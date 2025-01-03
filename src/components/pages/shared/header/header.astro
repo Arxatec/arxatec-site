@@ -1,23 +1,21 @@
 ---
 import logo from "../../../../assets/logo.png";
-import BookOpen from "astro-heroicons/solid/BookOpen.astro";
 import PrimaryButton from "../../../shared/primary-button/primary-button.astro";
+import SecondayButton from "../../../shared/seconday-button/seconday-button.astro";
 ---
 
-<header class="bg-white">
+<header class="pt-0 lg:pt-4 fixed w-full z-50 top-0">
   <nav
-    class="flex items-center justify-between p-6 lg:px-8"
+    class="flex shadow-md border border-gray-100 items-center justify-between px-6 py-4 lg:px-8 rounded-xl max-w-7xl mx-auto w-full bg-white/70 backdrop-blur-md"
     aria-label="Global"
   >
     <div class="flex lg:flex-1 items-center gap-2">
       <a href="#" class="-m-1.5 p-1.5">
         <span class="sr-only">Arxatec</span>
 
-        <BookOpen class="size-8 text-blue-600" />
+        <img src={logo.src} alt="logo" class="size-10" />
       </a>
-      <p class="text-lg font-semibold text-stone-950 font-robotoSlab">
-        Arxatec
-      </p>
+      <p class="text-base font-semibold text-stone-950">Arxatec</p>
     </div>
     <div class="flex lg:hidden">
       <button
@@ -42,12 +40,17 @@ import PrimaryButton from "../../../shared/primary-button/primary-button.astro";
       </button>
     </div>
     <div class="hidden lg:flex lg:gap-x-12">
+      <a href="#" class="text-sm/6 font-semibold text-gray-900">Producto</a>
       <a href="#" class="text-sm/6 font-semibold text-gray-900">Comunidad</a>
       <a href="#" class="text-sm/6 font-semibold text-gray-900">Planes</a>
       <a href="#" class="text-sm/6 font-semibold text-gray-900">Blog</a>
       <a href="#" class="text-sm/6 font-semibold text-gray-900">Soporte</a>
     </div>
-    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+    <div class="hidden lg:flex lg:flex-1 gap-4 lg:justify-end">
+      <SecondayButton
+        text="Registrarse"
+        className="border-blue-600 bg-white text-blue-600"
+      />
       <PrimaryButton text="Iniciar sesión" />
     </div>
   </nav>
