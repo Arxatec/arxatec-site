@@ -1,6 +1,4 @@
 ---
-import ChevronDown from "astro-heroicons/outline/chevronDown.astro";
-import ChevronUp from "astro-heroicons/outline/chevronUp.astro";
 const faqs = [
   {
     question: "What's the best thing about Switzerland?",
@@ -8,45 +6,44 @@ const faqs = [
       "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
   },
   {
-    question: "What is your name?",
-    answer: "My name is Astro, and I'm here to help you!",
+    question: "How do I reset my password?",
+    answer:
+      "Click on 'Forgot password' at the login screen and follow the instructions.",
   },
   {
-    question: "How does this work?",
+    question: "Where can I find my purchase history?",
     answer:
-      "This is a dynamic FAQ section powered by Astro. It shows questions and answers based on the provided data.",
+      "You can check your purchase history under 'My Account' > 'Orders'.",
   },
 ];
 ---
 
 <div class="bg-white">
-  <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
-    <div class="mx-auto max-w-4xl divide-y divide-gray-900/10">
-      <h2
-        class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl"
+  <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
+    <h2
+      class="text-4xl font-semibold tracking-tight text-gray-900 ext-4xl font-robotoSlab"
+    >
+      Frequently asked questions
+    </h2>
+    <p class="mt-6 max-w-2xl text-base/7 text-gray-600">
+      Have a different question and can’t find the answer you’re looking for?
+      Reach out to our support team by
+      <a href="#" class="font-semibold text-blue-600 hover:text-blue-500"
+        >sending us an email</a
       >
-        Frequently asked questions
-      </h2>
-      <dl class="mt-10 space-y-6 divide-y divide-gray-900/10">
+      and we’ll get back to you as soon as we can.
+    </p>
+    <div class="mt-20">
+      <dl
+        class="space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:gap-x-10"
+      >
         {
-          faqs.map((faq, index) => (
-            <div class="pt-6">
-              <dt>
-                <button
-                  type="button"
-                  class="flex w-full items-start justify-between text-left text-gray-900"
-                  aria-controls={`faq-${index}`}
-                  aria-expanded="false"
-                >
-                  <span class="text-base/7 font-semibold">{faq.question}</span>
-                  <span class="ml-6 flex h-7 items-center">
-                    <ChevronDown class="w-5 h-5 text-gray-500" />
-                  </span>
-                </button>
+          faqs.map((faq) => (
+            <div>
+              <dt class="text-base/7 font-semibold text-gray-900">
+                {faq.question}
               </dt>
-              <dd class="mt-2 pr-12" id={`faq-${index}`}>
-                <p class="text-base/7 text-gray-600">{faq.answer}</p>
-              </dd>
+              <dd class="mt-2 text-base/7 text-gray-600">{faq.answer}</dd>
             </div>
           ))
         }

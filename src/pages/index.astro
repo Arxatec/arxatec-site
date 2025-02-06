@@ -1,14 +1,22 @@
 ---
+import CtaSection from "../components/pages/home/cta-section/cta-section.astro";
+import FeaturesSection from "../components/pages/home/features-section/features-section.astro";
 import HeroSection from "../components/pages/home/hero-section/hero-section.astro";
 import LogoCloudSection from "../components/pages/home/logo-cloud-section/logo-cloud-section.astro";
+import PricingSection from "../components/pages/home/pricing-section/pricing-section.astro";
 import QaSection from "../components/pages/home/qa-section/qa-section.astro";
+import Footer from "../components/pages/shared/footer/footer.astro";
 import Header from "../components/pages/shared/header/header.astro";
+import PrimaryButton from "../components/shared/primary-button/primary-button.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
   <Header />
   <HeroSection />
-  <LogoCloudSection />
+  <FeaturesSection />
+  <PricingSection />
   <QaSection />
+  <CtaSection />
+  <Footer />
 </Layout>
