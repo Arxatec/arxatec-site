@@ -2,75 +2,102 @@
 import CustomInput from "../../../shared/custom-input/custom-input.astro";
 import PrimaryButton from "../../../shared/primary-button/primary-button.astro";
 import CheckCircle from "astro-heroicons/outline/CheckCircle.astro";
+import ArrowUpRight from "astro-heroicons/outline/ArrowUpRight.astro";
 import CardTestimonial from "./card-testimonial/card-testimonial.astro";
 ---
 
-<div class="relative">
+<div class="p-4 mt-[100px]">
   <div
-    class="mx-auto max-w-7xl pb-24 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 mt-40"
+    class="relative w-full h-[920px] overflow-hidden rounded-lg flex items-center justify-center"
   >
-    <div class="px-6 lg:px-0 lg:py-20">
-      <div class="mx-auto max-w-2xl">
-        <div class="max-w-lg">
-          <div>
-            <a href="#" class="inline-flex space-x-6">
-              <span
-                class="rounded-full bg-blue-600/10 px-3 py-1 text-sm/6 font-semibold text-blue-600 ring-1 ring-blue-600/10 ring-inset"
-              >
-                Acceso a abogados de calidad
-              </span>
-            </a>
-          </div>
-          <h1
-            class="mt-10 text-3xl font-thin font-robotoSlab text-pretty text-stone-500 sm:text-4xl"
+    <img
+      src="https://images.pexels.com/photos/8428053/pexels-photo-8428053.jpeg"
+      alt="banner"
+      class="w-full h-full object-cover absolute z-[-1] top-0 left-0 overflow-hidden"
+    />
+    <div class="w-full h-full absolute inset-0 bg-black/45"></div>
+    <div class="relative z-10 w-full max-w-7xl px-4 grid grid-cols-2">
+      <div class="w-full max-w-2xl">
+        <p class="text-white font-medium text-lg text-left mb-4">
+          Seremos la plataforma #1 de abogados
+        </p>
+        <h1 class="text-white font-bold text-4xl text-left">
+          Asesoría legal confiable y gestión eficiente de casos
+        </h1>
+        <p class="text-white/80 text-left mt-8">
+          Nuestros abogados brindan un enfoque personalizado para cada cliente,
+          asegurando soluciones rápidas y efectivas para resolver cualquier
+          desafío legal. Con años de experiencia, nos comprometemos a defender
+          tus derechos con la más alta profesionalidad y dedicación.
+        </p>
+        <div class="mt-10 flex max-w-md gap-x-4">
+          <input
+            id="email-address"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+            class="min-w-0 flex-auto rounded-md bg-white/15 backdrop-blur-lg px-3.5 py-2 text-base text-white outline outline-1 -outline-offset-1 outline-white/15 placeholder:text-white/60 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-white sm:text-sm/6"
+            placeholder="Ingresa tu correo electrónico"
+          />
+          <button
+            type="submit"
+            class="flex-none rounded-md bg-white px-4 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-white/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+            >Ingresar</button
           >
-            <span class="font-black text-stone-900 tracking-tight"
-              >Plataforma legal
-            </span>
-            para clientes en busca de asesoría confiable y abogados que gestionan
-            casos con eficiencia
-          </h1>
-          <p class="mt-8 text-base text-pretty text-stone-500">
-            Simplifica la asesoría legal con herramientas intuitivas y una
-            comunidad diseñada para el éxito. Únete hoy y lleva tu práctica o
-            tus casos al siguiente nivel.
-          </p>
-          <div class="mt-10 flex items-center gap-x-2">
-            <CustomInput placeholder="Ej. email@domain.com" className="w-72" />
-            <PrimaryButton text="Empezar ahora" />
-          </div>
-          <div class="w-full flex gap-4 items-center flex-wrap mt-8">
-            <li class="flex items-center gap-1 text-gray-800 text-sm">
-              <CheckCircle class="size-5 text-blue-500" />
-              Gestión de casos
-            </li>
-            <li class="flex items-center gap-1 text-gray-800 text-sm">
-              <CheckCircle class="size-5 text-blue-500" />
-              Comunicación segura
-            </li>
-            <li class="flex items-center gap-1 text-gray-800 text-sm">
-              <CheckCircle class="size-5 text-blue-500" />
-              Agenda de reuniones y recordatorios
-            </li>
-          </div>
+        </div>
+        <div class="w-full flex gap-4 flex-wrap mt-8 flex-col">
+          <li class="flex items-center gap-1 text-white text-sm">
+            <CheckCircle class="size-5 text-white/70" />
+            Gestión de casos
+          </li>
+          <li class="flex items-center gap-1 text-white text-sm">
+            <CheckCircle class="size-5 text-white/70" />
+            Comunicación segura
+          </li>
+          <li class="flex items-center gap-1 text-white text-sm">
+            <CheckCircle class="size-5 text-white/70" />
+            Agenda de reuniones y recordatorios
+          </li>
         </div>
       </div>
-    </div>
-    <div class="md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
-      <img
-        src="https://images.pexels.com/photos/8730355/pexels-photo-8730355.jpeg"
-        alt="Legal team"
-        class="object-cover object-center w-full h-full rounded-lg shadow-lg"
-      />
+      <div class="flex items-start justify-end">
+        <a
+          class="bg-white/10 backdrop-blur-md rounded-lg p-2 w-fit cursor-pointer animate-smooth-bounce hover:animate-none group"
+        >
+          <img
+            src="https://images.pexels.com/photos/14726611/pexels-photo-14726611.jpeg"
+            alt="image"
+            class="w-56 h-48 object-cover rounded-lg"
+          />
+          <div class="text-white mt-4 flex items-start justify-between">
+            <p>
+              Sobre nosotros &<br />sobre Arxatec
+            </p>
+            <ArrowUpRight
+              class="size-4 text-white mt-1 group-hover:mt-0 transition-all"
+            />
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="max-w-7xl mx-auto px-6 py-24 lg:px-8">
-  <h1 class="font-bold text-lg text-gray-900">Lo que dicen de nosotros:</h1>
-  <div class="grid grid-cols-3 items-center mt-8 justify-between gap-4">
-    <CardTestimonial />
-    <CardTestimonial />
-    <CardTestimonial />
-  </div>
-</div>
+<style>
+  @keyframes smooth-bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .animate-smooth-bounce {
+    animation: smooth-bounce 3s linear infinite;
+  }
+</style>
