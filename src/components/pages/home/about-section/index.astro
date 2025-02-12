@@ -1,0 +1,126 @@
+---
+import Play from "astro-heroicons/solid/Play.astro";
+import LockClosed from "astro-heroicons/solid/LockClosed.astro";
+import ChartBar from "astro-heroicons/solid/ChartBar.astro";
+import Users from "astro-heroicons/solid/Users.astro";
+import Bolt from "astro-heroicons/solid/Bolt.astro";
+---
+
+<div class="py-24 sm:py-32">
+  <div class="mx-auto px-6 max-w-7xl w-full lg:px-8">
+    <div class="grid grid-cols-[44%_55%] gap-2">
+      <div
+        class="bg-white rounded-xl shadow-sm overflow-hidden p-6"
+        role="region"
+        aria-labelledby="sobre-nosotros-title"
+      >
+        <h2
+          id="sobre-nosotros-title"
+          class="text-base/7 font-semibold text-blue-600 text-left"
+        >
+          Sobre nosotros
+        </h2>
+        <p
+          class="mt-2 max-w-lg text-pretty text-4xl font-semibold tracking-tight text-gray-950 text-left"
+        >
+          Tú plataforma legal <br /> del futuro
+        </p>
+        <p
+          class="mt-6 max-w-2xl text-pretty text-left text-base font-medium text-gray-600"
+        >
+          Somos la plataforma que revoluciona la forma en que abogados y
+          clientes se conectan. Con seguridad, inteligencia y una comunidad
+          activa, ofrecemos asistencia inmediata y herramientas avanzadas para
+          transformar el ejercicio legal en todo el mundo.
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-2 w-full bg-white rounded-xl shadow-sm overflow-hidden p-6 gap-10"
+        role="list"
+      >
+        <div role="listitem">
+          <span
+            class="bg-blue-100 block p-2 w-fit rounded-md"
+            aria-hidden="true"
+          >
+            <LockClosed class="text-blue-600 size-8" />
+          </span>
+          <h3 class="text-gray-900 font-semibold text-lg mt-4">
+            Plataforma segura
+          </h3>
+          <p class="text-gray-600 text-base">
+            Somos una plataforma completamente segura para la revolución legal.
+          </p>
+        </div>
+
+        <div role="listitem">
+          <span
+            class="bg-blue-100 block p-2 w-fit rounded-md"
+            aria-hidden="true"
+          >
+            <ChartBar class="text-blue-600 size-8" />
+          </span>
+          <h3 class="text-gray-900 font-semibold text-lg mt-4">
+            Dashboard inteligente
+          </h3>
+          <p class="text-gray-600 text-base">
+            Somos el centro de control definitivo para gestionar casos y
+            clientes con facilidad.
+          </p>
+        </div>
+
+        <div role="listitem">
+          <span
+            class="bg-blue-100 block p-2 w-fit rounded-md"
+            aria-hidden="true"
+          >
+            <Users class="text-blue-600 size-8" />
+          </span>
+          <h3 class="text-gray-900 font-semibold text-lg mt-4">
+            Comunidad activa
+          </h3>
+          <p class="text-gray-600 text-base">
+            Somos el espacio donde abogados y clientes se conectan, aprenden y
+            crecen juntos.
+          </p>
+        </div>
+
+        <div role="listitem">
+          <span
+            class="bg-blue-100 block p-2 w-fit rounded-md"
+            aria-hidden="true"
+          >
+            <Bolt class="text-blue-600 size-8" />
+          </span>
+          <h3 class="text-gray-900 font-semibold text-lg mt-4">
+            Asistencia inmediata
+          </h3>
+          <p class="text-gray-600 text-base">
+            Somos la solución para comunicación rápida y eficiente con clientes
+            y abogados en tiempo real.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="overflow-hidden relative rounded-lg mt-2 h-[720px]">
+      <img
+        src="https://images.pexels.com/photos/4427816/pexels-photo-4427816.jpeg"
+        alt="Reunión de abogados discutiendo un caso legal"
+        class="w-full h-full object-cover relative z-[5]"
+        loading="lazy"
+      />
+
+      <div
+        class="w-full h-full absolute left-0 top-0 bg-black/30 z-10 flex items-center justify-center"
+      >
+        <button
+          class="bg-white/20 backdrop-blur-sm rounded-full flex p-6 items-center justify-center"
+          aria-label="Reproducir video informativo"
+        >
+          <Play class="size-10 text-white" />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
