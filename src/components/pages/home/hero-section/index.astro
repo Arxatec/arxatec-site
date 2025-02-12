@@ -1,27 +1,35 @@
 ---
-import CustomInput from "../../../shared/custom-input/custom-input.astro";
-import PrimaryButton from "../../../shared/primary-button/primary-button.astro";
 import CheckCircle from "astro-heroicons/outline/CheckCircle.astro";
 import ArrowUpRight from "astro-heroicons/outline/ArrowUpRight.astro";
-import CardTestimonial from "./card-testimonial/card-testimonial.astro";
+import laywer from "../../../../assets/images/hero/lawyer.jpeg";
 ---
 
-<div class="p-4 mt-[100px]">
+<section
+  class="p-4 mt-[150px] md:mt-[108px] relative z-10"
+  aria-labelledby="hero-heading"
+>
   <div
-    class="relative w-full h-[920px] overflow-hidden rounded-lg flex items-center justify-center"
+    class="relative w-full h-auto md:h-[920px] overflow-hidden rounded-lg flex items-center justify-center"
   >
     <img
-      src="https://images.pexels.com/photos/8428053/pexels-photo-8428053.jpeg"
-      alt="banner"
+      src={laywer.src}
+      alt="Un abogado en su oficina"
       class="w-full h-full object-cover absolute z-[-1] top-0 left-0 overflow-hidden"
+      loading="lazy"
     />
-    <div class="w-full h-full absolute inset-0 bg-black/45"></div>
-    <div class="relative z-10 w-full max-w-7xl px-4 grid grid-cols-2">
+    <div class="w-full h-full absolute inset-0 bg-black/45" aria-hidden="true">
+    </div>
+    <div
+      class="relative z-10 w-full max-w-7xl px-4 grid grid-cols-1 md:grid-cols-2"
+    >
       <div class="w-full max-w-2xl">
-        <p class="text-white font-medium text-lg text-left mb-4">
+        <p
+          class="text-white font-medium text-lg text-left mb-4 mt-12 md:mt-0"
+          id="hero-subheading"
+        >
           Seremos la plataforma #1 de abogados
         </p>
-        <h1 class="text-white font-bold text-4xl text-left">
+        <h1 id="hero-heading" class="text-white font-bold text-4xl text-left">
           Asesoría legal confiable y gestión eficiente de casos
         </h1>
         <p class="text-white/80 text-left mt-8">
@@ -30,59 +38,74 @@ import CardTestimonial from "./card-testimonial/card-testimonial.astro";
           desafío legal. Con años de experiencia, nos comprometemos a defender
           tus derechos con la más alta profesionalidad y dedicación.
         </p>
-        <div class="mt-10 flex max-w-md gap-x-4">
+        <form
+          class="mt-10 flex max-w-md gap-x-4"
+          aria-label="Suscripción por correo"
+        >
+          <label for="email-address" class="sr-only">Correo electrónico</label>
           <input
             id="email-address"
             name="email"
             type="email"
             autocomplete="email"
             required
-            class="min-w-0 flex-auto rounded-md bg-white/15 backdrop-blur-lg px-3.5 py-2 text-base text-white outline outline-1 -outline-offset-1 outline-white/15 placeholder:text-white/60 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-white sm:text-sm/6"
+            class="min-w-0 flex-auto rounded-md bg-white/15 backdrop-blur-lg px-3.5 py-2 text-sm text-white outline outline-1 -outline-offset-1 outline-white/15 placeholder:text-white/60 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-white sm:text-sm/6"
             placeholder="Ingresa tu correo electrónico"
           />
           <button
             type="submit"
             class="flex-none rounded-md bg-white px-4 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-white/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
-            >Ingresar</button
           >
-        </div>
-        <div class="w-full flex gap-4 flex-wrap mt-8 flex-col">
+            Ingresar
+          </button>
+        </form>
+        <ul
+          class="w-full flex gap-4 flex-wrap mt-8 flex-col"
+          aria-labelledby="benefits-heading"
+        >
+          <h2 id="benefits-heading" class="sr-only">
+            Beneficios de nuestra plataforma
+          </h2>
           <li class="flex items-center gap-1 text-white text-sm">
-            <CheckCircle class="size-5 text-white/70" />
+            <CheckCircle class="size-5 text-white/70" aria-hidden="true" />
             Gestión de casos
           </li>
           <li class="flex items-center gap-1 text-white text-sm">
-            <CheckCircle class="size-5 text-white/70" />
+            <CheckCircle class="size-5 text-white/70" aria-hidden="true" />
             Comunicación segura
           </li>
           <li class="flex items-center gap-1 text-white text-sm">
-            <CheckCircle class="size-5 text-white/70" />
+            <CheckCircle class="size-5 text-white/70" aria-hidden="true" />
             Agenda de reuniones y recordatorios
           </li>
-        </div>
+        </ul>
       </div>
-      <div class="flex items-start justify-end">
+      <div
+        class="flex items-start justify-end mt-12 mb-12 md:mb-0 md:mt-0 w-full"
+      >
         <a
-          class="bg-white/10 backdrop-blur-md rounded-lg p-2 w-fit cursor-pointer animate-smooth-bounce hover:animate-none group"
+          href="#"
+          class="bg-white/10 backdrop-blur-md rounded-lg p-2 cursor-pointer animate-smooth-bounce hover:animate-none group w-full md:w-fit"
+          aria-label="Conoce más sobre nosotros"
         >
           <img
             src="https://images.pexels.com/photos/14726611/pexels-photo-14726611.jpeg"
-            alt="image"
-            class="w-56 h-48 object-cover rounded-lg"
+            alt="Abogados en una reunión"
+            class="md:w-56 h-48 object-cover rounded-lg w-full"
+            loading="lazy"
           />
           <div class="text-white mt-4 flex items-start justify-between">
-            <p>
-              Sobre nosotros &<br />sobre Arxatec
-            </p>
+            <p>Sobre nosotros &<br />sobre Arxatec</p>
             <ArrowUpRight
               class="size-4 text-white mt-1 group-hover:mt-0 transition-all"
+              aria-hidden="true"
             />
           </div>
         </a>
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <style>
   @keyframes smooth-bounce {

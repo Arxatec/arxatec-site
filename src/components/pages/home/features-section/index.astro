@@ -1,19 +1,28 @@
+---
+import communityFeature from "../../../../assets/images/features/comunity_feature.png";
+import messagesFeature from "../../../../assets/images/features/messages_feature.png";
+import calendarFeature from "../../../../assets/images/features/calendar_feature.png";
+import casesFeature from "../../../../assets/images/features/cases_feature.png";
+import paymentFeature from "../../../../assets/images/features/payment_feature.png";
+---
+
 <div class="py-24 sm:py-32">
   <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
     <div class="bg-white rounded-xl shadow-sm overflow-hidden p-6">
       <h2 class="text-base/7 font-semibold text-blue-600 text-left">
-        Deploy faster
+        Herramientas
       </h2>
       <p
         class="mt-2 max-w-lg text-pretty text-4xl font-semibold tracking-tight text-gray-950 text-left"
       >
-        Everything you need to deploy your app
+        Herramientas poderosas para el mundo legal
       </p>
       <p
         class="mt-6 max-w-2xl text-pretty text-left text-base font-medium text-gray-600"
       >
-        Choose an affordable plan that’s packed with the best features for
-        engaging your audience, creating customer loyalty, and driving sales.
+        Descubre las funcionalidades que hacen de Arxatec la plataforma
+        definitiva para abogados y clientes. Desde gestión inteligente hasta
+        comunicación en tiempo real, todo lo que necesitas en un solo lugar.
       </p>
     </div>
     <div class="mt-2 grid grid-cols-1 gap-2 lg:grid-cols-6 lg:grid-rows-2">
@@ -25,20 +34,25 @@
         <div
           class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(1rem+1px)] lg:rounded-tl-[calc(1rem+1px)]"
         >
-          <img
-            class="h-80 object-cover object-left"
-            src="https://tailwindui.com/plus/img/component-images/bento-01-performance.png"
-            alt=""
-          />
+          <div class="relative w-full h-[80]">
+            <div
+              class="absolute h-16 w-full bg-gradient-to-t from-white to-transparent z-20 bottom-0"
+            >
+            </div>
+            <img
+              class="h-80 object-cover object-left w-full"
+              src={communityFeature.src}
+              alt=""
+            />
+          </div>
           <div class="p-10 pt-4">
-            <h3 class="text-sm/4 font-semibold text-blue-600">Performance</h3>
+            <h3 class="text-sm/4 font-semibold text-blue-600">Comunidad</h3>
             <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
-              Lightning-fast builds
+              Comparte y aprende
             </p>
             <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-              gravida justo et nulla efficitur, maximus egestas sem
-              pellentesque.
+              Publica, aprende y comparte con otros profesionales y clientes
+              sobre el mundo legal.
             </p>
           </div>
         </div>
@@ -48,24 +62,32 @@
         </div>
       </div>
       <div class="relative lg:col-span-3">
-        <div class="absolute inset-px rounded-lg bg-white lg:rounded-tr-[1rem]">
+        <div
+          class="absolute inset-px rounded-lg bg-white lg:rounded-tr-[1rem] w-full h-full"
+        >
         </div>
         <div
           class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-tr-[calc(1rem+1px)]"
         >
-          <img
-            class="h-80 object-cover object-left lg:object-right"
-            src="https://tailwindui.com/plus/img/component-images/bento-01-releases.png"
-            alt=""
-          />
+          <div class="relative w-full h-80">
+            <div
+              class="absolute h-16 w-full bg-gradient-to-t from-white to-transparent z-20 bottom-0"
+            >
+            </div>
+            <img
+              class="h-80 object-cover object-left lg:object-right"
+              src={casesFeature.src}
+              alt=""
+            />
+          </div>
           <div class="p-10 pt-4">
-            <h3 class="text-sm/4 font-semibold text-blue-600">Releases</h3>
+            <h3 class="text-sm/4 font-semibold text-blue-600">Casos</h3>
             <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
-              Push to deploy
+              Crea y gestiona casos
             </p>
             <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
-              Curabitur auctor, ex quis auctor venenatis, eros arcu rhoncus
-              massa, laoreet dapibus ex elit vitae odio.
+              Crea y gestiona tus casos con abogados en tiempo real para una
+              comunicación más rápida y efectiva.
             </p>
           </div>
         </div>
@@ -80,18 +102,24 @@
         <div
           class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-bl-[calc(1rem+1px)]"
         >
-          <img
-            class="h-80 object-cover object-left"
-            src="https://tailwindui.com/plus/img/component-images/bento-01-speed.png"
-            alt=""
-          />
+          <div class="relative h-80 w-full">
+            <div
+              class="absolute h-16 w-full bg-gradient-to-t from-white to-transparent z-20 bottom-0"
+            >
+            </div>
+            <img
+              class="h-80 object-cover object-left relative z-10 w-full"
+              src={messagesFeature.src}
+              alt=""
+            />
+          </div>
           <div class="p-10 pt-4">
-            <h3 class="text-sm/4 font-semibold text-blue-600">Speed</h3>
+            <h3 class="text-sm/4 font-semibold text-blue-600">Mensajes</h3>
             <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
-              Built for power users
+              Habla con tu abogado
             </p>
             <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
-              Sed congue eros non finibus molestie. Vestibulum euismod augue.
+              Comunicación directa e instantánea con los expertos que necesitas.
             </p>
           </div>
         </div>
@@ -105,19 +133,24 @@
         <div
           class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]"
         >
-          <img
-            class="h-80 object-cover"
-            src="https://tailwindui.com/plus/img/component-images/bento-01-integrations.png"
-            alt=""
-          />
+          <div class="h-80 relative w-full">
+            <div
+              class="absolute h-16 w-full bg-gradient-to-t from-white to-transparent z-20 bottom-0"
+            >
+            </div>
+            <img
+              class="h-80 object-cover w-full"
+              src={calendarFeature.src}
+              alt=""
+            />
+          </div>
           <div class="p-10 pt-4">
-            <h3 class="text-sm/4 font-semibold text-blue-600">Integrations</h3>
+            <h3 class="text-sm/4 font-semibold text-blue-600">Calendario</h3>
             <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
-              Connect your favorite tools
+              Organiza tus citas
             </p>
             <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
-              Maecenas at augue sed elit dictum vulputate, in nisi aliquam
-              maximus arcu.
+              Gestiona reuniones y audiencias virtuales sin complicaciones.
             </p>
           </div>
         </div>
@@ -132,19 +165,25 @@
         <div
           class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(1rem+1px)] lg:rounded-br-[calc(1rem+1px)]"
         >
-          <img
-            class="h-80 object-cover"
-            src="https://tailwindui.com/plus/img/component-images/bento-01-network.png"
-            alt=""
-          />
+          <div class="relative h-80 w-full">
+            <div
+              class="absolute h-16 w-full bg-gradient-to-t from-white to-transparent z-20 bottom-0"
+            >
+            </div>
+            <img
+              class="h-80 object-cover w-full"
+              src={paymentFeature.src}
+              alt=""
+            />
+          </div>
           <div class="p-10 pt-4">
-            <h3 class="text-sm/4 font-semibold text-blue-600">Network</h3>
+            <h3 class="text-sm/4 font-semibold text-blue-600">Pagos</h3>
             <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
-              Globally distributed CDN
+              Contrata en segundos
             </p>
             <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
-              Aenean vulputate justo commodo auctor vehicula in malesuada
-              semper.
+              Paga de forma rápida y segura para obtener asistencia legal
+              inmediata.
             </p>
           </div>
         </div>
