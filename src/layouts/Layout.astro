@@ -1,9 +1,11 @@
 ---
 import "@fontsource-variable/dm-sans";
+import { getRelativeLocaleUrl } from "astro:i18n";
+const currentLang = Astro.currentLocale || "es";
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={currentLang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -12,6 +14,7 @@ import "@fontsource-variable/dm-sans";
     <title>Arxatec</title>
   </head>
   <body class="text-gray-900 font-sans bg-slate-100">
+    <!-- {getRelativeLocaleUrl(currentLang, "/")} -->
     <slot />
   </body>
 </html>

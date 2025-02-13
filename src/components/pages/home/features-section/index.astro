@@ -1,4 +1,11 @@
 ---
+import { languageList, useTranslations } from "../../../../i18n/";
+const currentLang = Astro.currentLocale || "es";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList
+);
+
 import communityFeature from "../../../../assets/images/features/comunity_feature.png";
 import messagesFeature from "../../../../assets/images/features/messages_feature.png";
 import calendarFeature from "../../../../assets/images/features/calendar_feature.png";
@@ -10,19 +17,17 @@ import paymentFeature from "../../../../assets/images/features/payment_feature.p
   <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
     <div class="bg-white rounded-xl shadow-sm overflow-hidden p-6">
       <h2 class="text-base/7 font-semibold text-blue-600 text-left">
-        Herramientas
+        {translateLabels("home.features.tag")}
       </h2>
       <p
         class="mt-2 max-w-lg text-pretty text-4xl font-semibold tracking-tight text-gray-950 text-left"
       >
-        Herramientas poderosas para el mundo legal
+        {translateLabels("home.features.title")}
       </p>
       <p
         class="mt-6 max-w-2xl text-pretty text-left text-base font-medium text-gray-600"
       >
-        Descubre las funcionalidades que hacen de Arxatec la plataforma
-        definitiva para abogados y clientes. Desde gestión inteligente hasta
-        comunicación en tiempo real, todo lo que necesitas en un solo lugar.
+        {translateLabels("home.features.description")}
       </p>
     </div>
     <div class="mt-2 grid grid-cols-1 gap-2 lg:grid-cols-6 lg:grid-rows-2">
@@ -46,13 +51,14 @@ import paymentFeature from "../../../../assets/images/features/payment_feature.p
             />
           </div>
           <div class="p-10 pt-4">
-            <h3 class="text-sm/4 font-semibold text-blue-600">Comunidad</h3>
+            <h3 class="text-sm/4 font-semibold text-blue-600">
+              {translateLabels("home.features.community.tag")}
+            </h3>
             <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
-              Comparte y aprende
+              {translateLabels("home.features.community.title")}
             </p>
             <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
-              Publica, aprende y comparte con otros profesionales y clientes
-              sobre el mundo legal.
+              {translateLabels("home.features.community.description")}
             </p>
           </div>
         </div>
@@ -81,13 +87,14 @@ import paymentFeature from "../../../../assets/images/features/payment_feature.p
             />
           </div>
           <div class="p-10 pt-4">
-            <h3 class="text-sm/4 font-semibold text-blue-600">Casos</h3>
+            <h3 class="text-sm/4 font-semibold text-blue-600">
+              {translateLabels("home.features.cases.tag")}
+            </h3>
             <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
-              Crea y gestiona casos
+              {translateLabels("home.features.cases.title")}
             </p>
             <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
-              Crea y gestiona tus casos con abogados en tiempo real para una
-              comunicación más rápida y efectiva.
+              {translateLabels("home.features.cases.description")}
             </p>
           </div>
         </div>
@@ -114,12 +121,14 @@ import paymentFeature from "../../../../assets/images/features/payment_feature.p
             />
           </div>
           <div class="p-10 pt-4">
-            <h3 class="text-sm/4 font-semibold text-blue-600">Mensajes</h3>
+            <h3 class="text-sm/4 font-semibold text-blue-600">
+              {translateLabels("home.features.messages.tag")}
+            </h3>
             <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
-              Habla con tu abogado
+              {translateLabels("home.features.messages.title")}
             </p>
             <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
-              Comunicación directa e instantánea con los expertos que necesitas.
+              {translateLabels("home.features.messages.description")}
             </p>
           </div>
         </div>
@@ -145,12 +154,14 @@ import paymentFeature from "../../../../assets/images/features/payment_feature.p
             />
           </div>
           <div class="p-10 pt-4">
-            <h3 class="text-sm/4 font-semibold text-blue-600">Calendario</h3>
+            <h3 class="text-sm/4 font-semibold text-blue-600">
+              {translateLabels("home.features.calendar.tag")}
+            </h3>
             <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
-              Organiza tus citas
+              {translateLabels("home.features.calendar.title")}
             </p>
             <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
-              Gestiona reuniones y audiencias virtuales sin complicaciones.
+              {translateLabels("home.features.calendar.description")}
             </p>
           </div>
         </div>
@@ -177,13 +188,14 @@ import paymentFeature from "../../../../assets/images/features/payment_feature.p
             />
           </div>
           <div class="p-10 pt-4">
-            <h3 class="text-sm/4 font-semibold text-blue-600">Pagos</h3>
+            <h3 class="text-sm/4 font-semibold text-blue-600">
+              {translateLabels("home.features.payments.tag")}
+            </h3>
             <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
-              Contrata en segundos
+              {translateLabels("home.features.payments.title")}
             </p>
             <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
-              Paga de forma rápida y segura para obtener asistencia legal
-              inmediata.
+              {translateLabels("home.features.payments.description")}
             </p>
           </div>
         </div>

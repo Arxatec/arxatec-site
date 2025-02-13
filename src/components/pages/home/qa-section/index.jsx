@@ -1,43 +1,7 @@
 import React, { useState } from "react";
 
-const QaSection = () => {
-  const faqs = [
-    {
-      question: "¿Qué es esta plataforma y cómo puede ayudarme?",
-      answer:
-        "Nuestra plataforma es una solución integral diseñada para abogados y profesionales del derecho. Integra inteligencia artificial con herramientas avanzadas como CRM para la gestión de clientes, una comunidad interactiva para compartir conocimientos y colaborar con otros abogados, y la integración con servicios de Google. Con Arxatec, puedes gestionar casos de manera eficiente, automatizar tareas repetitivas, comunicarte con clientes en tiempo real y acceder a una red de profesionales para fortalecer tu práctica legal.",
-    },
-    {
-      question: "¿Cuánto cuesta el servicio?",
-      answer:
-        "Ofrecemos distintos planes según tus necesidades. Contamos con un plan gratuito que permite acceso a la comunidad y herramientas básicas, ideal para quienes inician. También disponemos de planes premium con funcionalidades avanzadas como gestión de clientes con CRM, automatización de documentos, análisis de datos con IA y más. Te invitamos a revisar nuestra sección de precios para elegir el plan que mejor se adapte a ti.",
-    },
-    {
-      question: "¿Cómo puedo registrarme?",
-      answer:
-        "Registrarte es rápido y sencillo. Solo haz clic en 'Registrarse', completa el formulario con tu nombre, correo y contraseña, y confirma tu cuenta mediante el enlace que recibirás por correo. Una vez registrado, tendrás acceso inmediato a la plataforma y todas sus herramientas según el plan seleccionado. Si necesitas ayuda, nuestro equipo de soporte está disponible para asistirte.",
-    },
-    {
-      question: "¿Qué diferencia a esta plataforma de otras?",
-      answer:
-        "Arxatec no es solo una herramienta de gestión, sino un ecosistema completo para abogados. Combinamos inteligencia artificial con automatización de documentos, gestión de casos, CRM avanzado y una comunidad activa de profesionales del derecho. Además, facilitamos la conexión entre abogados y clientes mediante comunicación en tiempo real y funciones especializadas para mejorar la eficiencia del trabajo legal.",
-    },
-    {
-      question: "¿Es segura la información que subo?",
-      answer:
-        "Sí, la seguridad es nuestra prioridad. Implementamos encriptación avanzada y cumplimos con normativas internacionales como el RGPD para garantizar la privacidad de los datos. Además, ofrecemos autenticación en dos pasos y acceso restringido a información confidencial, asegurando que solo personas autorizadas puedan visualizarla.",
-    },
-    {
-      question: "¿Puedo acceder desde cualquier dispositivo?",
-      answer:
-        "Sí, nuestra plataforma es completamente web y está optimizada para funcionar en cualquier dispositivo con conexión a internet. Puedes acceder desde computadoras, tablets o smartphones sin necesidad de instalar aplicaciones adicionales. Todo está diseñado para brindarte una experiencia fluida desde cualquier lugar.",
-    },
-    {
-      question: "¿Ofrecen soporte?",
-      answer:
-        "Sí, contamos con un equipo de soporte especializado listo para ayudarte en cualquier momento. Puedes contactarnos mediante nuestro chat en vivo dentro de la plataforma, por correo electrónico o accediendo a nuestra sección de preguntas frecuentes y tutoriales. Nuestro objetivo es brindarte la mejor experiencia posible y resolver cualquier duda que tengas.",
-    },
-  ];
+const QaSection = ({ faqSection }) => {
+  const faqs = faqSection.faqs;
 
   const [openIndex, setOpenIndex] = useState(-1);
 
@@ -51,15 +15,13 @@ const QaSection = () => {
         <div className="mx-auto w-full">
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <h2 className="text-base/7 font-semibold text-blue-600 text-left">
-              Preguntas frecuentes
+              {faqSection.tag}
             </h2>
             <p className="mt-2 max-w-lg text-pretty text-4xl font-semibold tracking-tight text-gray-950 text-left">
-              Preguntas y respuestas
+              {faqSection.title}
             </p>
             <p className="mt-6 max-w-2xl text-pretty text-left text-base font-medium text-gray-600">
-              Choose an affordable plan that's packed with the best features for
-              engaging your audience, creating customer loyalty, and driving
-              sales.
+              {faqSection.description}
             </p>
           </div>
 

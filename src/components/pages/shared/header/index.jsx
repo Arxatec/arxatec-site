@@ -6,11 +6,49 @@ import {
   CalendarDateRangeIcon,
   UsersIcon,
   ChevronDownIcon,
+  XMarkIcon,
+  Bars3Icon,
 } from "@heroicons/react/24/outline";
+import {
+  ArrowDownOnSquareIcon,
+  Squares2X2Icon,
+} from "@heroicons/react/16/solid";
+
+const products = [
+  {
+    name: "Mensajes",
+    description:
+      "Comunicación directa e instantánea con los expertos que necesitas.",
+    icon: ChatBubbleBottomCenterIcon,
+    route: "",
+  },
+  {
+    name: " Gestión de casos",
+    description:
+      "Tus abogados en tiempo real para una comunicación más rápida y efectiva.",
+    icon: DocumentTextIcon,
+    route: "",
+  },
+  {
+    name: "Calendario",
+    description:
+      "Gestiona reuniones y audiencias virtuales sin complicaciones.",
+    icon: CalendarDateRangeIcon,
+    route: "",
+  },
+  {
+    name: "Comunidad",
+    description:
+      "Comparte con otros profesionales y clientes sobre el mundo legal.",
+    icon: UsersIcon,
+    route: "",
+  },
+];
 
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openProducts, setOpenProducts] = useState(true);
+  const [navLinks, setNavLinks] = useState([]);
 
   const ref = useRef(null);
   const [height, setHeight] = useState(0);
@@ -39,16 +77,19 @@ const Header = () => {
     setOpenProducts(value);
   };
 
-  const navLinks = [
-    {
-      name: "Producto",
-      href: "#",
-      action: (val) => toggleOpenProducts(val),
-    },
-    { name: "Comunidad", href: "#" },
-    { name: "Planes", href: "#" },
-    { name: "Blog", href: "#" },
-  ];
+  useEffect(() => {
+    setNavLinks([
+      {
+        name: "Producto",
+        href: "#",
+        action: (val) => toggleOpenProducts(val),
+        active: openProducts,
+      },
+      { name: "Planes", href: "#" },
+      { name: "Blog", href: "#" },
+      { name: "Soporte", href: "#" },
+    ]);
+  }, [openProducts]);
   return (
     <header className="fixed top-0 w-full z-50">
       <div className="flex items-center justify-between bg-blue-600 px-6 py-1.5">
@@ -72,13 +113,7 @@ const Header = () => {
           className="p-3"
           aria-label="Cerrar aviso"
         >
-          <svg
-            className="size-5 text-white"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
-          </svg>
+          <XMarkIcon className="size-5 text-white" />
         </button>
       </div>
 
@@ -98,19 +133,7 @@ const Header = () => {
               onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Abrir menú"
             >
-              <svg
-                className="size-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
+              <Bars3Icon className="size-6" />
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
@@ -133,7 +156,12 @@ const Header = () => {
                   >
                     {link.name}
                     <ChevronDownIcon
-                      className="size-4 text-gray-900"
+                      className="size-3.5 text-gray-900 transition-all"
+                      style={{
+                        transform: link.active
+                          ? "rotate(180deg)"
+                          : "rotate(0deg)",
+                      }}
                       strokeWidth={2.5}
                     />
                   </button>
@@ -161,65 +189,20 @@ const Header = () => {
           }}
         >
           <div className="mx-auto grid max-w-7xl grid-cols-1 gap-2 px-6 py-6 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-0 sm:py-10 lg:grid-cols-4 lg:gap-4 lg:px-8 xl:gap-8">
-            <div className="group relative -mx-3 flex rounded-lg text-sm/6 hover:bg-gray-50/20 sm:flex-col p-3 sm:p-6 transition-all justify-start items-start">
-              <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50/20 transition-all">
-                <ChatBubbleBottomCenterIcon className="size-6 text-gray-600" />
+            {products.map((product) => (
+              <div className="group relative -mx-3 flex rounded-lg p-3 text-sm/6 hover:bg-gray-50/20 transition-all sm:flex-col sm:p-6 justify-start items-start">
+                <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50/20 transition-all">
+                  <product.icon className="size-6 text-gray-600" />
+                </div>
+                <div className="mt-4">
+                  <a href="#" className="font-semibold text-gray-900">
+                    {product.name}
+                    <span className="absolute inset-0"></span>
+                  </a>
+                  <p className="mt-1 text-gray-600">{product.description}</p>
+                </div>
               </div>
-              <div className="mt-4">
-                <a href="#" className="font-semibold text-gray-900">
-                  Mensajes
-                  <span className="absolute inset-0"></span>
-                </a>
-                <p className="mt-1 text-gray-600">
-                  Comunicación directa e instantánea con los expertos que
-                  necesitas.
-                </p>
-              </div>
-            </div>
-            <div className="group relative -mx-3 flex rounded-lg text-sm/6 hover:bg-gray-50/20 sm:flex-col transition-all justify-start items-start  p-3 sm:p-6 ">
-              <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50/20 transition-all">
-                <DocumentTextIcon className="size-6 text-gray-600" />
-              </div>
-              <div className="mt-4">
-                <a href="#" className="font-semibold text-gray-900">
-                  Gestión de casos
-                  <span className="absolute inset-0"></span>
-                </a>
-                <p className="mt-1 text-gray-600">
-                  Tus abogados en tiempo real para una comunicación más rápida y
-                  efectiva.
-                </p>
-              </div>
-            </div>
-            <div className="group relative -mx-3 flex  rounded-lg p-3 text-sm/6 hover:bg-gray-50/20 sm:flex-col sm:p-6 transitione-all jusitify-start items-start">
-              <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50/20 transition-all">
-                <CalendarDateRangeIcon className="size-6 text-gray-600" />
-              </div>
-              <div className="mt-4">
-                <a href="#" className="font-semibold text-gray-900">
-                  Calendario
-                  <span className="absolute inset-0"></span>
-                </a>
-                <p className="mt-1 text-gray-600">
-                  Gestiona reuniones y audiencias virtuales sin complicaciones.
-                </p>
-              </div>
-            </div>
-            <div className="group relative -mx-3 flex rounded-lg p-3 text-sm/6 hover:bg-gray-50/20 transition-all sm:flex-col sm:p-6 justify-start items-start">
-              <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50/20 transition-all">
-                <UsersIcon className="size-6 text-gray-600" />
-              </div>
-              <div className="mt-4">
-                <a href="#" className="font-semibold text-gray-900">
-                  Comunidad
-                  <span className="absolute inset-0"></span>
-                </a>
-                <p className="mt-1 text-gray-600">
-                  Comparte con otros profesionales y clientes sobre el mundo
-                  legal.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
           <div className="bg-gray-50/20">
             <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -241,45 +224,21 @@ const Header = () => {
                       clip-rule="evenodd"
                     />
                   </svg>
-                  Watch demo
+                  Mirar demostración
                 </a>
                 <a
                   href="#"
                   className="flex items-center gap-x-2.5 p-3 px-6 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100 sm:justify-center sm:px-0 hover:bg-gray-100/30 transition-all "
                 >
-                  <svg
-                    className="size-5 flex-none text-gray-400"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                    data-slot="icon"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Contact sales
+                  <Squares2X2Icon className="size-5 flex-none text-gray-400" />
+                  Ver productos
                 </a>
                 <a
                   href="#"
                   className="flex items-center gap-x-2.5 p-3 px-6 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100 sm:justify-center sm:px-0 hover:bg-gray-100/30 transition-all "
                 >
-                  <svg
-                    className="size-5 flex-none text-gray-400"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                    data-slot="icon"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M2.5 3A1.5 1.5 0 0 0 1 4.5v4A1.5 1.5 0 0 0 2.5 10h6A1.5 1.5 0 0 0 10 8.5v-4A1.5 1.5 0 0 0 8.5 3h-6Zm11 2A1.5 1.5 0 0 0 12 6.5v7a1.5 1.5 0 0 0 1.5 1.5h4a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 17.5 5h-4Zm-10 7A1.5 1.5 0 0 0 2 13.5v2A1.5 1.5 0 0 0 3.5 17h6a1.5 1.5 0 0 0 1.5-1.5v-2A1.5 1.5 0 0 0 9.5 12h-6Z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  View all products
+                  <ArrowDownOnSquareIcon className="size-5 flex-none text-gray-400" />
+                  Descargar aplicaciones
                 </a>
               </div>
             </div>
@@ -288,21 +247,42 @@ const Header = () => {
       </nav>
 
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-white/50 backdrop-blur-xl px-6 py-6 sm:max-w-sm">
-          <div className="space-y-2 py-6">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="block px-3 py-2 text-sm font-semibold text-gray-700 hover:text-gray-950"
-              >
-                {link.name}
+        <div className="fixed inset-0 z-50 bg-white/50 backdrop-blur-xl px-6 py-6 w-screen flex items-stretch justify-between flex-col">
+          <div>
+            <div className="flex items-center justify-between">
+              <a href="#" aria-label="Ir al inicio">
+                <img src={logo.src} alt="Arxatec logo" className="w-32" />
               </a>
-            ))}
+              <div className="">
+                <button
+                  type="button"
+                  className="p-2.5 text-gray-700"
+                  onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+                  aria-label="Abrir menú"
+                >
+                  <XMarkIcon className="size-6" />
+                </button>
+              </div>
+            </div>
+            <div className="space-y-1 py-6">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="block px-3 py-2 text-sm font-semibold text-gray-900 hover:text-gray-950"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
           </div>
-          <div className="py-6">
-            <button className="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+          <div className="py-4 flex gap-4 flex-col">
+            <button className="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 w-full">
               Iniciar sesión
+            </button>
+
+            <button className=" rounded-md px-4 py-2 text-sm font-semibold shadow-xs hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-60 border border-blue-600 bg-transparent text-blue-600 w-full">
+              Registrarse
             </button>
           </div>
         </div>

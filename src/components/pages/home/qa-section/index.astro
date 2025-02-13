@@ -1,0 +1,47 @@
+---
+import QaSection from ".";
+import { languageList, useTranslations } from "../../../../i18n/";
+const currentLang = Astro.currentLocale || "es";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList
+);
+
+const faqSection = {
+  tag: translateLabels("home.faq.tag"),
+  title: translateLabels("home.faq.title"),
+  description: translateLabels("home.faq.description"),
+  faqs: [
+    {
+      question: translateLabels("home.faq.1.question"),
+      answer: translateLabels("home.faq.1.answer"),
+    },
+    {
+      question: translateLabels("home.faq.2.question"),
+      answer: translateLabels("home.faq.2.answer"),
+    },
+    {
+      question: translateLabels("home.faq.3.question"),
+      answer: translateLabels("home.faq.3.answer"),
+    },
+    {
+      question: translateLabels("home.faq.4.question"),
+      answer: translateLabels("home.faq.4.answer"),
+    },
+    {
+      question: translateLabels("home.faq.5.question"),
+      answer: translateLabels("home.faq.5.answer"),
+    },
+    {
+      question: translateLabels("home.faq.6.question"),
+      answer: translateLabels("home.faq.6.answer"),
+    },
+    {
+      question: translateLabels("home.faq.7.question"),
+      answer: translateLabels("home.faq.7.answer"),
+    },
+  ],
+};
+---
+
+<QaSection faqSection={faqSection} client:load />

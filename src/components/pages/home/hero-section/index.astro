@@ -2,6 +2,13 @@
 import CheckCircle from "astro-heroicons/outline/CheckCircle.astro";
 import ArrowUpRight from "astro-heroicons/outline/ArrowUpRight.astro";
 import laywer from "../../../../assets/images/hero/lawyer.jpeg";
+
+import { languageList, useTranslations } from "../../../../i18n/";
+const currentLang = Astro.currentLocale || "es";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList
+);
 ---
 
 <section
@@ -12,12 +19,15 @@ import laywer from "../../../../assets/images/hero/lawyer.jpeg";
     class="relative w-full h-auto md:h-[920px] overflow-hidden rounded-lg flex items-center justify-center"
   >
     <img
-      src={laywer.src}
+      src="https://images.pexels.com/photos/8428070/pexels-photo-8428070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       alt="Un abogado en su oficina"
-      class="w-full h-full object-cover absolute z-[-1] top-0 left-0 overflow-hidden"
+      class="w-full h-full object-cover absolute z-[-1] top-0 left-0 overflow-hidden object-bottom"
       loading="lazy"
     />
-    <div class="w-full h-full absolute inset-0 bg-black/45" aria-hidden="true">
+    <div
+      class="w-full h-full absolute inset-0 bg-black/65 backdrop-blur-sm"
+      aria-hidden="true"
+    >
     </div>
     <div
       class="relative z-10 w-full max-w-7xl px-4 grid grid-cols-1 md:grid-cols-2"
@@ -27,22 +37,21 @@ import laywer from "../../../../assets/images/hero/lawyer.jpeg";
           class="text-white font-medium text-lg text-left mb-4 mt-12 md:mt-0"
           id="hero-subheading"
         >
-          Seremos la plataforma #1 de abogados
+          {translateLabels("home.hero.tag")}
         </p>
         <h1 id="hero-heading" class="text-white font-bold text-4xl text-left">
-          Asesoría legal confiable y gestión eficiente de casos
+          {translateLabels("home.hero.title")}
         </h1>
         <p class="text-white/80 text-left mt-8">
-          Nuestros abogados brindan un enfoque personalizado para cada cliente,
-          asegurando soluciones rápidas y efectivas para resolver cualquier
-          desafío legal. Con años de experiencia, nos comprometemos a defender
-          tus derechos con la más alta profesionalidad y dedicación.
+          {translateLabels("home.hero.description")}
         </p>
         <form
           class="mt-10 flex max-w-md gap-x-4"
           aria-label="Suscripción por correo"
         >
-          <label for="email-address" class="sr-only">Correo electrónico</label>
+          <label for="email-address" class="sr-only">
+            {translateLabels("home.hero.input.label")}
+          </label>
           <input
             id="email-address"
             name="email"
@@ -50,13 +59,13 @@ import laywer from "../../../../assets/images/hero/lawyer.jpeg";
             autocomplete="email"
             required
             class="min-w-0 flex-auto rounded-md bg-white/15 backdrop-blur-lg px-3.5 py-2 text-sm text-white outline outline-1 -outline-offset-1 outline-white/15 placeholder:text-white/60 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-white sm:text-sm/6"
-            placeholder="Ingresa tu correo electrónico"
+            placeholder={translateLabels("home.hero.input.placeholder")}
           />
           <button
             type="submit"
             class="flex-none rounded-md bg-white px-4 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-white/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
           >
-            Ingresar
+            {translateLabels("shared.join")}
           </button>
         </form>
         <ul
@@ -64,19 +73,19 @@ import laywer from "../../../../assets/images/hero/lawyer.jpeg";
           aria-labelledby="benefits-heading"
         >
           <h2 id="benefits-heading" class="sr-only">
-            Beneficios de nuestra plataforma
+            {translateLabels("home.hero.benefits")}
           </h2>
           <li class="flex items-center gap-1 text-white text-sm">
             <CheckCircle class="size-5 text-white/70" aria-hidden="true" />
-            Gestión de casos
+            {translateLabels("home.hero.benefits.cases")}
           </li>
           <li class="flex items-center gap-1 text-white text-sm">
             <CheckCircle class="size-5 text-white/70" aria-hidden="true" />
-            Comunicación segura
+            {translateLabels("home.hero.benefits.safe")}
           </li>
           <li class="flex items-center gap-1 text-white text-sm">
             <CheckCircle class="size-5 text-white/70" aria-hidden="true" />
-            Agenda de reuniones y recordatorios
+            {translateLabels("home.hero.benefits.meet")}
           </li>
         </ul>
       </div>
@@ -94,8 +103,12 @@ import laywer from "../../../../assets/images/hero/lawyer.jpeg";
             class="md:w-56 h-48 object-cover rounded-lg w-full"
             loading="lazy"
           />
-          <div class="text-white mt-4 flex items-start justify-between">
-            <p>Sobre nosotros &<br />sobre Arxatec</p>
+          <div
+            class="text-white mt-4 flex items-start justify-between whitespace-pre-line"
+          >
+            <p>
+              {translateLabels("home.hero.about.title")}
+            </p>
             <ArrowUpRight
               class="size-4 text-white mt-1 group-hover:mt-0 transition-all"
               aria-hidden="true"

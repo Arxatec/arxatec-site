@@ -1,4 +1,11 @@
 ---
+import { languageList, useTranslations } from "../../../../i18n/";
+const currentLang = Astro.currentLocale || "es";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList
+);
+
 const posts = [
   {
     title: "Boost your conversion rate",
@@ -48,7 +55,6 @@ const posts = [
       "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
     link: "#",
   },
-  // Puedes agregar más posts aquí
 ];
 ---
 
@@ -56,21 +62,17 @@ const posts = [
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="bg-white rounded-xl shadow-sm overflow-hidden p-6">
       <h2 class="text-base/7 font-semibold text-blue-600 text-left">
-        Nuestro blog
+        {translateLabels("home.blog.tag")}
       </h2>
       <p
         class="mt-2 max-w-lg text-pretty text-4xl font-semibold tracking-tight text-gray-950 text-left"
       >
-        Explora el futuro del derecho
+        {translateLabels("home.blog.title")}
       </p>
       <p
         class="mt-6 max-w-2xl text-pretty text-left text-base font-medium text-gray-600"
       >
-        Mantente al día con las últimas tendencias legales, análisis de casos,
-        tecnología aplicada al derecho y consejos para abogados. En nuestro blog
-        encontrarás artículos detallados que te ayudarán a mejorar tu práctica,
-        optimizar tu trabajo y entender cómo la inteligencia artificial está
-        transformando el mundo legal.
+        {translateLabels("home.blog.description")}
       </p>
     </div>
     <div

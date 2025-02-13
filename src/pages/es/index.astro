@@ -1,0 +1,26 @@
+---
+import AboutSection from "../../components/pages/home/about-section/index.astro";
+import BlogSection from "../../components/pages/home/blog-section/index.astro";
+import CtaSection from "../../components/pages/home/cta-section/index.astro";
+import FeaturesSection from "../../components/pages/home/features-section/index.astro";
+import HeroSection from "../../components/pages/home/hero-section/index.astro";
+import PricingSection from "../../components/pages/home/pricing-section/index.astro";
+import QaSection from "../../components/pages/home/qa-section/index.astro";
+import Footer from "../../components/pages/shared/footer/index.astro";
+import Header from "../../components/pages/shared/header/index.jsx";
+import Layout from "../../layouts/Layout.astro";
+
+const hola = "Hola";
+---
+
+<Layout>
+  <Header client:load />
+  <HeroSection />
+  <AboutSection />
+  <FeaturesSection />
+  <PricingSection />
+  <QaSection />
+  <BlogSection />
+  <CtaSection />
+  <Footer />
+</Layout>

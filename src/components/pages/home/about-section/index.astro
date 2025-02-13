@@ -4,6 +4,46 @@ import LockClosed from "astro-heroicons/solid/LockClosed.astro";
 import ChartBar from "astro-heroicons/solid/ChartBar.astro";
 import Users from "astro-heroicons/solid/Users.astro";
 import Bolt from "astro-heroicons/solid/Bolt.astro";
+import { languageList, useTranslations } from "../../../../i18n/";
+const currentLang = Astro.currentLocale || "es";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList
+);
+
+const highlights = [
+  {
+    icon: LockClosed,
+    title: translateLabels("home.about.highlights.securePlatform"),
+    description: translateLabels(
+      "home.about.highlights.securePlatform.description"
+    ),
+  },
+
+  {
+    icon: ChartBar,
+    title: translateLabels("home.about.highlights.smartDashboard"),
+    description: translateLabels(
+      "home.about.highlights.smartDashboard.description"
+    ),
+  },
+
+  {
+    icon: Users,
+    title: translateLabels("home.about.highlights.activeCommunity"),
+    description: translateLabels(
+      "home.about.highlights.activeCommunity.description"
+    ),
+  },
+
+  {
+    icon: Bolt,
+    title: translateLabels("home.about.highlights.instantSupport"),
+    description: translateLabels(
+      "home.about.highlights.instantSupport.description"
+    ),
+  },
+];
 ---
 
 <div class="py-24 sm:py-32">
@@ -16,97 +56,48 @@ import Bolt from "astro-heroicons/solid/Bolt.astro";
       >
         <h2
           id="sobre-nosotros-title"
-          class="text-base/7 font-semibold text-blue-600 text-left"
+          class="text-base/7 font-semibold text-blue-600 text-left white"
         >
-          Sobre nosotros
+          {translateLabels("home.about.tag")}
         </h2>
         <p
-          class="mt-2 max-w-lg text-pretty text-4xl font-semibold tracking-tight text-gray-950 text-left"
+          class="mt-2 max-w-lg text-pretty text-4xl font-semibold tracking-tight text-gray-950 text-left whitespace-pre-line"
         >
-          Tú plataforma legal <br /> del futuro
+          {translateLabels("home.about.title")}
         </p>
         <p
           class="mt-6 max-w-2xl text-pretty text-left text-base font-medium text-gray-600"
         >
-          Somos la plataforma que revoluciona la forma en que abogados y
-          clientes se conectan. Con seguridad, inteligencia y una comunidad
-          activa, ofrecemos asistencia inmediata y herramientas avanzadas para
-          transformar el ejercicio legal en todo el mundo.
+          {translateLabels("home.about.description")}
         </p>
       </div>
       <div
         class="grid grid-cols-2 w-full bg-white rounded-xl shadow-sm overflow-hidden p-6 gap-10"
         role="list"
       >
-        <div role="listitem">
-          <span
-            class="bg-blue-100 block p-2 w-fit rounded-md"
-            aria-hidden="true"
-          >
-            <LockClosed class="text-blue-600 size-8" />
-          </span>
-          <h3 class="text-gray-900 font-semibold text-lg mt-4">
-            Plataforma segura
-          </h3>
-          <p class="text-gray-600 text-base">
-            Somos una plataforma completamente segura para la revolución legal.
-          </p>
-        </div>
-
-        <div role="listitem">
-          <span
-            class="bg-blue-100 block p-2 w-fit rounded-md"
-            aria-hidden="true"
-          >
-            <ChartBar class="text-blue-600 size-8" />
-          </span>
-          <h3 class="text-gray-900 font-semibold text-lg mt-4">
-            Dashboard inteligente
-          </h3>
-          <p class="text-gray-600 text-base">
-            Somos el centro de control definitivo para gestionar casos y
-            clientes con facilidad.
-          </p>
-        </div>
-
-        <div role="listitem">
-          <span
-            class="bg-blue-100 block p-2 w-fit rounded-md"
-            aria-hidden="true"
-          >
-            <Users class="text-blue-600 size-8" />
-          </span>
-          <h3 class="text-gray-900 font-semibold text-lg mt-4">
-            Comunidad activa
-          </h3>
-          <p class="text-gray-600 text-base">
-            Somos el espacio donde abogados y clientes se conectan, aprenden y
-            crecen juntos.
-          </p>
-        </div>
-
-        <div role="listitem">
-          <span
-            class="bg-blue-100 block p-2 w-fit rounded-md"
-            aria-hidden="true"
-          >
-            <Bolt class="text-blue-600 size-8" />
-          </span>
-          <h3 class="text-gray-900 font-semibold text-lg mt-4">
-            Asistencia inmediata
-          </h3>
-          <p class="text-gray-600 text-base">
-            Somos la solución para comunicación rápida y eficiente con clientes
-            y abogados en tiempo real.
-          </p>
-        </div>
+        {
+          highlights.map((highlight) => (
+            <div role="listitem">
+              <span
+                class="bg-blue-100 block p-2 w-fit rounded-md"
+                aria-hidden="true"
+              >
+                <highlight.icon class="text-blue-600 size-8" />
+              </span>
+              <h3 class="text-gray-900 font-semibold text-lg mt-4">
+                {highlight.title}
+              </h3>
+              <p class="text-gray-600 text-base">{highlight.description}</p>
+            </div>
+          ))
+        }
       </div>
     </div>
 
     <div class="overflow-hidden relative rounded-lg mt-2 h-[720px]">
       <img
         src="https://images.pexels.com/photos/4427816/pexels-photo-4427816.jpeg"
-        alt="Reunión de abogados discutiendo un caso legal"
+        alt="image"
         class="w-full h-full object-cover relative z-[5]"
         loading="lazy"
       />
@@ -116,7 +107,7 @@ import Bolt from "astro-heroicons/solid/Bolt.astro";
       >
         <button
           class="bg-white/20 backdrop-blur-sm rounded-full flex p-6 items-center justify-center"
-          aria-label="Reproducir video informativo"
+          aria-label="button"
         >
           <Play class="size-10 text-white" />
         </button>
