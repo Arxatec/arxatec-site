@@ -1,4 +1,13 @@
-<div class="py-24 sm:py-32 mx-auto px-6 lg:px-8 max-w-7xl">
+---
+import { languageList, useTranslations } from "../../../../i18n/";
+const currentLang = Astro.currentLocale || "es";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList
+);
+---
+
+<div class="sm:pb-32 mx-auto px-6 lg:px-8 max-w-7xl">
   <div
     class="relative isolate overflow-hidden bg-slate-50 py-16 sm:py-24 lg:py-32 mx-auto max-w-7xl px-6 lg:px-12 rounded-xl shadow-sm"
   >
@@ -7,14 +16,15 @@
     >
       <div class="max-w-xl lg:max-w-lg">
         <h2 class="text-4xl font-semibold tracking-tight text-gray-900">
-          Mantente un paso adelante
+          {translateLabels("home.cta.title")}
         </h2>
         <p class="mt-4 text-lg text-gray-600">
-          Suscríbete a nuestro newsletter y recibe las últimas novedades,
-          actualizaciones directamente en tu correo.
+          {translateLabels("home.cta.description")}
         </p>
         <div class="mt-6 flex max-w-md gap-x-4">
-          <label for="email-address" class="sr-only">Email address</label>
+          <label for="email-address" class="sr-only">
+            {translateLabels("home.cta.input.placeholder")}
+          </label>
           <input
             id="email-address"
             name="email"
@@ -22,13 +32,14 @@
             autocomplete="email"
             required
             class="min-w-0 flex-auto rounded-md bg-gray-900/5 px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-900/10 placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500 sm:text-sm/6"
-            placeholder="Enter your email"
+            placeholder={translateLabels("home.cta.input.placeholder")}
           />
           <button
             type="submit"
-            class="flex-none rounded-md bg-blue-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
-            >Subscribe</button
+            class="flex-none rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
           >
+            {translateLabels("shared.join")}
+          </button>
         </div>
       </div>
       <dl class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
@@ -51,10 +62,10 @@
             </svg>
           </div>
           <dt class="mt-4 text-base font-semibold text-gray-900">
-            Contenido valioso
+            {translateLabels("home.cta.highContent.title")}
           </dt>
           <dd class="mt-2 text-base/7 text-gray-600">
-            Sé el primero en enterarte cuando nuestra plataforma esté lista.
+            {translateLabels("home.cta.highContent.description")}
           </dd>
         </div>
         <div class="flex flex-col items-start">
@@ -75,9 +86,11 @@
               ></path>
             </svg>
           </div>
-          <dt class="mt-4 text-base font-semibold text-gray-900">No spam</dt>
+          <dt class="mt-4 text-base font-semibold text-gray-900">
+            {translateLabels("home.cta.noSpam.title")}
+          </dt>
           <dd class="mt-2 text-base/7 text-gray-600">
-            Sin spam, solo información que realmente importa.
+            {translateLabels("home.cta.noSpam.description")}
           </dd>
         </div>
       </dl>

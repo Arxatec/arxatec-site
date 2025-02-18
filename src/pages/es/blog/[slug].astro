@@ -1,0 +1,298 @@
+---
+import Footer from "../../../components/pages/shared/footer/index.astro";
+import Header from "../../../components/pages/shared/header/index.astro";
+import CtaSection from "../../../components/pages/shared/cta-section/index.astro";
+import RelatedBlogSection from "../../../components/pages/blog/related-blog-section/index.astro";
+import Layout from "../../../layouts/Layout.astro";
+import ArrowLeft from "astro-heroicons/outline/ArrowLeft.astro";
+
+// TODO: implement blog and slugs then i have the endpoint
+// TODO: forget summary and and relatios articles in aside element
+
+export async function getStaticPaths() {
+  const posts = [
+    {
+      title: "Primer Post",
+      slug: "primer-post",
+      content: "Este es el primer post.",
+    },
+    {
+      title: "Segundo Post",
+      slug: "segundo-post",
+      content: "Aquí va el segundo post.",
+    },
+  ];
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const posts = [
+  {
+    title: "Primer Post",
+    slug: "primer-post",
+    content: "Este es el primer post.",
+  },
+  {
+    title: "Segundo Post",
+    slug: "segundo-post",
+    content: "Aquí va el segundo post.",
+  },
+];
+const post = posts.find((p) => p.slug === slug);
+
+if (!post) {
+  throw new Error(`No se encontró el post: ${slug}`);
+}
+---
+
+<Layout title="Blog - Arxatec">
+  <Header />
+  <main class="pb-32 pt-6 mx-auto max-w-7xl px-6 lg:px-8">
+    <section class="px-6 lg:px-12 bg-white py-12 rounded-md shadow-sm">
+      <button
+        class="mb-5 text-gray-700 font-medium flex items-center gap-2 transition-all hover:bg-gray-100 rounded-md px-4 py-2"
+      >
+        <ArrowLeft class="size-4" stroke-width={2} />
+        Volver
+      </button>
+      <p
+        class="text-gray-900 text-4xl font-bold tracking-tight text-left capitalize"
+        style="line-height: 50px;"
+      >
+        Cómo vestirse adecuadamente para aumentar tus posibilidades de éxito en
+        un juicio
+      </p>
+      <p class="text-base mt-4 text-gray-600 text-left">
+        Vestirse adecuadamente en un juicio es crucial para proyectar
+        profesionalismo, confianza y credibilidad, ya que influye en la
+        percepción del juez y el jurado, ayudando a reforzar la imagen de
+        seriedad y respeto que aumenta las posibilidades de éxito.
+      </p>
+
+      <div class="flex items-center justify-start gap-4 mt-5">
+        <span
+          class="text-gray-600 bg-gray-100 rounded-full px-4 py-1.5 text-sm"
+        >
+          Derechos legales
+        </span>
+      </div>
+    </section>
+    <section class="px-6 lg:px-12 bg-white py-4 rounded-md shadow-sm mt-2">
+      <div class="flex items-center justify-between">
+        <span class="flex items-center gap-2">
+          <img
+            class="rounded-full size-10 object-cover"
+            alt="username"
+            src="https://images.pexels.com/photos/5721002/pexels-photo-5721002.jpeg"
+          />
+          <div>
+            <p class="text-sm text-gray-700 font-semibold">
+              Rafael Aguirre Gonzalo
+            </p>
+            <p class="text-sm text-gray-700">Abogado legal</p>
+          </div>
+        </span>
+        <span class="flex items-center gap-2 justify-end">
+          <p class="text-sm text-gray-700">24 de enero del 2024</p>
+          <span class="size-1.5 rounded-full bg-gray-500"></span>
+          <p class="text-sm text-gray-700">10 minutos de lectura</p>
+        </span>
+      </div>
+    </section>
+    <img
+      src="https://images.pexels.com/photos/5673501/pexels-photo-5673501.jpeg"
+      alt="banner"
+      class="w-full h-[700px] object-cover rounded-md mt-2 object-top shadow"
+    />
+    <section class="px-12 bg-white py-12 mt-2 shadow rounded-md">
+      <div class="container_blog">
+        <p>
+          En el mundo legal, cada detalle cuenta, desde la presentación de los
+          argumentos hasta la forma en que te comportas dentro del tribunal. Sin
+          embargo, uno de los aspectos más subestimados, pero cruciales, es la
+          vestimenta. La forma en que te vistes puede influir en la percepción
+          que el juez y el jurado tienen de ti, y en última instancia, en el
+          resultado de tu caso. Si bien no existe un "código de vestimenta"
+          universal que garantice el éxito en un juicio, vestirse de manera
+          adecuada es un elemento fundamental para proyectar profesionalismo,
+          respeto y autoridad.
+        </p>
+
+        <h2>La Psicología de la Primera Impresión</h2>
+
+        <p>
+          La ropa que eliges usar en un juicio no solo es un reflejo de tu
+          personalidad, sino también una herramienta poderosa para influir en
+          cómo serás percibido. La psicología detrás de la primera impresión es
+          clara: las personas tienden a juzgar a los demás en los primeros
+          segundos de interacción, basándose principalmente en su apariencia. En
+          el contexto de un juicio, la forma en que te vistes puede afectar cómo
+          el juez y el jurado interpretan tus palabras y tus argumentos.
+          <br />
+          Una vestimenta profesional no solo comunica seriedad, sino que también
+          transmite confianza y credibilidad. No importa lo brillante que sea tu
+          caso o lo sólida que sea tu estrategia legal, si no proyectas una imagen
+          de respeto y competencia, tu mensaje puede no ser tan efectivo.
+        </p>
+
+        <h2>El Código de Vestimenta Ideal para Abogados y Demandantes</h2>
+        <ol>
+          <li>Traje Formal y Conservador</li>
+          <p>
+            Para abogados y demandantes, un traje oscuro (preferiblemente negro,
+            azul marino o gris) es casi siempre la mejor opción. Los trajes de
+            cortesía son sinónimo de seriedad y profesionalismo. Elige un corte
+            clásico, bien ajustado, que no sea ni demasiado ajustado ni
+            demasiado suelto. Evita los trajes de colores brillantes o patrones
+            llamativos, ya que pueden distraer y restar seriedad a la imagen que
+            deseas proyectar.
+          </p>
+
+          <li>Camisa y Corbata</li>
+          <p>
+            La camisa debe ser de un color neutro y suave, como blanco, azul
+            claro o gris. Las camisas de tonos más oscuros pueden dar un aire de
+            rigidez que no es necesario en el entorno legal. La corbata debe ser
+            sencilla, preferentemente de un color sólido o con un patrón
+            discreto, que complemente el color del traje y la camisa. Evita las
+            corbatas de colores brillantes o con patrones extravagantes, ya que
+            pueden restar profesionalismo.
+          </p>
+
+          <li>Zapatos Negros y Pulidos</li>
+          <p>
+            Los zapatos deben ser de cuero negro, bien lustrados y sin marcas
+            evidentes. Los zapatos sucios o desgastados envían un mensaje de
+            desorganización y falta de atención al detalle. Los zapatos deben
+            ser simples, sin adornos innecesarios. Un par bien cuidado de
+            zapatos de cuero es la elección ideal.
+          </p>
+
+          <li>Accesorios Moderados</li>
+          <p>
+            Los accesorios deben ser discretos. Un reloj elegante, un par de
+            gemelos si es necesario, y un cinturón que combine con los zapatos
+            son suficientes. Evita accesorios llamativos como pulseras grandes,
+            cadenas o anillos exagerados, que pueden restar seriedad. La idea es
+            mantener una apariencia limpia y profesional.
+          </p>
+
+          <li>Cuidado Personal</li>
+          <p>
+            El aspecto personal es tan importante como la ropa. Asegúrate de
+            estar bien arreglado. Esto incluye tener el cabello limpio y bien
+            peinado, las uñas cortas y limpias, y la barba (si tienes una) bien
+            recortada. La higiene personal es esencial: un juicio no es el lugar
+            para parecer desarreglado o desatendido.
+          </p>
+        </ol>
+        <h2>Consideraciones Especiales para las Demandantes</h2>
+        <p>
+          Si eres una mujer que se enfrenta a un juicio, la vestimenta también
+          juega un papel crucial en cómo eres percibida. Al igual que con los
+          hombres, el objetivo es proyectar seriedad, confianza y
+          profesionalismo. Sin embargo, hay algunos puntos adicionales a tener
+          en cuenta:
+        </p>
+
+        <ol>
+          <li>Trajes de Falda o Pantalón</li>
+          <p>
+            Un traje de falda o pantalón es igualmente adecuado. Elige una falda
+            que no sea demasiado corta (idealmente, que llegue a la rodilla o un
+            poco más abajo). Evita las prendas ajustadas que puedan distraer la
+            atención del contenido de tu caso.
+          </p>
+
+          <li>Colores y Estilo</li>
+          <p>
+            Los colores clásicos como el negro, gris o azul marino son opciones
+            excelentes. Si bien es posible usar una prenda con un patrón
+            discreto, mantén un enfoque minimalista. Los tonos demasiado
+            brillantes o los patrones agresivos pueden ser percibidos como poco
+            profesionales en un entorno tan formal.
+          </p>
+          <li>Maquillaje y Peinado</li>
+          <p>
+            El maquillaje debe ser natural y sutil. Evita colores de labios
+            llamativos o un maquillaje demasiado recargado. El peinado debe ser
+            elegante, pero cómodo. Asegúrate de que tu cabello esté bien cuidado
+            y no interfiera con tu visión o tu comodidad durante el juicio.
+          </p>
+          <li>Joyería y Accesorios</li>
+          <p>
+            Al igual que los hombres, las mujeres deben evitar los accesorios
+            demasiado llamativos. Un par de pendientes discretos, una pulsera
+            simple y un reloj pueden ser suficientes. No olvides que menos es
+            más.
+          </p>
+        </ol>
+
+        <h2>El Contexto Cultural y Regional</h2>
+        <p>
+          Es importante tener en cuenta que, en algunos casos, los códigos de
+          vestimenta pueden variar dependiendo de la jurisdicción y del tribunal
+          específico. Algunas cortes pueden ser más flexibles, mientras que
+          otras, particularmente las federales, pueden tener expectativas más
+          estrictas sobre la vestimenta. Siempre es recomendable investigar o
+          consultar con colegas que tengan experiencia en la jurisdicción
+          específica para asegurarse de que la vestimenta esté acorde con las
+          normas locales.
+        </p>
+
+        <h2>Conclusión</h2>
+        <p>
+          En el ámbito legal, vestirse de manera apropiada no solo es una
+          cuestión de apariencia, sino también de estrategia. La vestimenta
+          adecuada puede aumentar la percepción de tu profesionalismo, ayudar a
+          generar respeto y confianza, y, en última instancia, contribuir al
+          éxito de tu caso. Si bien no es el único factor determinante en el
+          resultado de un juicio, un atuendo bien elegido puede marcar la
+          diferencia en cómo se recibe tu mensaje. La clave es siempre la
+          moderación: vestir con respeto, sin ser ni excesivamente formal ni
+          demasiado relajado, y siempre mantener un enfoque en la seriedad y la
+          profesionalidad.
+          <br />
+          <br />
+          Recuerda, como dijo una vez el célebre autor y filósofo William Shakespeare:
+          "La ropa hace al hombre". Y en el caso de un juicio, puede hacer más que
+          eso: puede ayudarte a ganar.
+        </p>
+      </div>
+    </section>
+    <RelatedBlogSection />
+  </main>
+  <CtaSection />
+  <Footer />
+</Layout>
+
+<style>
+  .container_blog p {
+    font-size: 1rem;
+    line-height: 2rem;
+    color: #4b5563;
+  }
+  .container_blog ol {
+    list-style-type: decimal;
+    padding-left: 2rem;
+  }
+  .container_blog li {
+    font-size: 1rem;
+    line-height: 2rem;
+    color: #1f2937;
+    margin-top: 1rem;
+    font-weight: 600;
+    letter-spacing: -0.025rem;
+  }
+  .container_blog h2 {
+    letter-spacing: -0.025rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 3rem;
+    color: #111827;
+    margin-top: 2rem;
+  }
+</style>

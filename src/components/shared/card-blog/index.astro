@@ -1,0 +1,79 @@
+---
+interface Props {
+  imageUrl: string;
+  date: string;
+  category: string;
+  title: string;
+  titleUrl: string;
+  description: string;
+  authorName: string;
+  authorImage: string;
+  authorRole: string;
+}
+
+const {
+  imageUrl,
+  date,
+  category,
+  title,
+  titleUrl,
+  description,
+  authorName,
+  authorImage,
+  authorRole,
+} = Astro.props;
+---
+
+<article
+  class="flex flex-col items-start justify-between bg-white shadow-sm overflow-hidden rounded-lg"
+>
+  <div class="relative w-full">
+    <img
+      src={imageUrl}
+      alt={title}
+      class="aspect-video w-full rounded-t-lg bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+    />
+    <div class="absolute inset-0 rounded-t-lg"></div>
+  </div>
+  <div class="max-w-xl px-4 pb-4">
+    <div class="mt-4 flex items-center gap-x-4 text-xs">
+      <time datetime={date} class="text-gray-500">
+        {date}
+      </time>
+      <span
+        class="relative block z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+      >
+        {category}
+      </span>
+    </div>
+    <div class="group relative">
+      <h3
+        class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600"
+      >
+        <a href={titleUrl}>
+          <span class="absolute inset-0"></span>
+          {title}
+        </a>
+      </h3>
+      <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">
+        {description}
+      </p>
+    </div>
+    <div class="relative mt-8 flex items-center gap-x-4">
+      <img
+        src={authorImage}
+        alt={authorName}
+        class="size-10 rounded-full bg-gray-100"
+      />
+      <div class="text-sm/6">
+        <p class="font-semibold text-gray-900">
+          <div>
+            <span class="absolute inset-0"></span>
+            {authorName}
+          </div>
+        </p>
+        <p class="text-gray-600">{authorRole}</p>
+      </div>
+    </div>
+  </div>
+</article>

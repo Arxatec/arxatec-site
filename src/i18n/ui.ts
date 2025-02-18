@@ -8,6 +8,48 @@ export const labels = {
     // Shared
     "shared.join": "Ingresar",
 
+    // Shared > 404
+    "shared.404.title": "Página no encontrada",
+    "shared.404.description":
+      "Lo sentimos, no pudimos encontrar la página que estás buscando.",
+    "shared.404.button": "Volver al inicio",
+
+    // Shared > Header
+    "shared.header.banner":
+      "Arxatec está en desarrollo y esta es tu oportunidad de ser parte de la revolución legal desde el inicio. Regístrate ahora con tu correo electrónico y accede antes que nadie a una plataforma innovadora diseñada para optimizar el trabajo de abogados y profesionales del derecho. Obtén acceso gratuito de por vida y descubre el futuro del mundo legal.",
+    "shared.header.option.product": "Producto",
+    "shared.header.option.plan": "Planes",
+    "shared.header.option.blog": "Blog",
+    "shared.header.option.support": "Soporte",
+    "shared.header.login": "Ingresar",
+    "shared.header.register": "Registrarse",
+
+    // Shared > Footer
+
+    "shared.footer.slogan":
+      "Tranformando los servicios legales, asesoría legal confiable y gestión eficiente de casos.",
+    "shared.footer.product": "Producto",
+    "shared.footer.product.1": "Comunidad",
+    "shared.footer.product.2": "Mensajes",
+    "shared.footer.product.3": "Gestión de casos",
+    "shared.footer.product.4": "Calendario",
+    "shared.footer.product.5": "Pagos en línea",
+
+    "shared.footer.support": "Soporte",
+    "shared.footer.support.1": "Soporte",
+    "shared.footer.support.2": "Preguntas frecuentes",
+    "shared.footer.support.3": "Guía",
+
+    "shared.footer.company": "Compañia",
+    "shared.footer.company.1": "Acerca",
+    "shared.footer.company.2": "Blog",
+
+    "shared.footer.legal": "Legal",
+    "shared.footer.legal.1": "Términos y condiciones",
+    "shared.footer.legal.2": "Poolítica de privacidad",
+
+    "shared.footer.copyright": "2024 Arxatec. Todos los derechos reservados",
+
     // Home > Hero section
     "home.hero.tag": "La plataforma que revoluciona el mundo legal",
     "home.hero.title": "Conecta clientes y abogados en un solo lugar",
@@ -164,10 +206,63 @@ export const labels = {
       "Mantente al día con las últimas tendencias legales, análisis de casos, tecnología aplicada al derecho y consejos para abogados. En nuestro blog encontrarás artículos detallados que te ayudarán a mejorar tu práctica, optimizar tu trabajo y entender cómo la inteligencia artificial está transformando el mundo legal.",
 
     // Home > CTA sections
+
+    "home.cta.title": "Mantente un paso adelante",
+    "home.cta.description":
+      "Suscríbete a nuestro newsletter y recibe las últimas novedades, actualizaciones directamente en tu correo.",
+    "home.cta.input.placeholder": "Ingresa tu correo electrónico",
+    "home.cta.highContent.title": "Contenido valioso",
+    "home.cta.highContent.description":
+      "Sé el primero en enterarte cuando nuestra plataforma esté lista.",
+    "home.cta.noSpam.title": "No spam",
+    "home.cta.noSpam.description":
+      "Sin spam, solo información que realmente importa.",
   },
   en: {
     // Shared
     "shared.join": "Join",
+
+    // Shared > 404
+    "shared.404.title": "Page not found",
+    "shared.404.description":
+      "Sorry, we couldn’t find the page you’re looking for.",
+    "shared.404.button": "Back to home",
+
+    // Shared > Header
+    "shared.header.banner":
+      "Arxatec is in development, and this is your chance to be part of the legal revolution from the very beginning. Sign up now with your email and get early access to an innovative platform designed to optimize the work of lawyers and legal professionals. Enjoy lifetime free access and discover the future of the legal world.",
+    "shared.header.option.product": "Product",
+    "shared.header.option.plan": "Plans",
+    "shared.header.option.blog": "Blog",
+    "shared.header.option.support": "Support",
+    "shared.header.login": "Login",
+    "shared.header.register": "Register",
+
+    // Shared > Footer
+
+    "shared.footer.slogan":
+      "Transforming legal services, reliable legal advice, and efficient case management.",
+    "shared.footer.product": "Product",
+    "shared.footer.product.1": "Community",
+    "shared.footer.product.2": "Messages",
+    "shared.footer.product.3": "Case Management",
+    "shared.footer.product.4": "Calendar",
+    "shared.footer.product.5": "Online Payments",
+
+    "shared.footer.support": "Support",
+    "shared.footer.support.1": "Support",
+    "shared.footer.support.2": "Frequently Asked Questions",
+    "shared.footer.support.3": "Guide",
+
+    "shared.footer.company": "Company",
+    "shared.footer.company.1": "About",
+    "shared.footer.company.2": "Blog",
+
+    "shared.footer.legal": "Legal",
+    "shared.footer.legal.1": "Terms and Conditions",
+    "shared.footer.legal.2": "Privacy Policy",
+
+    "shared.footer.copyright": "2024 Arxatec. All rights reserved.",
 
     // Home > Hero section
     "home.hero.tag": "The platform that revolutionizes the legal world",
@@ -323,5 +418,18 @@ export const labels = {
     "home.blog.title": "Explore the Future of Law",
     "home.blog.description":
       "Stay up to date with the latest legal trends, case analysis, law-related technology, and tips for lawyers. In our blog, you'll find in-depth articles to help you improve your practice, optimize your work, and understand how artificial intelligence is transforming the legal world.",
+
+    // Home > CTA sections
+
+    "home.cta.title": "Stay One Step Ahead",
+    "home.cta.description":
+      "Subscribe to our newsletter and receive the latest news and updates directly in your inbox.",
+    "home.cta.input.placeholder": "Enter your email address",
+    "home.cta.highContent.title": "Valuable Content",
+    "home.cta.highContent.description":
+      "Be the first to know when our platform is ready.",
+    "home.cta.noSpam.title": "No Spam",
+    "home.cta.noSpam.description":
+      "No spam, just information that truly matters.",
   },
 };

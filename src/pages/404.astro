@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { languageList, useTranslations } from "../i18n/";
+const currentLang = Astro.currentLocale || "es";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList
+);
+---
+
+<Layout title="Error 404 - Arxatec">
+  <main class="p-2 h-screen w-full" style="height: 100vh">
+    <div
+      class="relative h-full flex items-center justify-center overflow-hidden rounded-md"
+    >
+      <div class="w-full">
+        <img
+          src="https://images.pexels.com/photos/7876093/pexels-photo-7876093.jpeg"
+          alt=""
+          class="absolute top-0 left-0 -z-10 w-full h-full object-cover"
+        />
+        <div
+          class="w-full h-full bg-black/55 z-10 absolute top-0 left-0 backdrop-blur-sm"
+        >
+        </div>
+        <div
+          class="mx-auto max-w-7xl px-6 py-32 text-center sm:py-40 lg:px-8 relative z-20"
+        >
+          <p class="text-base/8 font-semibold text-white">404</p>
+          <h1
+            class="mt-4 text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl"
+          >
+            {translateLabels("shared.404.title")}
+          </h1>
+          <p
+            class="mt-6 text-lg font-medium text-pretty text-white/70 sm:text-xl/8"
+          >
+            {translateLabels("shared.404.description")}
+          </p>
+          <div class="mt-10 flex justify-center">
+            <a
+              href={getRelativeLocaleUrl(currentLang, "/")}
+              class="text-sm/7 font-semibold text-white hover:bg-white/25 px-4 py-2 transition-all rounded-md"
+              ><span aria-hidden="true">&larr;</span>
+              {translateLabels("shared.404.button")}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

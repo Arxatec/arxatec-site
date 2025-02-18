@@ -1,5 +1,12 @@
 ---
 import logo from "../../../../assets/logo.png";
+
+import { languageList, useTranslations } from "../../../../i18n/";
+const currentLang = Astro.currentLocale || "es";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList
+);
 ---
 
 <footer class="bg-white">
@@ -8,92 +15,99 @@ import logo from "../../../../assets/logo.png";
       <div>
         <img class="h-9" src={logo.src} alt="Arxatec" />
         <p class="text-sm mt-4 text-gray-700 max-w-72">
-          Tranformando los servicios legales, asesoría legal confiable y gestión
-          eficiente de casos.
+          {translateLabels("shared.footer.slogan")}
         </p>
       </div>
 
       <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
         <div class="md:grid md:grid-cols-2 md:gap-8">
           <div>
-            <h3 class="text-sm/6 font-semibold text-gray-900">Producto</h3>
+            <h3 class="text-sm/6 font-semibold text-gray-900">
+              {translateLabels("shared.footer.product")}
+            </h3>
             <ul role="list" class="mt-6 space-y-4">
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900"
-                  >Comunidad</a
-                >
+                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                  {translateLabels("shared.footer.product.1")}
+                </a>
               </li>
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900"
-                  >Mensajes</a
-                >
+                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                  {translateLabels("shared.footer.product.2")}
+                </a>
               </li>
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900"
-                  >Gestión de casos</a
-                >
+                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                  {translateLabels("shared.footer.product.3")}
+                </a>
               </li>
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900"
-                  >Calendario</a
-                >
+                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                  {translateLabels("shared.footer.product.4")}
+                </a>
               </li>
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900"
-                  >Pagos en línea</a
-                >
+                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                  {translateLabels("shared.footer.product.5")}
+                </a>
               </li>
             </ul>
           </div>
           <div class="mt-10 md:mt-0">
-            <h3 class="text-sm/6 font-semibold text-gray-900">Soporte</h3>
+            <h3 class="text-sm/6 font-semibold text-gray-900">
+              {translateLabels("shared.footer.support")}
+            </h3>
             <ul role="list" class="mt-6 space-y-4">
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900"
-                  >Soporte</a
-                >
+                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                  {translateLabels("shared.footer.support.1")}
+                </a>
               </li>
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900"
-                  >Preguntas frecuentes</a
-                >
+                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                  {translateLabels("shared.footer.support.2")}
+                </a>
               </li>
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900"
-                  >Guia</a
-                >
+                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                  {translateLabels("shared.footer.support.3")}
+                </a>
               </li>
             </ul>
           </div>
         </div>
         <div class="md:grid md:grid-cols-2 md:gap-8">
           <div>
-            <h3 class="text-sm/6 font-semibold text-gray-900">Compañía</h3>
+            <h3 class="text-sm/6 font-semibold text-gray-900">
+              {translateLabels("shared.footer.company")}
+            </h3>
             <ul role="list" class="mt-6 space-y-4">
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900"
-                  >Acerca</a
-                >
+                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                  {translateLabels("shared.footer.company.1")}
+                </a>
               </li>
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900"
-                  >Blog</a
-                >
+                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                  {translateLabels("shared.footer.company.2")}
+                </a>
               </li>
             </ul>
           </div>
           <div class="mt-10 md:mt-0">
-            <h3 class="text-sm/6 font-semibold text-gray-900">Legal</h3>
+            <h3 class="text-sm/6 font-semibold text-gray-900">
+              {translateLabels("shared.footer.legal")}
+            </h3>
             <ul role="list" class="mt-6 space-y-4">
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900"
-                  >Términos y condiciones</a
-                >
+                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                  {translateLabels("shared.footer.legal.1")}
+                </a>
               </li>
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900"
-                  >Política de privacidad</a
-                >
+                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                  {translateLabels("shared.footer.legal.2")}
+                </a>
               </li>
             </ul>
           </div>
@@ -176,7 +190,7 @@ import logo from "../../../../assets/logo.png";
         </a>
       </div>
       <p class="mt-8 text-sm/6 text-gray-600 md:order-1 md:mt-0">
-        &copy; 2024 Arxatec, Inc. Todos los derechos reservados
+        {translateLabels("shared.footer.copyright")}
       </p>
     </div>
   </div>

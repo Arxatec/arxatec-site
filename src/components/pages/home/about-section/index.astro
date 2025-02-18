@@ -4,6 +4,7 @@ import LockClosed from "astro-heroicons/solid/LockClosed.astro";
 import ChartBar from "astro-heroicons/solid/ChartBar.astro";
 import Users from "astro-heroicons/solid/Users.astro";
 import Bolt from "astro-heroicons/solid/Bolt.astro";
+import VideoPlayer from "./video-player.astro";
 import { languageList, useTranslations } from "../../../../i18n/";
 const currentLang = Astro.currentLocale || "es";
 
@@ -108,10 +109,46 @@ const highlights = [
         <button
           class="bg-white/20 backdrop-blur-sm rounded-full flex p-6 items-center justify-center"
           aria-label="button"
+          id="openModal"
         >
           <Play class="size-10 text-white" />
         </button>
       </div>
     </div>
+
+    <div
+      class="w-screen top-0 left-0 h-screen bg-black/50 fixed z-50"
+      style="display: none;"
+      id="modal"
+    >
+      <VideoPlayer client:load />
+    </div>
   </div>
 </div>
+
+<script>
+  const modal = document.getElementById("modal");
+  const openModalButton = document.getElementById("openModal");
+  const closeModalButton = document.getElementById("close");
+
+  if (openModalButton != null && modal != null) {
+    openModalButton.addEventListener("click", () => {
+      console.log(modal);
+      modal.style.display = "block";
+    });
+  }
+
+  if (closeModalButton != null && modal != null) {
+    closeModalButton.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+  }
+
+  if (modal !== null) {
+    window.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  }
+</script>

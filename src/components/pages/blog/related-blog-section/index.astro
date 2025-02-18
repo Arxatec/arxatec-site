@@ -59,41 +59,38 @@ const posts = [
 ];
 ---
 
-<div class="py-24 sm:py-32">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="bg-white rounded-xl shadow-sm overflow-hidden p-6">
-      <h2 class="text-base/7 font-semibold text-blue-600 text-left">
-        {translateLabels("home.blog.tag")}
-      </h2>
-      <p
-        class="mt-2 max-w-lg text-pretty text-4xl font-semibold tracking-tight text-gray-950 text-left"
-      >
-        {translateLabels("home.blog.title")}
-      </p>
-      <p
-        class="mt-6 max-w-2xl text-pretty text-left text-base font-medium text-gray-600"
-      >
-        {translateLabels("home.blog.description")}
-      </p>
-    </div>
-    <div
-      class="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-2 gap-y-2 lg:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+<div class="mt-2">
+  <div
+    class="bg-white rounded-xl shadow-sm overflow-hidden p-6 flex items-center justify-between"
+  >
+    <p
+      class="mt-2 max-w-lg text-pretty text-3xl font-semibold tracking-tight text-gray-950 text-left"
     >
-      {
-        posts.map((post) => (
-          <CardBlog
-            imageUrl={post.image}
-            date={post.date}
-            category={post.category}
-            title={post.title}
-            titleUrl={post.link}
-            description={post.description}
-            authorName={post.author.name}
-            authorImage={post.author.avatar}
-            authorRole={post.author.role}
-          />
-        ))
-      }
-    </div>
+      Articulos Relacionados
+    </p>
+    <a
+      href=""
+      class="text-blue-600 text-sm font-semibold px-6 py-2 block hover:bg-blue-100 rounded-md transition-all"
+      >Ver más</a
+    >
+  </div>
+  <div
+    class="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-2 gap-y-2 lg:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+  >
+    {
+      posts.map((post) => (
+        <CardBlog
+          imageUrl={post.image}
+          date={post.date}
+          category={post.category}
+          title={post.title}
+          titleUrl={post.link}
+          description={post.description}
+          authorName={post.author.name}
+          authorImage={post.author.avatar}
+          authorRole={post.author.role}
+        />
+      ))
+    }
   </div>
 </div>
