@@ -85,15 +85,13 @@ const Header = ({ headerProps }) => {
     setNavLinks([
       {
         name: headerProps.nav.product,
-        href: "#",
-        action: (val) => toggleOpenProducts(val),
-        active: openProducts,
+        href: headerProps.nav.productUrl,
       },
-      { name: headerProps.nav.plan, href: "#" },
-      { name: headerProps.nav.blog, href: "#" },
-      { name: headerProps.nav.support, href: "#" },
+      { name: headerProps.nav.plan, href: headerProps.nav.planUrl },
+      { name: headerProps.nav.blog, href: headerProps.nav.blogUrl },
+      { name: headerProps.nav.support, href: headerProps.nav.supportUrl },
     ]);
-  }, [openProducts]);
+  }, []);
   return (
     <>
       <header className="fixed top-0 w-full z-50">

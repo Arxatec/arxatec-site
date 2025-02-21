@@ -2,6 +2,7 @@
 import { languageList, useTranslations } from "../../../../i18n/";
 const currentLang = Astro.currentLocale || "es";
 import CardBlog from "../../../shared/card-blog/index.astro";
+import ChevronDown from "astro-heroicons/outline/ChevronDown.astro";
 
 const translateLabels = useTranslations(
   currentLang as keyof typeof languageList
@@ -217,6 +218,60 @@ const posts = [
         Mantente al día con las últimas tendencias legales, análisis de casos,
         tecnología aplicada al derecho y consejos para abogados.
       </p>
+      <div class="mt-8 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <button
+            class="px-4 py-1.5 bg-gray-100 rounded-md font-medium text-gray-900 text-sm"
+          >
+            Todos
+          </button>
+          <button
+            class="px-4 py-1.5 rounded-md font-medium text-gray-900 text-sm hover:bg-gray-100 transition-all"
+          >
+            Laboral
+          </button>
+          <button
+            class="px-4 py-1.5 rounded-md font-medium text-gray-900 text-sm hover:bg-gray-100 transition-all"
+          >
+            Civil
+          </button>
+          <button
+            class="px-4 py-1.5 rounded-md font-medium text-gray-900 text-sm hover:bg-gray-100 transition-all"
+          >
+            Empresarial
+          </button>
+          <button
+            class="px-4 py-1.5 rounded-md font-medium text-gray-900 text-sm hover:bg-gray-100 transition-all"
+          >
+            Penal
+          </button>
+          <button
+            class="px-4 py-1.5 rounded-md font-medium text-gray-900 text-sm hover:bg-gray-100 transition-all"
+          >
+            Tecnológico
+          </button>
+        </div>
+        <div class="flex items-center gap-2">
+          <p class="text-sm text-gray-900">Ordenar por:</p>
+          <div class="mt-2 grid grid-cols-1">
+            <select
+              id="location"
+              name="location"
+              class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pl-3 pr-8 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6"
+            >
+              <option>Más reciente</option>
+              <option>Más popular</option>
+              <option>Alfabético</option>
+              <option>Relevancia</option>
+            </select>
+
+            <ChevronDown
+              class="pointer-events-none col-start-1 row-start-1 mr-2 size-3 self-center justify-self-end text-gray-500 sm:size-3"
+              stroke-width={3}
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <div
       class="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-2 gap-y-2 lg:gap-y-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"

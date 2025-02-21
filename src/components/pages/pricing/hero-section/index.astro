@@ -1,0 +1,38 @@
+---
+import { languageList, useTranslations } from "../../../../i18n/";
+import MagnifyingGlass from "astro-heroicons/outline/MagnifyingGlass.astro";
+const currentLang = Astro.currentLocale || "es";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList
+);
+---
+
+<section class="p-4 relative z-10">
+  <div
+    class="relative w-full h-auto overflow-hidden rounded-lg flex items-end justify-center"
+  >
+    <img
+      src="https://images.pexels.com/photos/7875996/pexels-photo-7875996.jpeg"
+      alt="Un abogado en su oficina"
+      class="w-full h-full object-cover absolute z-[-1] top-0 left-0 overflow-hidden object-center"
+      loading="lazy"
+    />
+    <div class="w-full h-full absolute inset-0 bg-black/70" aria-hidden="true">
+    </div>
+    <div
+      class="relative z-20 w-full max-w-7xl mx-auto py-44 px-6 lg:px-8 flex items-end justify-between"
+    >
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-4xl text-white font-bold mt-8 text-center">
+          Tu solución legal al mejor precio
+        </h2>
+        <p class="text-lg text-white/60 mt-4 text-center">
+          Conectamos clientes con abogados de forma fácil y transparente.
+          Encuentra asesoría legal o amplía tu alcance profesional con planes
+          diseñados para ajustarse a tus necesidades.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
