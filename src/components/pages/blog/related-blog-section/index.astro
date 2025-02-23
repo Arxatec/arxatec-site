@@ -4,7 +4,7 @@ const currentLang = Astro.currentLocale || "es";
 import CardBlog from "../../../shared/card-blog/index.astro";
 
 const translateLabels = useTranslations(
-  currentLang as keyof typeof languageList
+  currentLang as keyof typeof languageList,
 );
 
 const posts = [
@@ -66,13 +66,14 @@ const posts = [
     <p
       class="mt-2 max-w-lg text-pretty text-3xl font-semibold tracking-tight text-gray-950 text-left"
     >
-      Articulos Relacionados
+      {translateLabels("blog.read.related")}
     </p>
     <a
       href=""
       class="text-blue-600 text-sm font-semibold px-6 py-2 block hover:bg-blue-100 rounded-md transition-all"
-      >Ver más</a
     >
+      {translateLabels("blog.read.related.button")}
+    </a>
   </div>
   <div
     class="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-2 gap-y-2 lg:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"

@@ -5,6 +5,7 @@ import CtaSection from "../../../components/pages/shared/cta-section/index.astro
 import RelatedBlogSection from "../../../components/pages/blog/related-blog-section/index.astro";
 import Layout from "../../../layouts/Layout.astro";
 import ArrowLeft from "astro-heroicons/outline/ArrowLeft.astro";
+import { languageList, useTranslations } from "../../../i18n";
 
 // TODO: implement blog and slugs then i have the endpoint
 // TODO: forget summary and and relatios articles in aside element
@@ -46,6 +47,12 @@ const post = posts.find((p) => p.slug === slug);
 if (!post) {
   throw new Error(`No se encontró el post: ${slug}`);
 }
+
+const currentLang = Astro.currentLocale || "es";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList,
+);
 ---
 
 <Layout title="Blog - Arxatec">
@@ -56,7 +63,7 @@ if (!post) {
         class="mb-5 text-gray-700 font-medium flex items-center gap-2 transition-all hover:bg-gray-100 rounded-md px-4 py-2"
       >
         <ArrowLeft class="size-4" stroke-width={2} />
-        Volver
+        {translateLabels("blog.read.back")}
       </button>
       <p
         class="text-gray-900 text-4xl font-bold tracking-tight text-left capitalize"

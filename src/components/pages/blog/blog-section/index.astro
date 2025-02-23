@@ -5,7 +5,7 @@ import CardBlog from "../../../shared/card-blog/index.astro";
 import ChevronDown from "astro-heroicons/outline/ChevronDown.astro";
 
 const translateLabels = useTranslations(
-  currentLang as keyof typeof languageList
+  currentLang as keyof typeof languageList,
 );
 
 const posts = [
@@ -210,59 +210,71 @@ const posts = [
       <p
         class="mt-2 max-w-lg text-pretty text-4xl font-semibold tracking-tight text-gray-950 text-left"
       >
-        Nuestro blog
+        {translateLabels("blog.blog.title")}
       </p>
       <p
         class="mt-6 max-w-2xl text-pretty text-left text-base font-medium text-gray-600"
       >
-        Mantente al día con las últimas tendencias legales, análisis de casos,
-        tecnología aplicada al derecho y consejos para abogados.
+        {translateLabels("blog.blog.description")}
       </p>
       <div class="mt-8 flex items-center justify-between">
         <div class="flex items-center gap-2">
           <button
             class="px-4 py-1.5 bg-gray-100 rounded-md font-medium text-gray-900 text-sm"
           >
-            Todos
+            {translateLabels("blog.blog.category.1")}
           </button>
           <button
             class="px-4 py-1.5 rounded-md font-medium text-gray-900 text-sm hover:bg-gray-100 transition-all"
           >
-            Laboral
+            {translateLabels("blog.blog.category.2")}
           </button>
           <button
             class="px-4 py-1.5 rounded-md font-medium text-gray-900 text-sm hover:bg-gray-100 transition-all"
           >
-            Civil
+            {translateLabels("blog.blog.category.3")}
           </button>
           <button
             class="px-4 py-1.5 rounded-md font-medium text-gray-900 text-sm hover:bg-gray-100 transition-all"
           >
-            Empresarial
+            {translateLabels("blog.blog.category.4")}
           </button>
           <button
             class="px-4 py-1.5 rounded-md font-medium text-gray-900 text-sm hover:bg-gray-100 transition-all"
           >
-            Penal
+            {translateLabels("blog.blog.category.5")}
           </button>
           <button
             class="px-4 py-1.5 rounded-md font-medium text-gray-900 text-sm hover:bg-gray-100 transition-all"
           >
-            Tecnológico
+            {translateLabels("blog.blog.category.6")}
           </button>
         </div>
         <div class="flex items-center gap-2">
-          <p class="text-sm text-gray-900">Ordenar por:</p>
+          <p class="text-sm text-gray-900">
+            {translateLabels("blog.blog.order.title")}
+          </p>
           <div class="mt-2 grid grid-cols-1">
             <select
               id="location"
               name="location"
               class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pl-3 pr-8 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6"
             >
-              <option>Más reciente</option>
-              <option>Más popular</option>
-              <option>Alfabético</option>
-              <option>Relevancia</option>
+              <option>
+                {translateLabels("blog.blog.order.recent")}
+              </option>
+              <option>
+                {translateLabels("blog.blog.order.popular")}
+              </option>
+              <option>
+                {translateLabels("blog.blog.order.recommended")}
+              </option>
+              <option>
+                {translateLabels("blog.blog.order.relevance")}
+              </option>
+              <option>
+                {translateLabels("blog.blog.order.alphabetic")}
+              </option>
             </select>
 
             <ChevronDown
@@ -299,26 +311,28 @@ const posts = [
     >
       <div class="hidden sm:block">
         <p class="text-sm text-gray-700">
-          Showing
+          {translateLabels("blog.blog.pagination.show")}
           <span class="font-medium">1</span>
-          to
+          {translateLabels("blog.blog.pagination.show.to")}
           <span class="font-medium">10</span>
-          of
+          {translateLabels("blog.blog.pagination.show.of")}
           <span class="font-medium">20</span>
-          results
+          {translateLabels("blog.blog.pagination.results")}
         </p>
       </div>
       <div class="flex flex-1 justify-between sm:justify-end">
         <a
           href="#"
           class="relative inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus-visible:outline-offset-0"
-          >Previous</a
         >
+          {translateLabels("blog.blog.pagination.back")}
+        </a>
         <a
           href="#"
           class="relative ml-3 inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus-visible:outline-offset-0"
-          >Next</a
         >
+          {translateLabels("blog.blog.pagination.next")}
+        </a>
       </div>
     </nav>
   </div>

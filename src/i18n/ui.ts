@@ -217,6 +217,88 @@ export const labels = {
     "home.cta.noSpam.title": "No spam",
     "home.cta.noSpam.description":
       "Sin spam, solo información que realmente importa.",
+
+    // Blog > Blog section
+    "blog.blog.title": "Nuestro blog",
+    "blog.blog.description":
+      "Descubre nuestro blog y encuentra artículos detallados que te ayudarán a mejorar tu práctica, optimizar tu trabajo y entender cómo la inteligencia artificial está transformando el mundo legal.",
+    "blog.blog.order.title": "Ordenar por: ",
+    "blog.blog.order.recent": "Más reciente",
+    "blog.blog.order.popular": "Más popular",
+    "blog.blog.order.recommended": "Recomendado",
+    "blog.blog.order.relevance": "Artículos recomendados para ti",
+    "blog.blog.order.alphabetic": "Alfabético",
+
+    "blog.blog.category.1": "Todos",
+    "blog.blog.category.2": "Laboral",
+    "blog.blog.category.3": "Civil",
+    "blog.blog.category.4": "Empresarial",
+    "blog.blog.category.5": "Penal",
+    "blog.blog.category.6": "Tecnológico",
+
+    "blog.blog.pagination.show": "Mostrando",
+    "blog.blog.pagination.show.to": "de",
+    "blog.blog.pagination.show.of": "de",
+    "blog.blog.pagination.results": "resultados",
+    "blog.blog.pagination.next": "Siguiente",
+    "blog.blog.pagination.back": "Anterior",
+
+    // Blog > Read blog section
+    "blog.read.back": "Volver",
+    "blog.read.related": "Artículos relacionados",
+    "blog.read.related.button": "Ver más",
+
+    // Support > Hero section
+    "support.hero.title": "Tu tranquilidad, nuestra prioridad.",
+    "support.hero.description":
+      "¿Tienes dudas? No te preocupes, tenemos soluciones. Explora nuestras guías, contacta con nuestro equipo y sigue adelante sin complicaciones.",
+    "support.hero.input.placeholder": "Ingresa tu pregunta aquí...",
+
+    // Support > Contact section
+    "support.contact.title": "Contacto de soporte",
+    "support.contact.description":
+      "Si necesitas asistencia, no dudes en ponerte en contacto con nuestro equipo de soporte, que estará encantado de ayudarte.",
+
+    "support.contact.form.name.label": "Nombre",
+    "support.contact.form.name.placeholder": "Ej. Juan",
+
+    "support.contact.form.lastname.label": "Apellido",
+    "support.contact.form.lastname.placeholder": "Ej. Pérez",
+
+    "support.contact.form.email.label": "Correo electrónico",
+    "support.contact.form.email.placeholder": "Ej. juan.perez@example.com",
+
+    "support.contact.form.phone.label": "Teléfono",
+    "support.contact.form.phone.placeholder": "Ej. +54 9 11 1234 5678",
+
+    "support.contact.form.country.label": "País",
+    "support.contact.form.country.placeholder": "Ej. Argentina",
+
+    "support.contact.form.subject.label": "Asunto",
+    "support.contact.form.subject.placeholder": "Ej. Problema con el servicio",
+
+    "support.contact.form.message.label": "Mensaje",
+    "support.contact.form.message.placeholder": "Escribe aquí tu mensaje...",
+
+    "support.contact.form.button": "Enviar",
+    "support.contact.form.message.legal":
+      "Al enviar este formulario, aceptas nuestras condiciones legales. ",
+
+    "support.contact.info.mail.title": "Convesar sobre ventas",
+    "support.contact.info.mail.description":
+      "Si tienes alguna pregunta sobre nuestros productos o servicios, ponte en contacto con nuestro equipo de ventas.",
+
+    "support.contact.info.chat.title": "Soporte por chat",
+    "support.contact.info.chat.description":
+      "Chat con nuestro equipo de soporte para obtener ayuda y soluciones rápidas.",
+
+    "support.contact.info.phone.title": "Llamanos",
+    "support.contact.info.phone.description":
+      "Visita nuestro línea de lunes a viernes, 9:00AM - 18:00PM.",
+
+    "support.contact.info.location.title": "Nuestras oficinas",
+    "support.contact.info.location.description":
+      "Visita nuestras oficinas de lunes a viernes, 9:00AM - 18:00PM.",
   },
   en: {
     // Shared
@@ -431,5 +513,87 @@ export const labels = {
     "home.cta.noSpam.title": "No Spam",
     "home.cta.noSpam.description":
       "No spam, just information that truly matters.",
+
+    // Blog > Blog section
+    "blog.blog.title": "Our blog",
+    "blog.blog.description":
+      "Discover our blog and find detailed articles that will help you improve your practice, optimize your work, and understand how artificial intelligence is transforming the legal world.",
+    "blog.blog.order.title": "Sort by: ",
+    "blog.blog.order.recent": "Most recent",
+    "blog.blog.order.popular": "Most popular",
+    "blog.blog.order.recommended": "Recommended",
+    "blog.blog.order.relevance": "Recommended articles for you",
+    "blog.blog.order.alphabetic": "Alphabetical",
+
+    "blog.blog.category.1": "All",
+    "blog.blog.category.2": "Labor",
+    "blog.blog.category.3": "Civil",
+    "blog.blog.category.4": "Business",
+    "blog.blog.category.5": "Criminal",
+    "blog.blog.category.6": "Technological",
+
+    "blog.blog.pagination.show": "Showing",
+    "blog.blog.pagination.show.to": "to",
+    "blog.blog.pagination.show.of": "of",
+    "blog.blog.pagination.results": "results",
+    "blog.blog.pagination.next": "Next",
+    "blog.blog.pagination.back": "Previous",
+
+    // Blog > Read blog section
+    "blog.read.back": "Back",
+    "blog.read.related": "Related articles",
+    "blog.read.related.button": "See more",
+
+    // Support > Hero section
+    "support.hero.title": "Your peace of mind, our priority.",
+    "support.hero.description":
+      "Have questions? Don't worry, we have solutions. Explore our guides, contact our team, and move forward without complications.",
+    "support.hero.input.placeholder": "Enter your question here...",
+
+    // Support > Contact section
+    "support.contact.title": "Support contact",
+    "support.contact.description":
+      "If you need assistance, do not hesitate to contact our support team, who will be happy to help you.",
+
+    "support.contact.form.name.label": "Name",
+    "support.contact.form.name.placeholder": "E.g. John",
+
+    "support.contact.form.lastname.label": "Last name",
+    "support.contact.form.lastname.placeholder": "E.g. Doe",
+
+    "support.contact.form.email.label": "Email",
+    "support.contact.form.email.placeholder": "E.g. john.doe@example.com",
+
+    "support.contact.form.phone.label": "Phone",
+    "support.contact.form.phone.placeholder": "E.g. +1 555 123 4567",
+
+    "support.contact.form.country.label": "Country",
+    "support.contact.form.country.placeholder": "E.g. United States",
+
+    "support.contact.form.subject.label": "Subject",
+    "support.contact.form.subject.placeholder": "E.g. Issue with the service",
+
+    "support.contact.form.message.label": "Message",
+    "support.contact.form.message.placeholder": "Write your message here...",
+
+    "support.contact.form.button": "Send",
+    "support.contact.form.message.legal":
+      "By submitting this form, you accept our legal terms.",
+
+    "support.contact.info.mail.title": "Talk about sales",
+    "support.contact.info.mail.description":
+      "If you have any questions about our products or services, contact our sales team.",
+
+    "support.contact.info.chat.title": "Chat support",
+    "support.contact.info.chat.description":
+      "Chat with our support team for quick help and solutions.",
+
+    "support.contact.info.phone.title": "Call us",
+    "support.contact.info.phone.description":
+      "Visit our phone line Monday to Friday, 9:00 AM - 6:00 PM.",
+
+    "support.contact.info.location.title": "Our offices",
+    "support.contact.info.location.description":
+      "Visit our offices Monday to Friday, 9:00 AM - 6:00 PM.",
   },
 };
