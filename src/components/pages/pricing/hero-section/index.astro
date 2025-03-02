@@ -1,10 +1,9 @@
 ---
 import { languageList, useTranslations } from "../../../../i18n/";
-import MagnifyingGlass from "astro-heroicons/outline/MagnifyingGlass.astro";
 const currentLang = Astro.currentLocale || "es";
 
 const translateLabels = useTranslations(
-  currentLang as keyof typeof languageList
+  currentLang as keyof typeof languageList,
 );
 ---
 
@@ -25,12 +24,10 @@ const translateLabels = useTranslations(
     >
       <div class="max-w-2xl mx-auto">
         <h2 class="text-4xl text-white font-bold mt-8 text-center">
-          Tu solución legal al mejor precio
+          {translateLabels("pricing.hero.title")}
         </h2>
         <p class="text-lg text-white/60 mt-4 text-center">
-          Conectamos clientes con abogados de forma fácil y transparente.
-          Encuentra asesoría legal o amplía tu alcance profesional con planes
-          diseñados para ajustarse a tus necesidades.
+          {translateLabels("pricing.hero.description")}
         </p>
       </div>
     </div>

@@ -284,13 +284,14 @@ export const labels = {
     "support.contact.form.message.legal":
       "Al enviar este formulario, aceptas nuestras condiciones legales. ",
 
-    "support.contact.info.mail.title": "Convesar sobre ventas",
-    "support.contact.info.mail.description":
+    "support.contact.info.email.title": "Convesar sobre ventas",
+    "support.contact.info.email.description":
       "Si tienes alguna pregunta sobre nuestros productos o servicios, ponte en contacto con nuestro equipo de ventas.",
 
     "support.contact.info.chat.title": "Soporte por chat",
     "support.contact.info.chat.description":
       "Chat con nuestro equipo de soporte para obtener ayuda y soluciones rápidas.",
+    "support.contact.info.chat.button": "Iniciar chat en vivo",
 
     "support.contact.info.phone.title": "Llamanos",
     "support.contact.info.phone.description":
@@ -299,6 +300,54 @@ export const labels = {
     "support.contact.info.location.title": "Nuestras oficinas",
     "support.contact.info.location.description":
       "Visita nuestras oficinas de lunes a viernes, 9:00AM - 18:00PM.",
+
+    // Pricing > Hero section
+    "pricing.hero.title": "Tu solución legal al mejor precio",
+    "pricing.hero.description":
+      "Conectamos clientes con abogados de forma fácil y transparente. Encuentra asesoría legal o amplía tu alcance profesional con planes diseñados para ajustarse a tus necesidades.",
+
+    // Pricing > List pricing section
+    "pricing.list.product.title": "Herramientas",
+    "pricing.list.product.features.1": "Gestion de casos",
+    "pricing.list.product.features.2": "Pagos y finanzas",
+    "pricing.list.product.features.3": "Calendario",
+    "pricing.list.product.features.4": "Comunidad",
+    "pricing.list.product.features.5": "Mensajes",
+    "pricing.list.product.features.6": "Integración con IA",
+
+    "pricing.list.management.title": "Gestión y Organización",
+    "pricing.list.management.features.1": "Calendario de citas",
+    "pricing.list.management.features.2": "Gestión de reuniones virtuales",
+    "pricing.list.management.features.3": "Recordatorios automáticos de citas",
+    "pricing.list.management.features.4": "Historial de consultas organizadas",
+
+    "pricing.list.messaging.title": "Mensajes",
+    "pricing.list.messaging.features.1": "Chat con abogados en tiempo real",
+    "pricing.list.messaging.features.2": "Asistencia automatizada con IA legal",
+    "pricing.list.messaging.features.3":
+      "Historial de conversaciones almacenado",
+
+    "pricing.list.cases.title": "Gestión de Casos",
+    "pricing.list.cases.features.1": "Creación y seguimiento de casos",
+    "pricing.list.cases.features.2": "Acceso a documentos y contratos",
+    "pricing.list.cases.features.3":
+      "Generación automática de resúmenes de casos",
+    "pricing.list.cases.features.4": "Colaboración en tiempo real con abogados",
+
+    "pricing.list.community.title": "Comunidad y Aprendizaje",
+    "pricing.list.community.features.1": "Acceso a foros de discusión legales",
+    "pricing.list.community.features.2":
+      "Publicaciones y contenido geneado por expertos",
+    "pricing.list.community.features.3": "Webinars y eventos exclusivos",
+    "pricing.list.community.features.4": "Cursos y materiales de aprendizaje ",
+
+    "pricing.list.payments.title": "Pagos y Contrataciones",
+    "pricing.list.payments.features.1": "Pago seguro dentro de la plataforma",
+    "pricing.list.payments.features.2":
+      "Facturación automática y seguimiento de pagos",
+    "pricing.list.payments.features.3": "Planes flexibles según necesidades",
+    "pricing.list.payments.features.4":
+      "Acceso a promociones y descuentos exclusivos",
   },
   en: {
     // Shared
@@ -580,13 +629,14 @@ export const labels = {
     "support.contact.form.message.legal":
       "By submitting this form, you accept our legal terms.",
 
-    "support.contact.info.mail.title": "Talk about sales",
-    "support.contact.info.mail.description":
+    "support.contact.info.email.title": "Talk about sales",
+    "support.contact.info.email.description":
       "If you have any questions about our products or services, contact our sales team.",
 
     "support.contact.info.chat.title": "Chat support",
     "support.contact.info.chat.description":
       "Chat with our support team for quick help and solutions.",
+    "support.contact.info.chat.button": "Start chat online",
 
     "support.contact.info.phone.title": "Call us",
     "support.contact.info.phone.description":
@@ -595,5 +645,46 @@ export const labels = {
     "support.contact.info.location.title": "Our offices",
     "support.contact.info.location.description":
       "Visit our offices Monday to Friday, 9:00 AM - 6:00 PM.",
+
+    // Pricing > Hero section
+    "pricing.hero.title": "Your legal solution at the best price",
+    "pricing.hero.description":
+      "We connect clients with lawyers easily and transparently. Find legal advice or expand your professional reach with plans designed to fit your needs.",
+
+    // Pricing > List pricing section
+    "pricing.list.management.title": "Management & Organization",
+    "pricing.list.management.features.1": "Appointment calendar",
+    "pricing.list.management.features.2": "Virtual meeting management",
+    "pricing.list.management.features.3": "Automatic appointment reminders",
+    "pricing.list.management.features.4": "Organized consultation history",
+
+    "pricing.list.messaging.title": "Messaging",
+    "pricing.list.messaging.features.1": "Real-time chat with lawyers",
+    "pricing.list.messaging.features.2": "AI-powered legal assistance",
+    "pricing.list.messaging.features.3": "Stored conversation history",
+
+    "pricing.list.cases.title": "Case Management",
+    "pricing.list.cases.features.1":
+      "Case creation and tracking (Free: 1 case, Essential: 5 cases, Unlimited: no limit)",
+    "pricing.list.cases.features.2": "Access to documents and contracts",
+    "pricing.list.cases.features.3":
+      "Automatic case summary generation (Available in Essential & Unlimited)",
+    "pricing.list.cases.features.4": "Real-time collaboration with lawyers",
+
+    "pricing.list.community.title": "Community & Learning",
+    "pricing.list.community.features.1": "Access to legal discussion forums",
+    "pricing.list.community.features.2": "Posts and content created by experts",
+    "pricing.list.community.features.3":
+      "Exclusive webinars and events (Only in Unlimited)",
+    "pricing.list.community.features.4":
+      "Courses and learning materials (Free: Basic, Essential: Complete, Unlimited: Exclusive)",
+
+    "pricing.list.payments.title": "Payments & Hiring",
+    "pricing.list.payments.features.1": "Secure payments within the platform",
+    "pricing.list.payments.features.2":
+      "Automatic billing and payment tracking",
+    "pricing.list.payments.features.3": "Flexible plans based on needs",
+    "pricing.list.payments.features.4":
+      "Access to exclusive promotions and discounts (Only in Unlimited)",
   },
 };
