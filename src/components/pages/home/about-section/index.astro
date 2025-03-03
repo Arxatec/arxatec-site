@@ -117,10 +117,22 @@ const highlights = [
     </div>
 
     <div
-      class="w-screen top-0 left-0 h-screen bg-black/50 fixed z-50"
+      class="w-screen top-0 left-0 h-screen bg-black/50 fixed z-50 flex items-center justify-center p-4"
       style="display: none;"
       id="modal"
     >
+      <div
+        class="rounded-2xl mx-auto relative overflow-hidden w-full h-full max-w-[1400px] max-h-[800px]"
+      >
+        <iframe
+          class="w-full h-full"
+          id="iframe"
+          src="https://www.youtube.com/embed/sqJuBgWSqsc?autoplay=1&mute=1"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
     </div>
   </div>
 </div>
@@ -129,23 +141,29 @@ const highlights = [
   const modal = document.getElementById("modal");
   const openModalButton = document.getElementById("openModal");
   const closeModalButton = document.getElementById("close");
+  const frame = document.getElementById("iframe");
 
   if (openModalButton != null && modal != null) {
     openModalButton.addEventListener("click", () => {
-      console.log(modal);
-      modal.style.display = "block";
+      //@ts-ignore
+      frame.src = "https://www.youtube.com/embed/sqJuBgWSqsc?autoplay=1&mute=1";
+      modal.style.display = "flex";
     });
   }
 
-  if (closeModalButton != null && modal != null) {
+  if (closeModalButton != null && modal != null && frame !== null) {
     closeModalButton.addEventListener("click", () => {
+      //@ts-ignore
+      frame.src = "";
       modal.style.display = "none";
     });
   }
 
-  if (modal !== null) {
+  if (modal !== null && frame !== null) {
     window.addEventListener("click", (event) => {
       if (event.target === modal) {
+        //@ts-ignore
+        frame.src = "";
         modal.style.display = "none";
       }
     });
