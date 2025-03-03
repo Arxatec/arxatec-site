@@ -1,0 +1,22 @@
+---
+import Chatbot from "./index.jsx";
+import { languageList, useTranslations } from "../../../i18n/";
+const currentLang = Astro.currentLocale || "es";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList,
+);
+
+const props = {
+  title: translateLabels("chatbot.title"),
+  name: translateLabels("chatbot.name"),
+  you: translateLabels("chatbot.you"),
+  questions: {
+    question1: translateLabels("chatbot.question.1"),
+    question2: translateLabels("chatbot.question.2"),
+    question3: translateLabels("chatbot.question.3"),
+  },
+};
+---
+
+<Chatbot props={props} client:load />

@@ -9,7 +9,7 @@ import { languageList, useTranslations } from "../../../../i18n/";
 const currentLang = Astro.currentLocale || "es";
 
 const translateLabels = useTranslations(
-  currentLang as keyof typeof languageList
+  currentLang as keyof typeof languageList,
 );
 
 const highlights = [
@@ -17,7 +17,7 @@ const highlights = [
     icon: LockClosed,
     title: translateLabels("home.about.highlights.securePlatform"),
     description: translateLabels(
-      "home.about.highlights.securePlatform.description"
+      "home.about.highlights.securePlatform.description",
     ),
   },
 
@@ -25,7 +25,7 @@ const highlights = [
     icon: ChartBar,
     title: translateLabels("home.about.highlights.smartDashboard"),
     description: translateLabels(
-      "home.about.highlights.smartDashboard.description"
+      "home.about.highlights.smartDashboard.description",
     ),
   },
 
@@ -33,7 +33,7 @@ const highlights = [
     icon: Users,
     title: translateLabels("home.about.highlights.activeCommunity"),
     description: translateLabels(
-      "home.about.highlights.activeCommunity.description"
+      "home.about.highlights.activeCommunity.description",
     ),
   },
 
@@ -41,7 +41,7 @@ const highlights = [
     icon: Bolt,
     title: translateLabels("home.about.highlights.instantSupport"),
     description: translateLabels(
-      "home.about.highlights.instantSupport.description"
+      "home.about.highlights.instantSupport.description",
     ),
   },
 ];
@@ -121,7 +121,6 @@ const highlights = [
       style="display: none;"
       id="modal"
     >
-      <VideoPlayer client:load />
     </div>
   </div>
 </div>

@@ -3,9 +3,10 @@ import logo from "../../../../assets/logo.png";
 
 import { languageList, useTranslations } from "../../../../i18n/";
 const currentLang = Astro.currentLocale || "es";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 const translateLabels = useTranslations(
-  currentLang as keyof typeof languageList
+  currentLang as keyof typeof languageList,
 );
 ---
 
@@ -27,27 +28,42 @@ const translateLabels = useTranslations(
             </h3>
             <ul role="list" class="mt-6 space-y-4">
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                <a
+                  href={getRelativeLocaleUrl(currentLang, "/")}
+                  class="text-sm/6 text-gray-600 hover:text-gray-900"
+                >
                   {translateLabels("shared.footer.product.1")}
                 </a>
               </li>
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                <a
+                  href={getRelativeLocaleUrl(currentLang, "/")}
+                  class="text-sm/6 text-gray-600 hover:text-gray-900"
+                >
                   {translateLabels("shared.footer.product.2")}
                 </a>
               </li>
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                <a
+                  href={getRelativeLocaleUrl(currentLang, "/")}
+                  class="text-sm/6 text-gray-600 hover:text-gray-900"
+                >
                   {translateLabels("shared.footer.product.3")}
                 </a>
               </li>
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                <a
+                  href={getRelativeLocaleUrl(currentLang, "/")}
+                  class="text-sm/6 text-gray-600 hover:text-gray-900"
+                >
                   {translateLabels("shared.footer.product.4")}
                 </a>
               </li>
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                <a
+                  href={getRelativeLocaleUrl(currentLang, "/")}
+                  class="text-sm/6 text-gray-600 hover:text-gray-900"
+                >
                   {translateLabels("shared.footer.product.5")}
                 </a>
               </li>
@@ -59,17 +75,26 @@ const translateLabels = useTranslations(
             </h3>
             <ul role="list" class="mt-6 space-y-4">
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                <a
+                  href={getRelativeLocaleUrl(currentLang, "/support")}
+                  class="text-sm/6 text-gray-600 hover:text-gray-900"
+                >
                   {translateLabels("shared.footer.support.1")}
                 </a>
               </li>
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                <a
+                  href={getRelativeLocaleUrl(currentLang, "/support")}
+                  class="text-sm/6 text-gray-600 hover:text-gray-900"
+                >
                   {translateLabels("shared.footer.support.2")}
                 </a>
               </li>
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                <a
+                  href={getRelativeLocaleUrl(currentLang, "/support")}
+                  class="text-sm/6 text-gray-600 hover:text-gray-900"
+                >
                   {translateLabels("shared.footer.support.3")}
                 </a>
               </li>
@@ -83,12 +108,18 @@ const translateLabels = useTranslations(
             </h3>
             <ul role="list" class="mt-6 space-y-4">
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                <a
+                  href={getRelativeLocaleUrl(currentLang, "/")}
+                  class="text-sm/6 text-gray-600 hover:text-gray-900"
+                >
                   {translateLabels("shared.footer.company.1")}
                 </a>
               </li>
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                <a
+                  href={getRelativeLocaleUrl(currentLang, "/blog")}
+                  class="text-sm/6 text-gray-600 hover:text-gray-900"
+                >
                   {translateLabels("shared.footer.company.2")}
                 </a>
               </li>
@@ -100,12 +131,18 @@ const translateLabels = useTranslations(
             </h3>
             <ul role="list" class="mt-6 space-y-4">
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                <a
+                  href={getRelativeLocaleUrl(currentLang, "/terms")}
+                  class="text-sm/6 text-gray-600 hover:text-gray-900"
+                >
                   {translateLabels("shared.footer.legal.1")}
                 </a>
               </li>
               <li>
-                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                <a
+                  href={getRelativeLocaleUrl(currentLang, "/privacy")}
+                  class="text-sm/6 text-gray-600 hover:text-gray-900"
+                >
                   {translateLabels("shared.footer.legal.2")}
                 </a>
               </li>

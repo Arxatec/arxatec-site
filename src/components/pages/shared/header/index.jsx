@@ -99,7 +99,7 @@ const Header = ({ headerProps }) => {
           <div className="flex items-center justify-between bg-blue-600 px-6 py-1.5">
             <p className="text-xs text-white text-left max-w-7xl mx-auto block w-full line-clamp-2">
               <a
-                href="#"
+                href={navLinks[0]?.href}
                 aria-label="Regístrate para obtener acceso gratuito"
                 className="line-clamp-2"
               >
@@ -123,7 +123,7 @@ const Header = ({ headerProps }) => {
           onMouseLeave={() => toggleOpenProducts(false)}
         >
           <div className="flex items-center justify-between px-6 py-4 lg:px-8 max-w-7xl mx-auto">
-            <a href="#" aria-label="Ir al inicio">
+            <a href={navLinks[0]?.href} aria-label="Ir al inicio">
               <img src={logo.src} alt="Arxatec logo" className="w-32" />
             </a>
             <div className="lg:hidden">
@@ -250,7 +250,7 @@ const Header = ({ headerProps }) => {
           <div className="fixed inset-0 z-50 bg-white/50 backdrop-blur-xl px-6 py-6 w-screen flex items-stretch justify-between flex-col">
             <div>
               <div className="flex items-center justify-between">
-                <a href="#" aria-label="Ir al inicio">
+                <a href={navLinks[0]?.href} aria-label="Ir al inicio">
                   <img src={logo.src} alt="Arxatec logo" className="w-32" />
                 </a>
                 <div className="">

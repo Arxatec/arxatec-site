@@ -1,10 +1,20 @@
 export const languageList = {
   es: "Español",
   en: "English",
+  qu: "Runasimi",
 };
 
 export const labels = {
   es: {
+    // Chatbot
+    "chatbot.you": "Tú",
+    "chatbot.name": "Asistente Nova",
+    "chatbot.title":
+      "Hola, soy tu asistente Nova \n ¿En qué puedo ayudarte hoy?",
+    "chatbot.question.1": "¿Qué es Arxatec?",
+    "chatbot.question.2": "¿Cuándo saldrá Arxatec?",
+    "chatbot.question.3": "¿Arxatec es gratis?",
+
     // Shared
     "shared.join": "Ingresar",
 
@@ -348,8 +358,57 @@ export const labels = {
     "pricing.list.payments.features.3": "Planes flexibles según necesidades",
     "pricing.list.payments.features.4":
       "Acceso a promociones y descuentos exclusivos",
+
+    // Privacy
+    "privacy.back.up": "Volver arriba",
+    "privacy.last.update": "Ultima actualización 24/02/2025",
+    "privacy.title": "Politica de privacidad",
+    "privacy.description":
+      "La política de privacidad le ayudará a comprender mejor cómo recopilamos, usamos y compartimos su información personal",
+    "privacy.summary": "Resumen de privacidad",
+    "privacy.content.title": "Tabla de contenido",
+    "privacy.content.1": "Recopilación de datos personales",
+    "privacy.content.2": "Protección de información confidencial",
+    "privacy.content.3": "Seguridad de documentos legales",
+    "privacy.content.4": "Retención de datos",
+    "privacy.content.5": "Derechos de acceso y rectificación",
+    "privacy.content.6": "Confidencialidad digital",
+    "privacy.content.7": "Cookies y seguimiento",
+    "privacy.content.8": "Compartición con terceros",
+    "privacy.content.9": "Seguridad y encriptación",
+    "privacy.content.10": "Cumplimiento normativo",
+
+    // Terms
+    "terms.back.up": "Volver arriba",
+    "terms.last.update": "Ultima actualización 24/02/2025",
+    "terms.title": "Terminos y condiciones",
+    "terms.description":
+      "Los términos y condiciones le ayudarán a comprender mejor las reglas, derechos y responsabilidades al usar nuestros servicios.",
+    "terms.summary": "Resumen de terminos",
+    "terms.content.title": "Tabla de contenido",
+    "terms.content.1": "Introducción",
+    "terms.content.2": "Aceptación de los términos",
+    "terms.content.3": "Uso permitido del servicio",
+    "terms.content.4": "Registro y cuentas de usuario",
+    "terms.content.5": "Propiedad intelectual",
+    "terms.content.6": "Limitación de responsabilidad",
+    "terms.content.7": "Modificaciones a los términos",
+    "terms.content.8": "Cancelación y suspensión de cuentas",
+    "terms.content.9": "Privacidad y protección de datos",
+    "terms.content.10": "Enlaces a terceros",
+    "terms.content.11": "Ley aplicable y jurisdicción",
+    "terms.content.12": "Contacto",
   },
   en: {
+    // Chatbot
+    "chatbot.you": "You",
+    "chatbot.name": "Nova Assistant",
+    "chatbot.title":
+      "Hello, I'm your assistant Nova.\nHow can I help you today?",
+    "chatbot.question.1": "What is Arxatec?",
+    "chatbot.question.2": "When will Arxatec be released?",
+    "chatbot.question.3": "Is Arxatec free?",
+
     // Shared
     "shared.join": "Join",
 
@@ -686,5 +745,453 @@ export const labels = {
     "pricing.list.payments.features.3": "Flexible plans based on needs",
     "pricing.list.payments.features.4":
       "Access to exclusive promotions and discounts (Only in Unlimited)",
+
+    // Privacy
+    "privacy.back.up": "Back to top",
+    "privacy.last.update": "Last update 02/24/2025",
+    "privacy.title": "Privacy Policy",
+    "privacy.description":
+      "The privacy policy will help you better understand how we collect, use, and share your personal information",
+    "privacy.summary": "Privacy Summary",
+    "privacy.content.title": "Table of Contents",
+    "privacy.content.1": "Collection of Personal Data",
+    "privacy.content.2": "Protection of Confidential Information",
+    "privacy.content.3": "Security of Legal Documents",
+    "privacy.content.4": "Data Retention",
+    "privacy.content.5": "Rights of Access and Rectification",
+    "privacy.content.6": "Digital Confidentiality",
+    "privacy.content.7": "Cookies and Tracking",
+    "privacy.content.8": "Sharing with Third Parties",
+    "privacy.content.9": "Security and Encryption",
+    "privacy.content.10": "Regulatory Compliance",
+
+    // Terms
+    "terms.back.up": "Back to top",
+    "terms.last.update": "Last update 02/24/2025",
+    "terms.title": "Terms and Conditions",
+    "terms.description":
+      "The terms and conditions will help you better understand the rules, rights, and responsibilities when using our services.",
+    "terms.summary": "Terms Summary",
+    "terms.content.title": "Table of Contents",
+    "terms.content.1": "Introduction",
+    "terms.content.2": "Acceptance of Terms",
+    "terms.content.3": "Permitted Use of the Service",
+    "terms.content.4": "Registration and User Accounts",
+    "terms.content.5": "Intellectual Property",
+    "terms.content.6": "Limitation of Liability",
+    "terms.content.7": "Modifications to the Terms",
+    "terms.content.8": "Account Suspension and Termination",
+    "terms.content.9": "Privacy and Data Protection",
+    "terms.content.10": "Third-Party Links",
+    "terms.content.11": "Applicable Law and Jurisdiction",
+    "terms.content.12": "Contact",
+  },
+  qu: {
+    // Chatbot
+    "chatbot.you": "Qam",
+    "chatbot.name": "Nova Yanapiri",
+    "chatbot.title":
+      "Napaykuy, Ñuqaqa Nova yanapiri kani.\nImaynataq yanapawankichu?",
+    "chatbot.question.1": "Imaynataq Arxatec?",
+    "chatbot.question.2": "Hayk'aq p'unchawpi Arxatec lloqsinqa?",
+    "chatbot.question.3": "Arxatec mana qollqepuni chaychu?",
+
+    // Shared
+    "shared.join": "Yaykuy",
+
+    // Shared > 404
+    "shared.404.title": "Paqina mana tarikunchu",
+    "shared.404.description":
+      "Pampachaykuway, maskasqayki paqinata mana tarisqaykuchu.",
+    "shared.404.button": "Qallariy paqinaman kutiy",
+
+    // Shared > Header
+    "shared.header.banner":
+      "Arxatec wiñachkashanmi, kayqa qampaq hunt'apakuymi yanapakuyta kamachiq musuqyachiyta qallariyninmanta. Kunanchallan sutichakuy correo electrónico nisqawan, chaypitaq manaraq pipas yaykushaqtin yaykuy allin yachay platformaman kamachiqkuna llank'ananpaq. Wiñaypaq mana qullqipaqy aypakuywan chaskiy, chaypitaq riqsiy kamachiy pachap hamuq kayninmanta.",
+    "shared.header.option.product": "Ruway",
+    "shared.header.option.plan": "Qullqichaskiykuna",
+    "shared.header.option.blog": "Qillqasqakuna",
+    "shared.header.option.support": "Yanapakuy",
+    "shared.header.login": "Yaykuy",
+    "shared.header.register": "Qillqakuy",
+
+    // Shared > Footer
+
+    "shared.footer.slogan":
+      "Kamachiy ruwaykuna musuqyachiy, chaninchasqa kamachiy yuyaychaku, allin ruwaykuna hatunyachiy.",
+    "shared.footer.product": "Ruway",
+    "shared.footer.product.1": "Aylluchaski",
+    "shared.footer.product.2": "Willaykuna",
+    "shared.footer.product.3": "Ruwaykunap aypaykunata",
+    "shared.footer.product.4": "Pacha kamay",
+    "shared.footer.product.5": "Qullqi churaykunaqa internet nisqapi",
+
+    "shared.footer.support": "Yanapakuy",
+    "shared.footer.support.1": "Yanapakuy",
+    "shared.footer.support.2": "Sapa kutilla tapukuykuna",
+    "shared.footer.support.3": "Pusaqi",
+
+    "shared.footer.company": "Hatun Empresa",
+    "shared.footer.company.1": "Nuqaykumanta",
+    "shared.footer.company.2": "Qillqasqakuna",
+
+    "shared.footer.legal": "Kamachiy",
+    "shared.footer.legal.1": "Tukuy ima qhawana",
+    "shared.footer.legal.2": "Sapalla qhaway kamachiy",
+
+    "shared.footer.copyright": "2024 Arxatec. Llapan hayñikuna waqaychaska",
+
+    // Home > Hero section
+    "home.hero.tag": "Kamachiy pachakunata tikraq plataforma",
+    "home.hero.title": "Kamachiq yanapaqwan runakuna tupachiy huk pachallapiy",
+    "home.hero.description":
+      "Ancha allin caso nisqakuna ruwana, utqay kamachiy yuyaychana hinallataq yachaykunata rakinapaq hukllawasqa aylluchaski. Tukuy ima munasqayki kamachiq llank'ay allinchanaykipaq otaq kamachiy sasachakuykunata facilllata allichanapaq.",
+    "home.hero.input.placeholder": "Correo electrónico nisqaykita qillqay",
+    "home.hero.input.label": "Correo electrónico",
+    "home.hero.benefits": "Plataformayku allinyachisqankuna",
+    "home.hero.benefits.cases": "Caso nisqa ruwaykunap aypaykunata",
+    "home.hero.benefits.safe": "Waqaychasqa rimanakuy",
+    "home.hero.benefits.meet": "Tupachiykuna kamachiy hinallataq yuyachiqkuna",
+    "home.hero.about.title": "Nuqaykumanta &\nArxatecmanta",
+
+    // Home > About section
+
+    "home.about.tag": "Nuqaykumanta",
+    "home.about.title": "Kamachiy platformayki\nhamuq pachamanta",
+    "home.about.description":
+      "Plataformaykum kamachiqkunaqa hakucha kaqkunawan tupanankupaq tikraqmi. Waqaychasqa, amawta yachaywan, hinallataq kawsaqniyuq aylluwan kunanchallan yanapakuyta quspa hinallataq sumaq llank'anakunata quspa kamachiqkunap llank'asqankuta kay pachapi allinchachkan.",
+
+    "home.about.highlights.securePlatform": "Waqaychasqa plataforma",
+    "home.about.highlights.securePlatform.description":
+      "Kamachiy willaykikunaqa hunt'a waqaychasqam ancha allin pakasqakunawan hinallataq sapanchasqa kamachiykunawan.",
+
+    "home.about.highlights.smartDashboard": "Yuyayniyuq dashboard",
+    "home.about.highlights.smartDashboard.description":
+      "Tukuy ima kamachiq casos nisqakuna hinallataq runakunata facilllata aypanapi astawan allin pusaqi.",
+
+    "home.about.highlights.activeCommunity": "Kawsaqniyuq aylluchaski",
+    "home.about.highlights.activeCommunity.description":
+      "Wak kamachiq llank'aqkunawan tupachikuy, yachaykunata rakiy, hinallataq kamachiy musuq yachayniyuq kaywan p'unchawninpi kachkay.",
+
+    "home.about.highlights.instantSupport": "Kunanchallan yanapakuy",
+    "home.about.highlights.instantSupport.description":
+      "Hakucha kaqkunawan kamachiqkunawan kunanchallan rimanakuy utqay hinallataq allin allichaykuna maskhanapaq.",
+
+    // Home > Features secion
+    "home.features.tag": "Llank'anakuna",
+    "home.features.title":
+      "Sinchi ruway atiy llank'anakuna kamachiq pachamanta",
+    "home.features.description":
+      "Arxatec plataformata hunt'a kamachiqkunapaq hinallataq hakucha kaqkunapaq kaqta ruway atiykunata tariy. Yachayniyuq kamachimanta kunanchallan rimanakuykaman, tukuy ima munasqayki huk pachallapiy.",
+
+    "home.features.community.tag": "Aylluchaski",
+    "home.features.community.title": "Rakiy hinallataq yachay",
+    "home.features.community.description":
+      "Qillqay, yachay, hinallataq wak kamachiq llank'aqkunawan hakucha kaqkunawanpas kamachiy pachamanta rakiy.",
+
+    "home.features.cases.tag": "Casos",
+    "home.features.cases.title": "Casokuna kamariy hinallataq aypay",
+    "home.features.cases.description":
+      "Kamachiqkunawan kunanchallan pachapi casokunata kamariy hinallataq aypay ancha utqay hinallataq allin rimanakuypaq.",
+
+    "home.features.messages.tag": "Willaykuna",
+    "home.features.messages.title": "Kamachiqwan rimay",
+    "home.features.messages.description":
+      "Directo hinallataq kunanchallan rimanakuy munasqayki kamachiq yachayniyuqkunawan.",
+
+    "home.features.calendar.tag": "Pacha kamay",
+    "home.features.calendar.title": "Tupayniykikunata kamariy",
+    "home.features.calendar.description":
+      "Tupayniykuna hinallataq waskhancha wakichiykunata mana sasachakuywan aypay.",
+
+    "home.features.payments.tag": "Qullqi churakuykuna",
+    "home.features.payments.title": "Huk ratu contratachiy",
+    "home.features.payments.description":
+      "Utqaylla hinallataq waqaychaspa qullqi churay kunanchallan kamachiy yanapakuyta tarinaykipaq.",
+
+    // Home > Princing section
+
+    "home.pricing.tag": "Qullqichaskiykuna",
+    "home.pricing.title": "Sapa munaywan allinchana munaykuna",
+    "home.pricing.description":
+      "Astawan allinta kanman qampaq qullqichaskiyta akllay. Qallariy aypakuymanta hatun sumaq ruway atiy llank'anakunakama, Arxatecpi kamachiq llank'asqaykita aswan allin kanman kanampaq kallpata quykiku.",
+    "home.pricing.startFree": "Mana qullqintin qallariy",
+    "home.pricing.buy": "Qullqichaskiyta rantiy",
+    "home.pricing.popular": "Ancha reqsisqa",
+    "home.pricing.month": "killa",
+
+    "home.pricing.free.title": "Wiñaypaq mana qullqintin",
+    "home.pricing.free.description":
+      "Pisilla tapukuy aypakuy hinallataq llank'ay contratokuna qhawarina",
+    "home.pricing.free.price": "0",
+
+    "home.pricing.free.features.1": "Iskay pisilla tapukuykuna killapi",
+    "home.pricing.free.features.2": "Iskay llank'ay contratokuna qhawarina",
+    "home.pricing.free.features.3": "Pisilla yachachina riqsiykunaman aypakuy",
+    "home.pricing.free.features.4": "Correo electronico nisqapi yanapakuy",
+
+    "home.pricing.basic.title": "Fundamental",
+    "home.pricing.basic.description":
+      "Ancha allin yuyaychakuykuna hinallataq llank'ay awqanakuykunap aypaykunata",
+    "home.pricing.basic.price": "12",
+
+    "home.pricing.basic.features.1": "Phichqa ancha tapukuykuna killapi",
+    "home.pricing.basic.features.2":
+      "Mana samayniyuq llank'ay contratokuna qhawarina",
+    "home.pricing.basic.features.3": "Tukuy yachachina riqsiykunaman aypakuy",
+    "home.pricing.basic.features.4":
+      "Telefono nisqapi yanapakuy llank'ay horaskunallapi",
+
+    "home.pricing.premium.title": "Mana samayniyuq",
+    "home.pricing.premium.description":
+      "Sapanchasqa allichaykunata astawan ruway atiykunawan",
+    "home.pricing.premium.price": "25",
+
+    "home.pricing.premium.features.1":
+      "Mana samayniyuq sapanchasqa tapukuykuna",
+    "home.pricing.premium.features.2":
+      "Llank'ay contratokuna hinallataq mana facilchu qillqakunap qhawarina",
+    "home.pricing.premium.features.3":
+      "Ñawpaqman kamachiy yuyaychaku hinallataq casokuna qatipay",
+    "home.pricing.premium.features.4":
+      "Ancha allin aypakuy webinars nisqakunaman hinallataq sapanchasqa wakichikunaman",
+
+    // Home > Question and answers section
+
+    "home.faq.tag": "Sapa kutilla tapukuykuna",
+    "home.faq.title": "Tukuy yachayta munasqayki",
+    "home.faq.description":
+      "Astawan tapusqa tapukuykunap cutipaykunata tariy hinallataq munaqa willayta utqaylla hinallataq facilllata tariy",
+
+    "home.faq.1.question":
+      "¿Imataq kay plataforma hinallataq imaynatan yanapayta atiwanman?",
+    "home.faq.1.answer":
+      "Platformayku kamachiq llank'aqkunapaq hinallataq derecho profesioal nisqakunapaq tukuy ima qispisqa ruwaymi kan. Inteligencia artificial nisqa ancha allin llank'anakunawan CRM hinata hakucha kaqkunata allin ruwanapaq, kawsaqniyuq aylluta yachaykunata rakinapaq hinallataq wak kamachiqkunawan yanapanakupaq, chaymanta Google yanapakuykunawan tupachisqa. Arxatecwan, casos nisqakunata allin ruway atinki, kutimuy ruwaykunata automatizay, hakucha kaqkunawan kunanchallan pachapi rimanakuy, hinallataq kamachiq llank'aqkunap mink'anakuyninman aypakuspa kamachiq llank'asqaykita kallpayachinki.",
+
+    "home.faq.2.question": "¿Mashqatan chaskiqa qullqi?",
+    "home.faq.2.answer":
+      "Munasqaykiman hina tukuy rikch'aq qullqichaskiykunata quykiku. Mana qullqintin qullqichaskiyku kan aylluman hinallataq qallariy llank'anakunaman aypakusqakaq, allinmi qallariyta munasqakunapaq. Kaqllataqmi premium nisqa qullqichaskiykuna kan ancha allin ruway atiykunawan cliente nisqakunata allin ruwanapaq CRM nisqawan, qillqakunap automatizacionninwan, IA willaykunap analizaynin nisqa astawan masta. Qullqichaskiykuna nisqa rakita qhawarinanpaq akllayta quykiku astawan allinta qampaq qullqichaskiy kananpaq.",
+
+    "home.faq.3.question": "¿Imaynatan qillqayta atini?",
+    "home.faq.3.answer":
+      "Qillqakuyqa utqaylla hinallataq facilllatan. 'Qillqakuy' nisqata click ruway, sutikita, correo nisqaykita hinallataq contraseñaykita rakipi hunt'ay, chaymantapas cuentaykita correo nisqapi chaskisqayki waskhancha nisqawan hunt'apachiy. Qillqakuspañan, kunanchallan plataformaman hinallataq tukuy llank'anakunaman akllasqayki qullqichaskiy nisqaman hina aypakuyta atinki. Yanapakuyta munasqaykiqa, yanapakuy runayku qampaq yanapakuyta qupaq kachkanku.",
+
+    "home.faq.4.question":
+      "¿Imatan kay plataformaqa wak plataformakunamanta t'aqan?",
+    "home.faq.4.answer":
+      "Arxatecqa manam kamachiy llank'anallachu, aswanpas kamachiq llank'aqkunapaq hunt'a ayllutaqmi. Inteligencia artificial nisqata qillqakunap automatizacionnin, casos nisqakunap aypaynin, ancha allin CRM nisqa hinallataq kawsaqniyuq kamachiq llank'aqkunap ayllunwan tupachiyku. Kaqllataqmi, kamachiq llank'aqkunap hakucha kaqkunawan tupachiyninta facilyachiyku kunanchallan rimanakuywan hinallataq sapanchasqa ruway atiykunawan kamachiq llank'ayta astawan allin ruwanapaq.",
+
+    "home.faq.5.question": "¿Wiñachisqay willayqa waqaychasqachu?",
+    "home.faq.5.answer":
+      "Arí, waqaychasqaqa astawan munasqayku. Ancha allin pakasqatayta churayku hinallataq llapa suyukuna RGPD hina kamachiykunawan hunt'ayku willaykunap sapanchayninkunata waqaychanapaq. Kaqllataqmi, iskay mitapi chaninchakuyta hinallataq hark'asqa aypakuyta pakasqa willaykunapaq quyku, chayllapaqmi chaninchakusqa runakuna qhawariyta atinku.",
+
+    "home.faq.6.question": "¿Imaymana aparatokunawanchu aypakuyta atini?",
+    "home.faq.6.answer":
+      "Arí, platformaykuqa hunt'a web kaqmi hinallataq imaymana aparatokunapi internet tupachiywan kaspa allinchachkanmi. Computadorakuna, tabletakuna mana chayqa smartphones nisqakunawan mana wak programakuna yapaspa aypakuyta atinki. Tukuy ima qampaq may pachamantapas allin yupaywan puririnaykipaq kamachisqa kachkan.",
+
+    "home.faq.7.question": "¿Yanapakuyta qunkichikchu?",
+    "home.faq.7.answer":
+      "Arí, sapanchasqa yanapakuy runakunawan may pachapipas yanapakusunki. Plataforma ukhupi kawsayniyuq chat nisqataq, correo electronico nisqataq, mana chayqa sapa kutilla tapukuykuna hinallataq yachachiqkunakunawan tupachikuyta atinki. Munasqaykuqa astawan allin yupaywan kacharinayki hinallataq munapas tapukuynikita allichayku.",
+
+    // Home > Blog section
+
+    "home.blog.tag": "Blogniykuta",
+    "home.blog.title": "Kamachiypa hamuq pachanmanta t'aqwiriy",
+    "home.blog.description":
+      "P'unchawninpi kachkay musuq kamachiy yachasqakunamanta, caso nisqakunap qhawarisqanmanta, tecnologia kamachiypi aypachisqamanta hinallataq kamachiqkunapaq yuyaychakuykunapi. Blogniykupi ancha willayniyuq qillqasqakunata tarinki, chaywanmi llank'asqaykita allinchankichik, llank'aykita allinchankichik, hinallataq inteligencia artificial nisqa imaynatan kamachiy pachata tikrachkan chayta entiendenki.",
+
+    // Home > CTA sections
+
+    "home.cta.title": "Huk mitata ñawpaqman kachkay",
+    "home.cta.description":
+      "Newsletter nisqaman qillqakuy hinallataq musuq willaykunata, kunanchallanpatataq musuqyasqakunata correo nisqaykipi chaskiy.",
+    "home.cta.input.placeholder": "Correo electrónico nisqaykita qillqay",
+    "home.cta.highContent.title": "Chaniyuq willay",
+    "home.cta.highContent.description":
+      "Platformayku listoña kaqtin ñawpaq yachaq kay.",
+    "home.cta.noSpam.title": "Mana spam",
+    "home.cta.noSpam.description":
+      "Mana spam, cheqaqtapuni chaniyuq willayllam.",
+
+    // Blog > Blog section
+    "blog.blog.title": "Blogniykuta",
+    "blog.blog.description":
+      "Blogniykuta tarikuy hinallataq ancha willayniyuq qillqasqakunata tarikuy, chaywanmi llank'asqaykita allinchankichik, llank'aykita allinchankichik, hinallataq inteligencia artificial nisqa imaynatan kamachiy pachata tikrachkan chayta entiendenki.",
+    "blog.blog.order.title": "Kaywan kamariy: ",
+    "blog.blog.order.recent": "Astawan musuq",
+    "blog.blog.order.popular": "Astawan reqsisqa",
+    "blog.blog.order.recommended": "Yuyaychasqa",
+    "blog.blog.order.relevance": "Qampaq yuyaychasqa qillqasqakuna",
+    "blog.blog.order.alphabetic": "Sanampallawan",
+
+    "blog.blog.category.1": "Llapan",
+    "blog.blog.category.2": "Llank'ay",
+    "blog.blog.category.3": "Civil",
+    "blog.blog.category.4": "Empresa",
+    "blog.blog.category.5": "Penal",
+    "blog.blog.category.6": "Tecnológico",
+
+    "blog.blog.pagination.show": "Qhawarichkan",
+    "blog.blog.pagination.show.to": "kama",
+    "blog.blog.pagination.show.of": "manta",
+    "blog.blog.pagination.results": "Tarisqakuna",
+    "blog.blog.pagination.next": "Qhipaman",
+    "blog.blog.pagination.back": "Ñawpaqman",
+
+    // Blog > Read blog section
+    "blog.read.back": "Kutiy",
+    "blog.read.related": "Tupachisqa qillqasqakuna",
+    "blog.read.related.button": "Astawan qhaway",
+
+    // Support > Hero section
+    "support.hero.title": "Hawka yuyaynikiqa, munasqaykum.",
+    "support.hero.description":
+      "¿Tapukuykuna? Ama llakikuychu, allichaykuna qhapaqnikum. Pusayniykuta t'aqwiriy, yanapakuy runayquwan tupachakuy, chaymantapas mana sasachakuykunawan ñawpaqman riy.",
+    "support.hero.input.placeholder": "Tapukuynikita kaypi qillqay...",
+
+    // Support > Contact section
+    "support.contact.title": "Yanapakuy tupachina",
+    "support.contact.description":
+      "Yanapakuyta munaspaykiqa, yanapakuy runayquwan tupachayta ama qunqaychu, paymi kusisqa yanapakusunki.",
+
+    "support.contact.form.name.label": "Suti",
+    "support.contact.form.name.placeholder": "Ejemplopaq. Juan",
+
+    "support.contact.form.lastname.label": "Ayllu suti",
+    "support.contact.form.lastname.placeholder": "Ejemplopaq. Pérez",
+
+    "support.contact.form.email.label": "Correo electrónico",
+    "support.contact.form.email.placeholder":
+      "Ejemplopaq. juan.perez@example.com",
+
+    "support.contact.form.phone.label": "Telefono",
+    "support.contact.form.phone.placeholder": "Ejemplopaq. +54 9 11 1234 5678",
+
+    "support.contact.form.country.label": "Llaqta",
+    "support.contact.form.country.placeholder": "Ejemplopaq. Argentina",
+
+    "support.contact.form.subject.label": "Asunto",
+    "support.contact.form.subject.placeholder":
+      "Ejemplopaq. Ruwaywan sasachakuy",
+
+    "support.contact.form.message.label": "Willay",
+    "support.contact.form.message.placeholder": "Willaynikita kaypi qillqay...",
+
+    "support.contact.form.button": "Apachiy",
+    "support.contact.form.message.legal":
+      "Kay rakita apachispaykiqa, kamachiy tukuy ima qhawanaykuta chaskinkimi. ",
+
+    "support.contact.info.email.title": "Qhatuna rimay",
+    "support.contact.info.email.description":
+      "Ruwaykuna mana chayqa ruwasqaykunamanta tapukuyta kaspaykiqa, qhatuna runayquwan tupachakuy.",
+
+    "support.contact.info.chat.title": "Chat yanapakuy",
+    "support.contact.info.chat.description":
+      "Yanapakuy runayquwan chat ruway yanapakuykuna hinallataq utqay allichaykuna chaskipaq.",
+    "support.contact.info.chat.button": "Kawsaqniyuq chat qallariy",
+
+    "support.contact.info.phone.title": "Waqyamuwayku",
+    "support.contact.info.phone.description":
+      "Waskhaychata waqyay lunesmanta vierneskama, 9:00AM - 6:00PM.",
+
+    "support.contact.info.location.title": "Llank'ay wasiykuna",
+    "support.contact.info.location.description":
+      "Llank'ay wasikunata watukuy lunes p'unchaymanta vierneskama, 9:00AM - 6:00PM.",
+
+    // Pricing > Hero section
+    "pricing.hero.title": "Kamachiy allichayki astawan allin chaniywan",
+    "pricing.hero.description":
+      "Hakucha kaqkunata kamachiq yanapaqkunawan facilllata hinallataq ch'uyata tupachiyku. Kamachiy yuyaychakuyta tariy mana chayqa kamachiq llank'asqayki astawan munayman chayanampaq qampaq kamachisqa qullqichaskiykunawan allinchana.",
+
+    // Pricing > List pricing section
+    "pricing.list.product.title": "Llank'anakuna",
+    "pricing.list.product.features.1": "Caso nisqakunata allin ruwaykunata",
+    "pricing.list.product.features.2":
+      "Qullqi churakuykuna hinallataq finanzas",
+    "pricing.list.product.features.3": "Pacha kamay",
+    "pricing.list.product.features.4": "Aylluchaski",
+    "pricing.list.product.features.5": "Willaykuna",
+    "pricing.list.product.features.6": "IA tupachiy",
+
+    "pricing.list.management.title": "Allin ruway hinallataq Kamachiy",
+    "pricing.list.management.features.1": "Tupaykuna pacha kamay",
+    "pricing.list.management.features.2": "Waskhancha tupaykunata allin ruwana",
+    "pricing.list.management.features.3":
+      "Tupaykunamanta automatico nisqa yuyachiqkuna",
+    "pricing.list.management.features.4": "Kamachisqa tapukuy kamachiy",
+
+    "pricing.list.messaging.title": "Willaykuna",
+    "pricing.list.messaging.features.1": "Kamachiqkunawan kunanchallan chat",
+    "pricing.list.messaging.features.2":
+      "Kamachiy IA yanapakuywan automatizasqa yanapakuy",
+    "pricing.list.messaging.features.3": "Rimanakuykunap kamachiy waqaychasqa",
+
+    "pricing.list.cases.title": "Caso Allin ruwana",
+    "pricing.list.cases.features.1": "Casokuna kamariy hinallataq qatipay",
+    "pricing.list.cases.features.2":
+      "Qillqakunaman hinallataq contratokunaman aypay",
+    "pricing.list.cases.features.3":
+      "Casokuna mana runakunawan hunt'asqa kamariy",
+    "pricing.list.cases.features.4": "Kamachiqkunawan kunanchallan yanapanakuy",
+
+    "pricing.list.community.title": "Aylluchaski hinallataq Yachaqay",
+    "pricing.list.community.features.1":
+      "Kamachiy rimanakuykunata foropi aypay",
+    "pricing.list.community.features.2":
+      "Ruway Kamahiqwan sut'inchasqa willaykunata",
+    "pricing.list.community.features.3":
+      "Sapanchasqa webinars nisqakuna hinallataq wakichikuna",
+    "pricing.list.community.features.4":
+      "Yachachina hinallataq yachachina materialkuna",
+
+    "pricing.list.payments.title":
+      "Qullqi churakuykuna hinallataq Contrataykuna",
+    "pricing.list.payments.features.1":
+      "Waqaychasqa qullqi churay plataforma ukhupi",
+    "pricing.list.payments.features.2":
+      "Automatico nisqa facturación hinallataq qullqi churakuykunap qatipaynin",
+    "pricing.list.payments.features.3": "Munakusqaman qullqichaskiykuna",
+    "pricing.list.payments.features.4":
+      "Sapanchasqa aswan allin chaniyman hinallataq pisiyachiykunaman yaykuy",
+
+    // Privacy
+    "privacy.back.up": "Wichqayman kutiy",
+    "privacy.last.update": "Qhipa tukuy 24/02/2025",
+    "privacy.title": "Wañuchiy rimasqa",
+    "privacy.description":
+      "Kay wañuchiy rimasqanqa yachachinikuqkunata, imayna qillqaykuq, llamk'aykuq, hukllapi q'apachiykuqta yachachin",
+    "privacy.summary": "Wañuchiy rimasqa sumaq",
+    "privacy.content.title": "Tukuy rimanapaq",
+    "privacy.content.1": "Runa willay tupuy",
+    "privacy.content.2": "Mana yachanakusqa willay q'ipay",
+    "privacy.content.3": "Llamk'ay qillqasqa imaymana allinchasqa",
+    "privacy.content.4": "Willay waqaychay",
+    "privacy.content.5": "Yachaykunapaq kallpanakunapaq",
+    "privacy.content.6": "Internetpi waqaychanapaq",
+    "privacy.content.7": "Cookies nisqakuna hinallataq qhaway",
+    "privacy.content.8": "Hukkunawan rimanakuy",
+    "privacy.content.9": "Allinchasqa yachay, ñawpaqchay",
+    "privacy.content.10": "Kamachikuy llapanpaq",
+
+    // Terms
+    "terms.back.up": "Wichqayman kutiy",
+    "terms.last.update": "Qhipa hukchasqa 24/02/2025",
+    "terms.title": "Rimanakuywan Ruraykuna",
+    "terms.description":
+      "Kay rimanakuywan ruraykuna yanapanku sumaqta rikuspayki imayna qillqakusqakunata, aswan allin kasqanwan ima llamk’apunata.",
+    "terms.summary": "Rimanakuywan Qillqakuna",
+    "terms.content.title": "T’iqsimuy",
+    "terms.content.1": "Qallariy",
+    "terms.content.2": "Rimanakuywan qabulay",
+    "terms.content.3": "Imayna llamk’ay kanan",
+    "terms.content.4": "Rikuchiywan runa qillqakuna",
+    "terms.content.5": "Yachay pacha ruray",
+    "terms.content.6": "Atipanakuy qillqakuna",
+    "terms.content.7": "Rimanakuywan hukchasqakunata tukuy",
+    "terms.content.8": "Rikuchiywan p’itay hukchasqa",
+    "terms.content.9": "Suti tukuywan willay tukuy",
+    "terms.content.10": "Ñawpaq masinay willay",
+    "terms.content.11": "Rimanakuywan kay tukuy",
+    "terms.content.12": "Rimanakuywan tinkuy",
   },
 };

@@ -1,0 +1,529 @@
+---
+import Footer from "../../../components/pages/shared/footer/index.astro";
+import Header from "../../../components/pages/shared/header/index.astro";
+import Layout from "../../../layouts/Layout.astro";
+import ArrowLeft from "astro-heroicons/outline/ArrowLeft.astro";
+
+import { languageList, useTranslations } from "../../../i18n/";
+const currentLang = Astro.currentLocale || "es";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList,
+);
+---
+
+<Layout title="Politica de privacidad - Arxatec">
+  <Header />
+  <div class="mx-auto max-w-7xl px-6 pb-24 sm:pb-32 lg:px-8 lg:pb-40 pt-6">
+    <div class="w-full grid grid-cols-[1fr_400px] gap-2">
+      <div class="bg-white p-6 rounded-lg shadow-lg w-full">
+        <p class="text-gray-500 text-sm mb-4">
+          {translateLabels("privacy.last.update")}
+        </p>
+        <h1 class="text-gray-900 text-3xl font-extrabold">
+          {translateLabels("privacy.description")}
+        </h1>
+
+        <h2 class="text-xl font-bold mt-10 text-gray-900 mb-4">
+          {translateLabels("privacy.title")}
+        </h2>
+
+        <p class="text-base text-gray-500">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+          pariatur ipsam quos, quasi, cum aspernatur distinctio impedit
+          repudiandae incidunt in, sapiente dolorem nemo officiis voluptate ad
+          repellendus natus necessitatibus voluptas. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Quo, sunt saepe adipisci, ratione
+          doloribus consectetur, et qui illum facere eius vitae harum? Aperiam
+          expedita beatae quisquam. Eveniet maxime hic repudiandae.
+          <br />
+          <br />
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto expedita
+          excepturi vitae consequuntur incidunt repudiandae odio et quod? Quos commodi
+          iure ea reprehenderit quidem dignissimos adipisci ab, fugit amet vitae.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nihil
+          error ut, reiciendis debitis ab itaque porro beatae numquam molestiae.
+          Fugiat culpa sunt consectetur. Libero accusantium natus cupiditate deleniti
+          reprehenderit!
+          <br />
+          <br />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa incidunt
+          expedita minima laudantium, aliquam cumque aperiam ipsum eveniet. Voluptatibus
+          ad delectus vitae beatae, saepe ullam aspernatur facilis ex a ducimus.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa nobis nam
+          repudiandae! Quod voluptates odio consequuntur velit repudiandae aliquam,
+          at laborum veritatis sint itaque blanditiis distinctio fugiat soluta minima
+          dolore!
+        </p>
+
+        <div class="mt-16">
+          <h2 class="font-bold text-gray-900 text-xl">
+            {translateLabels("privacy.summary")}
+          </h2>
+          <div class="pl-4">
+            <p class="text-gray-500 mt-4">
+              <b class="font-bold text-gray-900 text-lg mb-2 block">
+                1. {translateLabels("privacy.content.1")}:
+              </b>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum rem fuga
+              dolorem qui vero nesciunt labore, tempore error, impedit, rerum perspiciatis
+              placeat ea vitae maiores doloremque totam corrupti saepe itaque? Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Alias eligendi odit
+              voluptatum porro, repellendus quam vel dignissimos maiores placeat
+              quibusdam esse commodi ullam deserunt, officia eum labore corrupti
+              fuga dolorum. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Rerum nesciunt similique nihil exercitationem repudiandae, dolore eligendi
+              distinctio nam vitae eveniet culpa ipsam officia temporibus laboriosam
+              recusandae natus reprehenderit fugiat inventore! Lorem ipsum dolor
+              sit, amet consectetur adipisicing elit. Ea aperiam hic id maxime quas
+              porro quo fuga aspernatur ab placeat tenetur libero reiciendis reprehenderit
+              nobis soluta perspiciatis, deserunt mollitia. Consequatur!
+              <br />
+              <br />
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis quidem
+              tempora quam accusamus possimus deleniti voluptatem qui, quis inventore
+              nihil ipsam tempore totam ratione expedita quasi! Minima eum neque
+              debitis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Distinctio maxime unde neque molestiae reprehenderit earum porro, qui
+              nostrum aliquam, tempore vel! Doloribus ut ullam molestiae ea maiores
+              consequuntur, deserunt voluptates? Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Reiciendis reprehenderit commodi fugiat, quas esse
+              natus. Voluptatum at unde saepe quaerat id soluta, eos, fugit deleniti
+              ducimus nihil labore excepturi repellendus.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+              iste ea delectus blanditiis ad cumque magnam beatae doloremque velit
+              accusantium mollitia est dolore, laborum, praesentium reiciendis aperiam
+              quaerat accusamus id. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Nemo libero cupiditate eos saepe aut sit minus at laudantium
+              eius accusamus quos, totam numquam, odit asperiores, provident quas
+              a temporibus deserunt?
+            </p>
+            <p class="text-gray-500 mt-6">
+              <b class="font-bold text-gray-900 text-lg mb-2 block">
+                2. {translateLabels("privacy.content.2")}:
+              </b>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum rem fuga
+              dolorem qui vero nesciunt labore, tempore error, impedit, rerum perspiciatis
+              placeat ea vitae maiores doloremque totam corrupti saepe itaque? Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Alias eligendi odit
+              voluptatum porro, repellendus quam vel dignissimos maiores placeat
+              quibusdam esse commodi ullam deserunt, officia eum labore corrupti
+              fuga dolorum. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Rerum nesciunt similique nihil exercitationem repudiandae, dolore eligendi
+              distinctio nam vitae eveniet culpa ipsam officia temporibus laboriosam
+              recusandae natus reprehenderit fugiat inventore! Lorem ipsum dolor
+              sit, amet consectetur adipisicing elit. Ea aperiam hic id maxime quas
+              porro quo fuga aspernatur ab placeat tenetur libero reiciendis reprehenderit
+              nobis soluta perspiciatis, deserunt mollitia. Consequatur!
+              <br />
+              <br />
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis quidem
+              tempora quam accusamus possimus deleniti voluptatem qui, quis inventore
+              nihil ipsam tempore totam ratione expedita quasi! Minima eum neque
+              debitis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Distinctio maxime unde neque molestiae reprehenderit earum porro, qui
+              nostrum aliquam, tempore vel! Doloribus ut ullam molestiae ea maiores
+              consequuntur, deserunt voluptates? Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Reiciendis reprehenderit commodi fugiat, quas esse
+              natus. Voluptatum at unde saepe quaerat id soluta, eos, fugit deleniti
+              ducimus nihil labore excepturi repellendus.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+              iste ea delectus blanditiis ad cumque magnam beatae doloremque velit
+              accusantium mollitia est dolore, laborum, praesentium reiciendis aperiam
+              quaerat accusamus id. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Nemo libero cupiditate eos saepe aut sit minus at laudantium
+              eius accusamus quos, totam numquam, odit asperiores, provident quas
+              a temporibus deserunt?
+            </p>
+            <p class="text-gray-500 mt-6">
+              <b class="font-bold text-gray-900 text-lg mb-2 block">
+                3. {translateLabels("privacy.content.3")}:
+              </b>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum rem fuga
+              dolorem qui vero nesciunt labore, tempore error, impedit, rerum perspiciatis
+              placeat ea vitae maiores doloremque totam corrupti saepe itaque? Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Alias eligendi odit
+              voluptatum porro, repellendus quam vel dignissimos maiores placeat
+              quibusdam esse commodi ullam deserunt, officia eum labore corrupti
+              fuga dolorum. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Rerum nesciunt similique nihil exercitationem repudiandae, dolore eligendi
+              distinctio nam vitae eveniet culpa ipsam officia temporibus laboriosam
+              recusandae natus reprehenderit fugiat inventore! Lorem ipsum dolor
+              sit, amet consectetur adipisicing elit. Ea aperiam hic id maxime quas
+              porro quo fuga aspernatur ab placeat tenetur libero reiciendis reprehenderit
+              nobis soluta perspiciatis, deserunt mollitia. Consequatur!
+              <br />
+              <br />
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis quidem
+              tempora quam accusamus possimus deleniti voluptatem qui, quis inventore
+              nihil ipsam tempore totam ratione expedita quasi! Minima eum neque
+              debitis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Distinctio maxime unde neque molestiae reprehenderit earum porro, qui
+              nostrum aliquam, tempore vel! Doloribus ut ullam molestiae ea maiores
+              consequuntur, deserunt voluptates? Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Reiciendis reprehenderit commodi fugiat, quas esse
+              natus. Voluptatum at unde saepe quaerat id soluta, eos, fugit deleniti
+              ducimus nihil labore excepturi repellendus.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+              iste ea delectus blanditiis ad cumque magnam beatae doloremque velit
+              accusantium mollitia est dolore, laborum, praesentium reiciendis aperiam
+              quaerat accusamus id. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Nemo libero cupiditate eos saepe aut sit minus at laudantium
+              eius accusamus quos, totam numquam, odit asperiores, provident quas
+              a temporibus deserunt?
+            </p>
+            <p class="text-gray-500 mt-6">
+              <b class="font-bold text-gray-900 text-lg mb-2 block">
+                4. {translateLabels("privacy.content.4")}:
+              </b>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum rem fuga
+              dolorem qui vero nesciunt labore, tempore error, impedit, rerum perspiciatis
+              placeat ea vitae maiores doloremque totam corrupti saepe itaque? Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Alias eligendi odit
+              voluptatum porro, repellendus quam vel dignissimos maiores placeat
+              quibusdam esse commodi ullam deserunt, officia eum labore corrupti
+              fuga dolorum. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Rerum nesciunt similique nihil exercitationem repudiandae, dolore eligendi
+              distinctio nam vitae eveniet culpa ipsam officia temporibus laboriosam
+              recusandae natus reprehenderit fugiat inventore! Lorem ipsum dolor
+              sit, amet consectetur adipisicing elit. Ea aperiam hic id maxime quas
+              porro quo fuga aspernatur ab placeat tenetur libero reiciendis reprehenderit
+              nobis soluta perspiciatis, deserunt mollitia. Consequatur!
+              <br />
+              <br />
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis quidem
+              tempora quam accusamus possimus deleniti voluptatem qui, quis inventore
+              nihil ipsam tempore totam ratione expedita quasi! Minima eum neque
+              debitis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Distinctio maxime unde neque molestiae reprehenderit earum porro, qui
+              nostrum aliquam, tempore vel! Doloribus ut ullam molestiae ea maiores
+              consequuntur, deserunt voluptates? Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Reiciendis reprehenderit commodi fugiat, quas esse
+              natus. Voluptatum at unde saepe quaerat id soluta, eos, fugit deleniti
+              ducimus nihil labore excepturi repellendus.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+              iste ea delectus blanditiis ad cumque magnam beatae doloremque velit
+              accusantium mollitia est dolore, laborum, praesentium reiciendis aperiam
+              quaerat accusamus id. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Nemo libero cupiditate eos saepe aut sit minus at laudantium
+              eius accusamus quos, totam numquam, odit asperiores, provident quas
+              a temporibus deserunt?
+            </p>
+            <p class="text-gray-500 mt-6">
+              <b class="font-bold text-gray-900 text-lg mb-2 block">
+                5. {translateLabels("privacy.content.5")}:
+              </b>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum rem fuga
+              dolorem qui vero nesciunt labore, tempore error, impedit, rerum perspiciatis
+              placeat ea vitae maiores doloremque totam corrupti saepe itaque? Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Alias eligendi odit
+              voluptatum porro, repellendus quam vel dignissimos maiores placeat
+              quibusdam esse commodi ullam deserunt, officia eum labore corrupti
+              fuga dolorum. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Rerum nesciunt similique nihil exercitationem repudiandae, dolore eligendi
+              distinctio nam vitae eveniet culpa ipsam officia temporibus laboriosam
+              recusandae natus reprehenderit fugiat inventore! Lorem ipsum dolor
+              sit, amet consectetur adipisicing elit. Ea aperiam hic id maxime quas
+              porro quo fuga aspernatur ab placeat tenetur libero reiciendis reprehenderit
+              nobis soluta perspiciatis, deserunt mollitia. Consequatur!
+              <br />
+              <br />
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis quidem
+              tempora quam accusamus possimus deleniti voluptatem qui, quis inventore
+              nihil ipsam tempore totam ratione expedita quasi! Minima eum neque
+              debitis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Distinctio maxime unde neque molestiae reprehenderit earum porro, qui
+              nostrum aliquam, tempore vel! Doloribus ut ullam molestiae ea maiores
+              consequuntur, deserunt voluptates? Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Reiciendis reprehenderit commodi fugiat, quas esse
+              natus. Voluptatum at unde saepe quaerat id soluta, eos, fugit deleniti
+              ducimus nihil labore excepturi repellendus.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+              iste ea delectus blanditiis ad cumque magnam beatae doloremque velit
+              accusantium mollitia est dolore, laborum, praesentium reiciendis aperiam
+              quaerat accusamus id. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Nemo libero cupiditate eos saepe aut sit minus at laudantium
+              eius accusamus quos, totam numquam, odit asperiores, provident quas
+              a temporibus deserunt?
+            </p>
+            <p class="text-gray-500 mt-6">
+              <b class="font-bold text-gray-900 text-lg mb-2 block">
+                6. {translateLabels("privacy.content.6")}:
+              </b>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum rem fuga
+              dolorem qui vero nesciunt labore, tempore error, impedit, rerum perspiciatis
+              placeat ea vitae maiores doloremque totam corrupti saepe itaque? Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Alias eligendi odit
+              voluptatum porro, repellendus quam vel dignissimos maiores placeat
+              quibusdam esse commodi ullam deserunt, officia eum labore corrupti
+              fuga dolorum. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Rerum nesciunt similique nihil exercitationem repudiandae, dolore eligendi
+              distinctio nam vitae eveniet culpa ipsam officia temporibus laboriosam
+              recusandae natus reprehenderit fugiat inventore! Lorem ipsum dolor
+              sit, amet consectetur adipisicing elit. Ea aperiam hic id maxime quas
+              porro quo fuga aspernatur ab placeat tenetur libero reiciendis reprehenderit
+              nobis soluta perspiciatis, deserunt mollitia. Consequatur!
+              <br />
+              <br />
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis quidem
+              tempora quam accusamus possimus deleniti voluptatem qui, quis inventore
+              nihil ipsam tempore totam ratione expedita quasi! Minima eum neque
+              debitis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Distinctio maxime unde neque molestiae reprehenderit earum porro, qui
+              nostrum aliquam, tempore vel! Doloribus ut ullam molestiae ea maiores
+              consequuntur, deserunt voluptates? Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Reiciendis reprehenderit commodi fugiat, quas esse
+              natus. Voluptatum at unde saepe quaerat id soluta, eos, fugit deleniti
+              ducimus nihil labore excepturi repellendus.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+              iste ea delectus blanditiis ad cumque magnam beatae doloremque velit
+              accusantium mollitia est dolore, laborum, praesentium reiciendis aperiam
+              quaerat accusamus id. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Nemo libero cupiditate eos saepe aut sit minus at laudantium
+              eius accusamus quos, totam numquam, odit asperiores, provident quas
+              a temporibus deserunt?
+            </p>
+            <p class="text-gray-500 mt-6">
+              <b class="font-bold text-gray-900 text-lg mb-2 block">
+                7. {translateLabels("privacy.content.7")}:
+              </b>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum rem fuga
+              dolorem qui vero nesciunt labore, tempore error, impedit, rerum perspiciatis
+              placeat ea vitae maiores doloremque totam corrupti saepe itaque? Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Alias eligendi odit
+              voluptatum porro, repellendus quam vel dignissimos maiores placeat
+              quibusdam esse commodi ullam deserunt, officia eum labore corrupti
+              fuga dolorum. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Rerum nesciunt similique nihil exercitationem repudiandae, dolore eligendi
+              distinctio nam vitae eveniet culpa ipsam officia temporibus laboriosam
+              recusandae natus reprehenderit fugiat inventore! Lorem ipsum dolor
+              sit, amet consectetur adipisicing elit. Ea aperiam hic id maxime quas
+              porro quo fuga aspernatur ab placeat tenetur libero reiciendis reprehenderit
+              nobis soluta perspiciatis, deserunt mollitia. Consequatur!
+              <br />
+              <br />
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis quidem
+              tempora quam accusamus possimus deleniti voluptatem qui, quis inventore
+              nihil ipsam tempore totam ratione expedita quasi! Minima eum neque
+              debitis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Distinctio maxime unde neque molestiae reprehenderit earum porro, qui
+              nostrum aliquam, tempore vel! Doloribus ut ullam molestiae ea maiores
+              consequuntur, deserunt voluptates? Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Reiciendis reprehenderit commodi fugiat, quas esse
+              natus. Voluptatum at unde saepe quaerat id soluta, eos, fugit deleniti
+              ducimus nihil labore excepturi repellendus.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+              iste ea delectus blanditiis ad cumque magnam beatae doloremque velit
+              accusantium mollitia est dolore, laborum, praesentium reiciendis aperiam
+              quaerat accusamus id. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Nemo libero cupiditate eos saepe aut sit minus at laudantium
+              eius accusamus quos, totam numquam, odit asperiores, provident quas
+              a temporibus deserunt?
+            </p>
+            <p class="text-gray-500 mt-6">
+              <b class="font-bold text-gray-900 text-lg mb-2 block">
+                8. {translateLabels("privacy.content.8")}:
+              </b>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum rem fuga
+              dolorem qui vero nesciunt labore, tempore error, impedit, rerum perspiciatis
+              placeat ea vitae maiores doloremque totam corrupti saepe itaque? Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Alias eligendi odit
+              voluptatum porro, repellendus quam vel dignissimos maiores placeat
+              quibusdam esse commodi ullam deserunt, officia eum labore corrupti
+              fuga dolorum. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Rerum nesciunt similique nihil exercitationem repudiandae, dolore eligendi
+              distinctio nam vitae eveniet culpa ipsam officia temporibus laboriosam
+              recusandae natus reprehenderit fugiat inventore! Lorem ipsum dolor
+              sit, amet consectetur adipisicing elit. Ea aperiam hic id maxime quas
+              porro quo fuga aspernatur ab placeat tenetur libero reiciendis reprehenderit
+              nobis soluta perspiciatis, deserunt mollitia. Consequatur!
+              <br />
+              <br />
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis quidem
+              tempora quam accusamus possimus deleniti voluptatem qui, quis inventore
+              nihil ipsam tempore totam ratione expedita quasi! Minima eum neque
+              debitis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Distinctio maxime unde neque molestiae reprehenderit earum porro, qui
+              nostrum aliquam, tempore vel! Doloribus ut ullam molestiae ea maiores
+              consequuntur, deserunt voluptates? Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Reiciendis reprehenderit commodi fugiat, quas esse
+              natus. Voluptatum at unde saepe quaerat id soluta, eos, fugit deleniti
+              ducimus nihil labore excepturi repellendus.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+              iste ea delectus blanditiis ad cumque magnam beatae doloremque velit
+              accusantium mollitia est dolore, laborum, praesentium reiciendis aperiam
+              quaerat accusamus id. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Nemo libero cupiditate eos saepe aut sit minus at laudantium
+              eius accusamus quos, totam numquam, odit asperiores, provident quas
+              a temporibus deserunt?
+            </p>
+            <p class="text-gray-500 mt-6">
+              <b class="font-bold text-gray-900 text-lg mb-2 block">
+                9. {translateLabels("privacy.content.9")}:
+              </b>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum rem fuga
+              dolorem qui vero nesciunt labore, tempore error, impedit, rerum perspiciatis
+              placeat ea vitae maiores doloremque totam corrupti saepe itaque? Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Alias eligendi odit
+              voluptatum porro, repellendus quam vel dignissimos maiores placeat
+              quibusdam esse commodi ullam deserunt, officia eum labore corrupti
+              fuga dolorum. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Rerum nesciunt similique nihil exercitationem repudiandae, dolore eligendi
+              distinctio nam vitae eveniet culpa ipsam officia temporibus laboriosam
+              recusandae natus reprehenderit fugiat inventore! Lorem ipsum dolor
+              sit, amet consectetur adipisicing elit. Ea aperiam hic id maxime quas
+              porro quo fuga aspernatur ab placeat tenetur libero reiciendis reprehenderit
+              nobis soluta perspiciatis, deserunt mollitia. Consequatur!
+              <br />
+              <br />
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis quidem
+              tempora quam accusamus possimus deleniti voluptatem qui, quis inventore
+              nihil ipsam tempore totam ratione expedita quasi! Minima eum neque
+              debitis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Distinctio maxime unde neque molestiae reprehenderit earum porro, qui
+              nostrum aliquam, tempore vel! Doloribus ut ullam molestiae ea maiores
+              consequuntur, deserunt voluptates? Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Reiciendis reprehenderit commodi fugiat, quas esse
+              natus. Voluptatum at unde saepe quaerat id soluta, eos, fugit deleniti
+              ducimus nihil labore excepturi repellendus.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+              iste ea delectus blanditiis ad cumque magnam beatae doloremque velit
+              accusantium mollitia est dolore, laborum, praesentium reiciendis aperiam
+              quaerat accusamus id. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Nemo libero cupiditate eos saepe aut sit minus at laudantium
+              eius accusamus quos, totam numquam, odit asperiores, provident quas
+              a temporibus deserunt?
+            </p>
+            <p class="text-gray-500 mt-6">
+              <b class="font-bold text-gray-900 text-lg mb-2 block">
+                10. {translateLabels("privacy.content.10")}:
+              </b>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum rem fuga
+              dolorem qui vero nesciunt labore, tempore error, impedit, rerum perspiciatis
+              placeat ea vitae maiores doloremque totam corrupti saepe itaque? Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Alias eligendi odit
+              voluptatum porro, repellendus quam vel dignissimos maiores placeat
+              quibusdam esse commodi ullam deserunt, officia eum labore corrupti
+              fuga dolorum. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Rerum nesciunt similique nihil exercitationem repudiandae, dolore eligendi
+              distinctio nam vitae eveniet culpa ipsam officia temporibus laboriosam
+              recusandae natus reprehenderit fugiat inventore! Lorem ipsum dolor
+              sit, amet consectetur adipisicing elit. Ea aperiam hic id maxime quas
+              porro quo fuga aspernatur ab placeat tenetur libero reiciendis reprehenderit
+              nobis soluta perspiciatis, deserunt mollitia. Consequatur!
+              <br />
+              <br />
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis quidem
+              tempora quam accusamus possimus deleniti voluptatem qui, quis inventore
+              nihil ipsam tempore totam ratione expedita quasi! Minima eum neque
+              debitis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Distinctio maxime unde neque molestiae reprehenderit earum porro, qui
+              nostrum aliquam, tempore vel! Doloribus ut ullam molestiae ea maiores
+              consequuntur, deserunt voluptates? Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Reiciendis reprehenderit commodi fugiat, quas esse
+              natus. Voluptatum at unde saepe quaerat id soluta, eos, fugit deleniti
+              ducimus nihil labore excepturi repellendus.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+              iste ea delectus blanditiis ad cumque magnam beatae doloremque velit
+              accusantium mollitia est dolore, laborum, praesentium reiciendis aperiam
+              quaerat accusamus id. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Nemo libero cupiditate eos saepe aut sit minus at laudantium
+              eius accusamus quos, totam numquam, odit asperiores, provident quas
+              a temporibus deserunt?
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-white p-6 rounded-lg shadow-lg w-full h-fit sticky top-[134px]"
+      >
+        <h2 class="text-xl font-bold text-gray-900">
+          {translateLabels("privacy.content.title")}
+        </h2>
+        <ol class="pl-4 mt-4 space-y-2">
+          <li class="underline list-decimal text-gray-700">
+            <a href="">
+              {translateLabels("privacy.content.1")}
+            </a>
+          </li>
+          <li class="underline list-decimal text-gray-700">
+            <a href="">
+              {translateLabels("privacy.content.2")}
+            </a>
+          </li>
+          <li class="underline list-decimal text-gray-700">
+            <a href="">
+              {translateLabels("privacy.content.3")}
+            </a>
+          </li>
+          <li class="underline list-decimal text-gray-700">
+            <a href="">
+              {translateLabels("privacy.content.4")}
+            </a>
+          </li>
+
+          <li class="underline list-decimal text-gray-700">
+            <a href="">
+              {translateLabels("privacy.content.5")}
+            </a>
+          </li>
+          <li class="underline list-decimal text-gray-700">
+            <a href="">
+              {translateLabels("privacy.content.6")}
+            </a>
+          </li>
+          <li class="underline list-decimal text-gray-700">
+            <a href="">
+              {translateLabels("privacy.content.7")}
+            </a>
+          </li>
+          <li class="underline list-decimal text-gray-700">
+            <a href="">
+              {translateLabels("privacy.content.8")}
+            </a>
+          </li>
+          <li class="underline list-decimal text-gray-700">
+            <a href="">
+              {translateLabels("privacy.content.9")}
+            </a>
+          </li>
+          <li class="underline list-decimal text-gray-700">
+            <a href="">
+              {translateLabels("privacy.content.10")}
+            </a>
+          </li>
+        </ol>
+        <div class="border-t border-gray-100 mt-4 py-2">
+          <a
+            href=""
+            class="text-gray-900 flex items-center gap-2 hover:bg-gray-100 transition-all px-4 py-2 rounded-md w-fit"
+          >
+            <ArrowLeft class="size-4 text-gray-900" stroke-width={2} />
+            {translateLabels("privacy.back.up")}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <Footer />
+</Layout>
