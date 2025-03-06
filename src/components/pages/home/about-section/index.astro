@@ -57,23 +57,23 @@ const highlights = [
       >
         <h2
           id="sobre-nosotros-title"
-          class="text-base/7 font-semibold text-blue-600 text-left white"
+          class="lg:text-base/7 text-sm font-semibold text-blue-600 text-left white"
         >
           {translateLabels("home.about.tag")}
         </h2>
         <p
-          class="mt-2 max-w-lg text-pretty text-4xl font-semibold tracking-tight text-gray-950 text-left whitespace-pre-line"
+          class="mt-2 max-w-lg text-pretty text-2xl lg:text-4xl font-semibold tracking-tight text-gray-950 text-left whitespace-pre-line"
         >
           {translateLabels("home.about.title")}
         </p>
         <p
-          class="mt-6 max-w-2xl text-pretty text-left text-base font-medium text-gray-600"
+          class="mt-2 lg:mt-6 max-w-2xl text-pretty text-left lg:text-base font-medium text-gray-600 text-sm"
         >
           {translateLabels("home.about.description")}
         </p>
       </div>
       <div
-        class="grid grid-cols-2 w-full bg-white rounded-xl shadow-sm overflow-hidden p-6 gap-10"
+        class="grid grid-cols-1 md:grid-cols-2 w-full bg-white rounded-xl shadow-sm overflow-hidden p-6 gap-10"
         role="list"
       >
         {
@@ -83,12 +83,14 @@ const highlights = [
                 class="bg-blue-100 block p-2 w-fit rounded-md"
                 aria-hidden="true"
               >
-                <highlight.icon class="text-blue-600 size-8" />
+                <highlight.icon class="text-blue-600 lg:size-8 size-6" />
               </span>
-              <h3 class="text-gray-900 font-semibold text-lg mt-4">
+              <h3 class="text-gray-900 font-semibold lg:text-lg text-base mt-4">
                 {highlight.title}
               </h3>
-              <p class="text-gray-600 text-base">{highlight.description}</p>
+              <p class="text-gray-600 lg:text-base text-sm">
+                {highlight.description}
+              </p>
             </div>
           ))
         }
@@ -111,7 +113,7 @@ const highlights = [
           aria-label="button"
           id="openModal"
         >
-          <Play class="size-10 text-white" />
+          <Play class="lg:size-10 size-7 text-white" />
         </button>
       </div>
     </div>

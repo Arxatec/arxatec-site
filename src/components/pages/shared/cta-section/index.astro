@@ -3,11 +3,11 @@ import { languageList, useTranslations } from "../../../../i18n/";
 const currentLang = Astro.currentLocale || "es";
 
 const translateLabels = useTranslations(
-  currentLang as keyof typeof languageList
+  currentLang as keyof typeof languageList,
 );
 ---
 
-<div class="sm:pb-32 mx-auto px-6 lg:px-8 max-w-7xl">
+<div class="pb-32 mx-auto px-6 lg:px-8 max-w-7xl">
   <div
     class="relative isolate overflow-hidden bg-slate-50 py-16 sm:py-24 lg:py-32 mx-auto max-w-7xl px-6 lg:px-12 rounded-xl shadow-sm"
   >
@@ -15,13 +15,15 @@ const translateLabels = useTranslations(
       class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2"
     >
       <div class="max-w-xl lg:max-w-lg">
-        <h2 class="text-4xl font-semibold tracking-tight text-gray-900">
+        <h2
+          class="lg:text-4xl text-2xl font-semibold tracking-tight text-gray-900"
+        >
           {translateLabels("home.cta.title")}
         </h2>
-        <p class="mt-4 text-lg text-gray-600">
+        <p class="lg:mt-4 mt-2 lg:text-lg text-sm text-gray-600">
           {translateLabels("home.cta.description")}
         </p>
-        <div class="mt-6 flex max-w-md gap-x-4">
+        <div class="mt-6 flex max-w-md gap-x-4 flex-wrap gap-y-2">
           <label for="email-address" class="sr-only">
             {translateLabels("home.cta.input.placeholder")}
           </label>
@@ -31,7 +33,7 @@ const translateLabels = useTranslations(
             type="email"
             autocomplete="email"
             required
-            class="min-w-0 flex-auto rounded-md bg-gray-900/5 px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-900/10 placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500 sm:text-sm/6"
+            class="min-w-0 flex-auto rounded-md bg-gray-900/5 px-3.5 py-2 lg:text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-900/10 placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500 text-sm"
             placeholder={translateLabels("home.cta.input.placeholder")}
           />
           <button
@@ -64,7 +66,7 @@ const translateLabels = useTranslations(
           <dt class="mt-4 text-base font-semibold text-gray-900">
             {translateLabels("home.cta.highContent.title")}
           </dt>
-          <dd class="mt-2 text-base/7 text-gray-600">
+          <dd class="mt-2 lg:text-base/7 text-sm text-gray-600">
             {translateLabels("home.cta.highContent.description")}
           </dd>
         </div>
@@ -89,7 +91,7 @@ const translateLabels = useTranslations(
           <dt class="mt-4 text-base font-semibold text-gray-900">
             {translateLabels("home.cta.noSpam.title")}
           </dt>
-          <dd class="mt-2 text-base/7 text-gray-600">
+          <dd class="mt-2 lg:text-base/7 text-sm text-gray-600">
             {translateLabels("home.cta.noSpam.description")}
           </dd>
         </div>

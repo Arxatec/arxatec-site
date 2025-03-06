@@ -31,15 +31,18 @@ const translateLabels = useTranslations(
     >
       <div class="w-full max-w-2xl">
         <p
-          class="text-white font-medium text-lg text-left mb-4 mt-12 md:mt-0"
+          class="text-white font-medium text-base lg:text-lg text-left mb-4 mt-12 md:mt-0"
           id="hero-subheading"
         >
           {translateLabels("home.hero.tag")}
         </p>
-        <h1 id="hero-heading" class="text-white font-bold text-4xl text-left">
+        <h1
+          id="hero-heading"
+          class="text-white font-bold text-3xl lg:text-4xl text-left"
+        >
           {translateLabels("home.hero.title")}
         </h1>
-        <p class="text-white/80 text-left mt-8">
+        <p class="text-white/80 text-left mt-8 text-sm lg:text-base">
           {translateLabels("home.hero.description")}
         </p>
         <form
@@ -55,7 +58,7 @@ const translateLabels = useTranslations(
             type="email"
             autocomplete="email"
             required
-            class="min-w-0 flex-auto rounded-md bg-white/15 backdrop-blur-lg px-3.5 py-2 text-sm text-white outline outline-1 -outline-offset-1 outline-white/15 placeholder:text-white/60 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-white sm:text-sm/6"
+            class="min-w-0 flex-auto rounded-md bg-white/15 backdrop-blur-lg px-3.5 py-2 text-sm text-white outline outline-1 -outline-offset-1 outline-white/15 placeholder:text-white/60 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-white"
             placeholder={translateLabels("home.hero.input.placeholder")}
           />
           <button
@@ -101,7 +104,7 @@ const translateLabels = useTranslations(
             loading="lazy"
           />
           <div
-            class="text-white mt-4 flex items-start justify-between whitespace-pre-line"
+            class="text-white mt-4 flex items-start justify-between whitespace-pre-line text-sm lg:text-base"
           >
             <p>
               {translateLabels("home.hero.about.title")}

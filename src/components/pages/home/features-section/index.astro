@@ -3,7 +3,7 @@ import { languageList, useTranslations } from "../../../../i18n/";
 const currentLang = Astro.currentLocale || "es";
 
 const translateLabels = useTranslations(
-  currentLang as keyof typeof languageList
+  currentLang as keyof typeof languageList,
 );
 
 import communityFeature from "../../../../assets/images/features/comunity_feature.png";
@@ -16,16 +16,16 @@ import paymentFeature from "../../../../assets/images/features/payment_feature.p
 <div class="py-24 sm:py-32">
   <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
     <div class="bg-white rounded-xl shadow-sm overflow-hidden p-6">
-      <h2 class="text-base/7 font-semibold text-blue-600 text-left">
+      <h2 class="lg:text-base/7 text-sm font-semibold text-blue-600 text-left">
         {translateLabels("home.features.tag")}
       </h2>
       <p
-        class="mt-2 max-w-lg text-pretty text-4xl font-semibold tracking-tight text-gray-950 text-left"
+        class="mt-2 max-w-lg text-pretty lg:text-4xl text-2xl font-semibold tracking-tight text-gray-950 text-left"
       >
         {translateLabels("home.features.title")}
       </p>
       <p
-        class="mt-6 max-w-2xl text-pretty text-left text-base font-medium text-gray-600"
+        class="lg:mt-6 mt-2 text-sm max-w-2xl text-pretty text-left lg:text-base font-medium text-gray-600"
       >
         {translateLabels("home.features.description")}
       </p>

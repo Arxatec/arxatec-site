@@ -1,0 +1,63 @@
+---
+import ArrowLeft from "astro-heroicons/outline/ArrowLeft.astro";
+import { languageList, useTranslations } from "../../../../i18n/";
+const currentLang = Astro.currentLocale || "es";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList,
+);
+---
+
+<section class="px-6 lg:px-12 bg-white py-12 rounded-md shadow-sm">
+  <button
+    class="mb-5 text-gray-700 font-medium flex items-center gap-2 transition-all hover:bg-gray-100 rounded-md px-4 py-2 text-sm lg:text-base"
+  >
+    <ArrowLeft class="size-4" stroke-width={2} />
+    {translateLabels("blog.read.back")}
+  </button>
+  <p
+    class="text-gray-900 lg:text-4xl text-2xl font-bold tracking-tight text-left capitalize"
+  >
+    Cómo vestirse adecuadamente para aumentar tus posibilidades de éxito en un
+    juicio
+  </p>
+  <p class="lg:text-base text-sm mt-4 text-gray-600 text-left">
+    Vestirse adecuadamente en un juicio es crucial para proyectar
+    profesionalismo, confianza y credibilidad, ya que influye en la percepción
+    del juez y el jurado, ayudando a reforzar la imagen de seriedad y respeto
+    que aumenta las posibilidades de éxito.
+  </p>
+
+  <div class="flex items-center justify-start gap-4 mt-5">
+    <span class="text-gray-600 bg-gray-100 rounded-full px-4 py-1.5 text-sm">
+      Derechos legales
+    </span>
+  </div>
+</section>
+<section class="px-6 lg:px-12 bg-white py-4 rounded-md shadow-sm mt-2">
+  <div class="flex items-center justify-between flex-wrap gap-4">
+    <span class="flex items-center gap-2">
+      <img
+        class="rounded-full size-10 object-cover"
+        alt="username"
+        src="https://images.pexels.com/photos/5721002/pexels-photo-5721002.jpeg"
+      />
+      <div>
+        <p class="text-sm text-gray-700 font-semibold">
+          Rafael Aguirre Gonzalo
+        </p>
+        <p class="text-sm text-gray-700">Abogado legal</p>
+      </div>
+    </span>
+    <span class="flex items-center gap-2 lg:justify-end flex-wrap">
+      <p class="text-sm text-gray-700">24 de enero del 2024</p>
+      <span class="size-1.5 rounded-full bg-gray-500"></span>
+      <p class="text-sm text-gray-700">10 minutos de lectura</p>
+    </span>
+  </div>
+</section>
+<img
+  src="https://images.pexels.com/photos/5673501/pexels-photo-5673501.jpeg"
+  alt="banner"
+  class="w-full h-[700px] object-cover rounded-md mt-2 object-top shadow"
+/>

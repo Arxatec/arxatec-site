@@ -208,17 +208,17 @@ const posts = [
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="bg-white rounded-xl shadow-sm overflow-hidden p-6">
       <p
-        class="mt-2 max-w-lg text-pretty text-4xl font-semibold tracking-tight text-gray-950 text-left"
+        class="mt-2 max-w-lg text-pretty lg:text-4xl text-2xl font-semibold tracking-tight text-gray-950 text-left"
       >
         {translateLabels("blog.blog.title")}
       </p>
       <p
-        class="mt-6 max-w-2xl text-pretty text-left text-base font-medium text-gray-600"
+        class="lg:mt-6 mt-2 max-w-2xl text-pretty text-left lg:text-base text-sm font-medium text-gray-600"
       >
         {translateLabels("blog.blog.description")}
       </p>
-      <div class="mt-8 flex items-center justify-between">
-        <div class="flex items-center gap-2">
+      <div class="mt-8 flex items-center justify-between flex-wrap gap-6">
+        <div class="flex items-center gap-2 flex-wrap">
           <button
             class="px-4 py-1.5 bg-gray-100 rounded-md font-medium text-gray-900 text-sm"
           >
@@ -250,7 +250,7 @@ const posts = [
             {translateLabels("blog.blog.category.6")}
           </button>
         </div>
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-1 flex-wrap">
           <p class="text-sm text-gray-900">
             {translateLabels("blog.blog.order.title")}
           </p>
@@ -258,7 +258,7 @@ const posts = [
             <select
               id="location"
               name="location"
-              class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pl-3 pr-8 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6"
+              class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pl-3 pr-8 lg:text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 text-sm"
             >
               <option>
                 {translateLabels("blog.blog.order.recent")}

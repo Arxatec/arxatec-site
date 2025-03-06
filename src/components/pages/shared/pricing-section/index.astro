@@ -4,7 +4,7 @@ import { languageList, useTranslations } from "../../../../i18n/";
 const currentLang = Astro.currentLocale || "es";
 
 const translateLabels = useTranslations(
-  currentLang as keyof typeof languageList
+  currentLang as keyof typeof languageList,
 );
 ---
 
@@ -12,17 +12,17 @@ const translateLabels = useTranslations(
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="bg-white shadow-sm rounded-xl p-6">
       <div class="max-w-4xl text-center">
-        <h2 class="text-base font-semibold text-blue-600 text-left">
+        <h2 class="lg:text-base text-sm font-semibold text-blue-600 text-left">
           {translateLabels("home.pricing.tag")}
         </h2>
         <p
-          class="mt-2 text-balance text-left text-4xl font-semibold tracking-tight text-gray-900 sm:text-4xl font-robotoSlab"
+          class="mt-2 text-balance text-left lg:text-4xl text-2xl font-semibold tracking-tight text-gray-900 sm:text-4xl font-robotoSlab"
         >
           {translateLabels("home.pricing.title")}
         </p>
       </div>
       <p
-        class="mt-6 max-w-2xl text-pretty text-left text-base font-medium text-gray-600"
+        class="lg:mt-6 mt-2 max-w-2xl text-pretty text-left lg:text-base text-sm font-medium text-gray-600"
       >
         {translateLabels("home.pricing.description")}
       </p>

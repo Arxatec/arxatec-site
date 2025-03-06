@@ -147,7 +147,7 @@ export const Chat = ({ setOpenChat, props }) => {
   };
 
   return (
-    <div className="flex flex-col h-[600px] w-full max-w-md mx-auto rounded-lg shadow-lg overflow-hidden bg-white fixed bottom-4 right-4 z-50">
+    <div className="flex flex-col h-[600px] w-full max-w-md mx-auto rounded-lg shadow-lg overflow-hidden bg-white fixed bottom-0 right-0 md:bottom-4 md:right-4 z-50">
       <div className="p-2 border-b border-gray-100 bg-white flex items-center justify-between">
         <div className="flex items-center ">
           {!isHome && (

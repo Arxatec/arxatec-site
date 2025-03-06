@@ -11,12 +11,12 @@ const translateLabels = useTranslations(
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="bg-white rounded-xl shadow-sm overflow-hidden p-6">
       <p
-        class="mt-2 max-w-lg text-pretty text-4xl font-semibold tracking-tight text-gray-950 text-left"
+        class="mt-2 max-w-lg text-pretty lg:text-4xl text-2xl font-semibold tracking-tight text-gray-950 text-left"
       >
         {translateLabels("support.contact.title")}
       </p>
       <p
-        class="mt-6 max-w-2xl text-pretty text-left text-base font-medium text-gray-600"
+        class="lg:mt-6 mt-2 max-w-2xl text-pretty text-left lg:lg:text-base text-sm font-medium text-gray-600"
       >
         {translateLabels("support.contact.description")}
       </p>
@@ -26,53 +26,64 @@ const translateLabels = useTranslations(
         class="overflow-hidden shadow-sm rounded-xl relative bg-white p-6 divide-y divide-gray-200"
       >
         <div class="pb-6">
-          <h2 class="text-gray-900 font-bold text-lg">
+          <h2 class="text-gray-900 font-bold lg:text-lg text-base">
             {translateLabels("support.contact.info.email.title")}
           </h2>
-          <p class="text-gray-600 mt-2">
+          <p class="text-gray-600 mt-2 text-sm lg:lg:text-base">
             {translateLabels("support.contact.info.email.description")}
           </p>
 
-          <a href="" class="underline text-gray-900 font-semibold block mt-6"
+          <a
+            href=""
+            class="underline text-gray-900 font-semibold block mt-6 text-sm lg:lg:text-base"
             >arxatec.developers@gmail.com</a
           >
         </div>
         <div class="py-6">
-          <h2 class="text-gray-900 font-bold text-lg">
+          <h2 class="text-gray-900 font-bold lg:text-lg text-base">
             {translateLabels("support.contact.info.chat.title")}
           </h2>
-          <p class="text-gray-600 mt-2">
+          <p class="text-gray-600 mt-2 text-sm lg:lg:text-base">
             {translateLabels("support.contact.info.chat.description")}
           </p>
 
-          <a href="" class="underline text-gray-900 font-semibold block mt-6">
+          <a
+            href=""
+            class="underline text-gray-900 font-semibold block mt-6 text-sm lg:lg:text-base"
+          >
             {translateLabels("support.contact.info.chat.button")}
           </a>
         </div>
         <div class="py-6">
-          <h2 class="text-gray-900 font-bold text-lg">
+          <h2 class="text-gray-900 font-bold lg:text-lg text-base">
             {translateLabels("support.contact.info.phone.title")}
           </h2>
-          <p class="text-gray-600 mt-2">
+          <p class="text-gray-600 mt-2 text-sm lg:lg:text-base">
             {translateLabels("support.contact.info.phone.description")}
           </p>
 
-          <a href="" class="underline text-gray-900 font-semibold block mt-6"
+          <a
+            href=""
+            class="underline text-gray-900 font-semibold block mt-6 text-sm lg:lg:text-base"
             >+51 967523180</a
           >
-          <a href="" class="underline text-gray-900 font-semibold block mt-2"
+          <a
+            href=""
+            class="underline text-gray-900 font-semibold block mt-2 text-sm lg:lg:text-base"
             >+04 012112</a
           >
         </div>
         <div class="py-6">
-          <h2 class="text-gray-900 font-bold text-lg">
+          <h2 class="text-gray-900 font-bold lg:text-lg text-base">
             {translateLabels("support.contact.info.location.title")}
           </h2>
-          <p class="text-gray-600 mt-2">
+          <p class="text-gray-600 mt-2 text-sm lg:lg:text-base">
             {translateLabels("support.contact.info.location.description")}
           </p>
 
-          <a href="" class="underline text-gray-900 font-semibold block mt-6"
+          <a
+            href=""
+            class="underline text-gray-900 font-semibold block mt-6 text-sm lg:lg:text-base"
             >Torre Galena 234, Huancayo, Junín, Perú</a
           >
         </div>
@@ -88,7 +99,7 @@ const translateLabels = useTranslations(
                 type="text"
                 name="name"
                 id="name"
-                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6"
+                class="block w-full rounded-md bg-white px-3 py-1.5 lg:text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 text-sm"
                 placeholder={translateLabels(
                   "support.contact.form.name.placeholder",
                 )}
@@ -107,7 +118,7 @@ const translateLabels = useTranslations(
                 type="text"
                 name="lastname"
                 id="lastname"
-                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6"
+                class="block w-full rounded-md bg-white px-3 py-1.5 lg:lg:text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm"
                 placeholder={translateLabels(
                   "support.contact.form.lastname.placeholder",
                 )}
@@ -124,7 +135,7 @@ const translateLabels = useTranslations(
               type="email"
               name="email"
               id="email"
-              class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6"
+              class="block w-full rounded-md bg-white px-3 py-1.5 lg:text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 text-sm"
               placeholder={translateLabels(
                 "support.contact.form.email.placeholder",
               )}
@@ -140,7 +151,7 @@ const translateLabels = useTranslations(
               type="text"
               name="phone"
               id="phone"
-              class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6"
+              class="block w-full rounded-md bg-white px-3 py-1.5 lg:text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 text-sm"
               placeholder={translateLabels(
                 "support.contact.form.phone.placeholder",
               )}
@@ -159,7 +170,7 @@ const translateLabels = useTranslations(
               type="text"
               name="country"
               id="country"
-              class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6"
+              class="block w-full rounded-md bg-white px-3 py-1.5 lg:text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 text-sm"
               placeholder={translateLabels(
                 "support.contact.form.country.placeholder",
               )}
@@ -179,7 +190,7 @@ const translateLabels = useTranslations(
               type="text"
               name="country"
               id="country"
-              class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6"
+              class="block w-full rounded-md bg-white px-3 py-1.5 lg:text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 text-sm"
               placeholder={translateLabels(
                 "support.contact.form.subject.placeholder",
               )}
@@ -202,7 +213,7 @@ const translateLabels = useTranslations(
               placeholder={translateLabels(
                 "support.contact.form.message.placeholder",
               )}
-              class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6"
+              class="block w-full rounded-md bg-white px-3 py-1.5 lg:text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 text-sm"
             ></textarea>
           </div>
         </div>
