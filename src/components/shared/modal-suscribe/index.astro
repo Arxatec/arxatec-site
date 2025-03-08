@@ -1,0 +1,34 @@
+---
+import ModalSuscribe from "./index.jsx";
+import { languageList, useTranslations } from "../../../i18n/";
+const currentLang = Astro.currentLocale || "es";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList,
+);
+
+const props = {
+  title: translateLabels("modal.suscribe.title"),
+  description: translateLabels("modal.suscribe.description"),
+  form:{
+    email:{
+      label: translateLabels("modal.suscribe.form.email.label"),
+      placeholder: translateLabels("modal.suscribe.form.email.placeholder"),
+
+    },
+    name:{
+      label: translateLabels("modal.suscribe.form.name.label"),
+      placeholder: translateLabels("modal.suscribe.form.name.placeholder"),
+    },
+    submit: translateLabels("modal.suscribe.form.submit"),
+  },
+  terms:{
+    p1: translateLabels("modal.suscribe.terms.p1"),
+    p2: translateLabels("modal.suscribe.terms.p2"),
+    p3: translateLabels("modal.suscribe.terms.p3"),
+    p4: translateLabels("modal.suscribe.terms.p4"),
+  }
+};
+---
+
+<ModalSuscribe client:only="react" props={props} />

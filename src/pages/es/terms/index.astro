@@ -5,14 +5,37 @@ import Layout from "../../../layouts/Layout.astro";
 import ArrowLeft from "astro-heroicons/outline/ArrowLeft.astro";
 
 import { languageList, useTranslations } from "../../../i18n/";
+import { assets } from "../../../utils";
 const currentLang = Astro.currentLocale || "es";
 
 const translateLabels = useTranslations(
-  currentLang as keyof typeof languageList,
+  currentLang as keyof typeof languageList
 );
+
+const structuredData = {
+  "@context": assets.seo.context,
+  "@type": assets.seo.type,
+  name: translateLabels("seo.terms.title"),
+  url: translateLabels("seo.terms.canonical"),
+  description: translateLabels("seo.terms.description"),
+  publisher: {
+    "@type": assets.seo.type_publisher,
+    name: assets.seo.name,
+    logo: assets.seo.logo_url,
+  },
+};
 ---
 
-<Layout title="Terminos y condiciones - Arxatec">
+<Layout
+  title={translateLabels("seo.terms.title")}
+  description={translateLabels("seo.terms.description")}
+  keywords={translateLabels("seo.terms.keywords")}
+  canonical={translateLabels("seo.terms.canonical")}
+  image={assets.seo.image_og}
+  type={assets.seo.type.toLowerCase()}
+  robots={assets.seo.robots}
+  structuredData={structuredData}
+>
   <Header />
   <div class="mx-auto max-w-7xl px-6 pb-24 sm:pb-32 lg:px-8 lg:pb-40 pt-6">
     <div class="w-full grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-2">

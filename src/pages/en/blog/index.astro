@@ -5,9 +5,38 @@ import HeroSection from "../../../components/pages/blog/hero-section/index.astro
 import CtaSection from "../../../components/pages/shared/cta-section/index.astro";
 import BlogSection from "../../../components/pages/blog/blog-section/index.astro";
 import Layout from "../../../layouts/Layout.astro";
+import { languageList, useTranslations } from "../../../i18n/";
+import { assets } from "../../../utils";
+const currentLang = Astro.currentLocale || "en";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList
+);
+
+const structuredData = {
+  "@context": assets.seo.context,
+  "@type": assets.seo.type,
+  name: translateLabels("seo.blog.title"),
+  url: translateLabels("seo.blog.canonical"),
+  description: translateLabels("seo.blog.description"),
+  publisher: {
+    "@type": assets.seo.type_publisher,
+    name: assets.seo.name,
+    logo: assets.seo.logo_url,
+  },
+};
 ---
 
-<Layout title="Blog - Arxatec">
+<Layout
+  title={translateLabels("seo.blog.title")}
+  description={translateLabels("seo.blog.description")}
+  keywords={translateLabels("seo.blog.keywords")}
+  canonical={translateLabels("seo.blog.canonical")}
+  image={assets.seo.image_og}
+  type={assets.seo.type.toLowerCase()}
+  robots={assets.seo.robots}
+  structuredData={structuredData}
+>
   <Header />
   <HeroSection />
   <BlogSection />

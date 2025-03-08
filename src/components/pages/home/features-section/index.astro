@@ -1,16 +1,12 @@
 ---
 import { languageList, useTranslations } from "../../../../i18n/";
+import { assets } from "../../../../utils";
 const currentLang = Astro.currentLocale || "es";
 
 const translateLabels = useTranslations(
   currentLang as keyof typeof languageList,
 );
 
-import communityFeature from "../../../../assets/images/features/comunity_feature.png";
-import messagesFeature from "../../../../assets/images/features/messages_feature.png";
-import calendarFeature from "../../../../assets/images/features/calendar_feature.png";
-import casesFeature from "../../../../assets/images/features/cases_feature.png";
-import paymentFeature from "../../../../assets/images/features/payment_feature.png";
 ---
 
 <div class="py-24 sm:py-32">
@@ -46,7 +42,7 @@ import paymentFeature from "../../../../assets/images/features/payment_feature.p
             </div>
             <img
               class="h-80 object-cover object-left w-full"
-              src={communityFeature.src}
+              src={assets.home.features.community}
               alt=""
             />
           </div>
@@ -82,7 +78,7 @@ import paymentFeature from "../../../../assets/images/features/payment_feature.p
             </div>
             <img
               class="h-80 object-cover object-left lg:object-right"
-              src={casesFeature.src}
+              src={assets.home.features.cases}
               alt=""
             />
           </div>
@@ -116,7 +112,7 @@ import paymentFeature from "../../../../assets/images/features/payment_feature.p
             </div>
             <img
               class="h-80 object-cover object-left relative z-10 w-full"
-              src={messagesFeature.src}
+              src={assets.home.features.messages}
               alt=""
             />
           </div>
@@ -149,7 +145,7 @@ import paymentFeature from "../../../../assets/images/features/payment_feature.p
             </div>
             <img
               class="h-80 object-cover w-full"
-              src={calendarFeature.src}
+              src={assets.home.features.calendar}
               alt=""
             />
           </div>
@@ -183,7 +179,7 @@ import paymentFeature from "../../../../assets/images/features/payment_feature.p
             </div>
             <img
               class="h-80 object-cover w-full"
-              src={paymentFeature.src}
+              src={assets.home.features.payments}
               alt=""
             />
           </div>

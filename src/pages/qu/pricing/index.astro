@@ -6,9 +6,68 @@ import PricingSection from "../../../components/pages/shared/pricing-section/ind
 import PricingDetailSection from "../../../components/pages/pricing/pricing-detail-section/index.astro";
 import HeroSection from "../../../components/pages/pricing/hero-section/index.astro";
 import Layout from "../../../layouts/Layout.astro";
+import { languageList, useTranslations } from "../../../i18n/";
+import { assets } from "../../../utils";
+const currentLang = Astro.currentLocale || "qu";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList
+);
+
+const structuredData = {
+  "@context": assets.seo.context,
+  "@type": assets.seo.type,
+  name: translateLabels("seo.pricing.title"),
+  url: translateLabels("seo.pricing.canonical"),
+  description: translateLabels("seo.pricing.description"),
+  brand: {
+    "@type": "Brand",
+    name: assets.seo.name,
+  },
+  offers: [
+    {
+      "@type": "Offer",
+      name: translateLabels("home.pricing.free.title"),
+      price: translateLabels("home.pricing.free.price"),
+      priceCurrency: "USD",
+      url: translateLabels("seo.pricing.canonical"),
+      availability: "https://schema.org/InStock",
+    },
+    {
+      "@type": "Offer",
+      name: translateLabels("home.pricing.basic.title"),
+      price: translateLabels("home.pricing.basic.price"),
+      priceCurrency: "USD",
+      url: translateLabels("seo.pricing.canonical"),
+      availability: "https://schema.org/InStock",
+    },
+    {
+      "@type": "Offer",
+      name: translateLabels("home.pricing.premium.title"),
+      price: translateLabels("home.pricing.premium.price"),
+      priceCurrency: "USD",
+      url: translateLabels("seo.pricing.canonical"),
+      availability: "https://schema.org/InStock",
+    },
+  ],
+  publisher: {
+    "@type": assets.seo.type_publisher,
+    name: assets.seo.name,
+    logo: assets.seo.logo_url,
+  },
+};
 ---
 
-<Layout title="Precios - Arxatec">
+<Layout
+  title={translateLabels("seo.pricing.title")}
+  description={translateLabels("seo.pricing.description")}
+  keywords={translateLabels("seo.pricing.keywords")}
+  canonical={translateLabels("seo.pricing.canonical")}
+  image={assets.seo.image_og}
+  type={assets.seo.type.toLowerCase()}
+  robots={assets.seo.robots}
+  structuredData={structuredData}
+>
   <Header />
   <HeroSection />
   <PricingSection />

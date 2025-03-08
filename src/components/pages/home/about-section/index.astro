@@ -4,8 +4,8 @@ import LockClosed from "astro-heroicons/solid/LockClosed.astro";
 import ChartBar from "astro-heroicons/solid/ChartBar.astro";
 import Users from "astro-heroicons/solid/Users.astro";
 import Bolt from "astro-heroicons/solid/Bolt.astro";
-import VideoPlayer from "./video-player.astro";
 import { languageList, useTranslations } from "../../../../i18n/";
+import { assets } from "../../../../utils";
 const currentLang = Astro.currentLocale || "es";
 
 const translateLabels = useTranslations(
@@ -99,7 +99,7 @@ const highlights = [
 
     <div class="overflow-hidden relative rounded-lg mt-2 h-[720px]">
       <img
-        src="https://images.pexels.com/photos/4427816/pexels-photo-4427816.jpeg"
+        src={assets.home.about.video_banner}
         alt="image"
         class="w-full h-full object-cover relative z-[5]"
         loading="lazy"

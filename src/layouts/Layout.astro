@@ -1,31 +1,96 @@
 ---
 import "@fontsource-variable/dm-sans";
 import Chatbot from "../components/shared/chatbot/index.astro";
+import ModalSuscribe from "../components/shared/modal-suscribe/index.astro";
+
 const currentLang = Astro.currentLocale || "es";
-const { title } = Astro.props;
+const {
+  title = "Mi Sitio Web",
+  description = "Bienvenido a nuestro sitio web, descubre lo mejor en tecnología.",
+  keywords = "tecnología, innovación, software, desarrollo web",
+  canonical = Astro.url.pathname,
+  image = "/default-og-image.jpg",
+  type = "website",
+  robots = "index, follow",
+  structuredData
+} = Astro.props;
 ---
 
-<!doctype html>
-<html lang={currentLang}>
+<!DOCTYPE html>
+<html lang={currentLang} dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="robots" content={robots} />
+
+    <!-- SEO Meta -->
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content={type} />
+    <meta property="og:locale" content={currentLang} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonical} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- JSON-LD Structured Data -->
+    {structuredData && <script type="application/ld+json">{JSON.stringify(structuredData)}</script>}
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+
+    <!-- Scripts -->
+    <meta name="generator" content={Astro.generator} />
   </head>
+
   <body class="text-gray-900 font-sans bg-slate-100">
     <slot />
-    <Chatbot />
+    <Chatbot  />
+    <ModalSuscribe  />
   </body>
 </html>
 
 <style>
-  *,
-  *::after,
-  *::before {
+  *, *::after, *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
 </style>
+
+<script>
+  document.addEventListener("click", function (event) {
+    const isModalActive = localStorage.getItem("IS_MODAL_ACTIVE");
+    // @ts-ignore
+    if(event.target.classList.contains("modal-suscribe-button")){
+      if (typeof isModalActive === "string") {
+        if(isModalActive === "true"){
+          localStorage.setItem("IS_MODAL_ACTIVE", "false");
+        }else{
+          localStorage.setItem("IS_MODAL_ACTIVE", "true");
+        }
+        console.log(localStorage.getItem("IS_MODAL_ACTIVE"))
+      }else{
+        localStorage.setItem("IS_MODAL_ACTIVE", "true");
+      }
+    }
+  });
+</script>

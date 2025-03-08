@@ -1,9 +1,9 @@
 ---
 import CheckCircle from "astro-heroicons/outline/CheckCircle.astro";
 import ArrowUpRight from "astro-heroicons/outline/ArrowUpRight.astro";
-import laywer from "../../../../assets/images/hero/lawyer.jpeg";
 
 import { languageList, useTranslations } from "../../../../i18n/";
+import { assets } from "../../../../utils";
 const currentLang = Astro.currentLocale || "es";
 
 const translateLabels = useTranslations(
@@ -16,7 +16,7 @@ const translateLabels = useTranslations(
     class="relative w-full h-auto md:h-[920px] overflow-hidden rounded-lg flex items-center justify-center"
   >
     <img
-      src="https://images.pexels.com/photos/8428070/pexels-photo-8428070.jpeg"
+      src={assets.home.hero.banner}
       alt="Un abogado en su oficina"
       class="w-full h-full object-cover absolute z-[-1] top-0 left-0 overflow-hidden object-bottom"
       loading="lazy"
@@ -98,7 +98,7 @@ const translateLabels = useTranslations(
           aria-label="Conoce más sobre nosotros"
         >
           <img
-            src="https://images.pexels.com/photos/14726611/pexels-photo-14726611.jpeg"
+            src={assets.home.hero.about_banner}
             alt="Abogados en una reunión"
             class="md:w-56 h-48 object-cover rounded-lg w-full"
             loading="lazy"

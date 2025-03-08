@@ -5,6 +5,26 @@ import CtaSection from "../../../components/pages/shared/cta-section/index.astro
 import RelatedBlogSection from "../../../components/pages/blog/related-blog-section/index.astro";
 import Layout from "../../../layouts/Layout.astro";
 import BlogInfoSection from "../../../components/pages/blog/blog-info-section/index.astro";
+import { languageList, useTranslations } from "../../../i18n/";
+import { assets } from "../../../utils";
+const currentLang = Astro.currentLocale || "qu";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList
+);
+
+const structuredData = {
+  "@context": assets.seo.context,
+  "@type": assets.seo.type,
+  name: translateLabels("seo.blog.title"),
+  url: translateLabels("seo.blog.canonical"),
+  description: translateLabels("seo.blog.description"),
+  publisher: {
+    "@type": assets.seo.type_publisher,
+    name: assets.seo.name,
+    logo: assets.seo.logo_url,
+  },
+};
 
 // TODO: implement blog and slugs then i have the endpoint
 // TODO: forget summary and and relatios articles in aside element
@@ -48,7 +68,16 @@ if (!post) {
 }
 ---
 
-<Layout title="Blog - Arxatec">
+<Layout
+  title={translateLabels("seo.blog.title")}
+  description={translateLabels("seo.blog.description")}
+  keywords={translateLabels("seo.blog.keywords")}
+  canonical={translateLabels("seo.blog.canonical")}
+  image={assets.seo.image_og}
+  type={assets.seo.type.toLowerCase()}
+  robots={assets.seo.robots}
+  structuredData={structuredData}
+>
   <Header />
   <main class="pb-32 pt-6 mx-auto max-w-7xl px-6 lg:px-8">
     <BlogInfoSection />

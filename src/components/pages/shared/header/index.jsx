@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from "react";
-import logo from "../../../../assets/logo.png";
 import {
   ChatBubbleBottomCenterIcon,
   DocumentTextIcon,
@@ -8,12 +7,13 @@ import {
   ChevronDownIcon,
   XMarkIcon,
   Bars3Icon,
-  LanguageIcon,
 } from "@heroicons/react/24/outline";
 import {
   ArrowDownOnSquareIcon,
+  PlayCircleIcon,
   Squares2X2Icon,
 } from "@heroicons/react/16/solid";
+import { assets } from "../../../../utils";
 
 const products = [
   {
@@ -124,7 +124,7 @@ const Header = ({ headerProps }) => {
         >
           <div className="flex items-center justify-between px-6 py-4 lg:px-8 max-w-7xl mx-auto">
             <a href={navLinks[0]?.href} aria-label="Ir al inicio">
-              <img src={logo.src} alt="Arxatec logo" className="w-32" />
+              <img src={assets.logo} alt="Arxatec logo" className="w-32" />
             </a>
             <div className="lg:hidden">
               <button
@@ -137,11 +137,10 @@ const Header = ({ headerProps }) => {
               </button>
             </div>
             <div className="hidden lg:flex lg:gap-x-12">
-              {navLinks.map((link) => (
-                <>
+              {navLinks.map((link, idx) => (
+                <span key={idx}>
                   {link.action == undefined ? (
                     <a
-                      key={link.name}
                       href={link.href}
                       className="text-sm font-semibold text-gray-900 isolate z-50 block"
                     >
@@ -149,7 +148,6 @@ const Header = ({ headerProps }) => {
                     </a>
                   ) : (
                     <button
-                      key={link.name}
                       className="text-sm font-semibold text-gray-900 flex items-center gap-2"
                       onMouseEnter={() => link.action(true)}
                       onClick={() => link.action()}
@@ -166,11 +164,11 @@ const Header = ({ headerProps }) => {
                       />
                     </button>
                   )}
-                </>
+                </span>
               ))}
             </div>
             <div className="hidden lg:flex gap-4">
-              <button className=" rounded-md px-4 py-2 text-sm font-semibold shadow-xs hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-60 border border-blue-600 bg-transparent text-blue-600">
+              <button className="modal-suscribe-button rounded-md px-4 py-2 text-sm font-semibold shadow-xs hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-60 border border-blue-600 bg-transparent text-blue-600">
                 {headerProps.actions.register}
               </button>
 
@@ -190,7 +188,9 @@ const Header = ({ headerProps }) => {
           >
             <div className="mx-auto grid max-w-7xl grid-cols-1 gap-2 px-6 py-6 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-0 sm:py-10 lg:grid-cols-4 lg:gap-4 lg:px-8 xl:gap-8">
               {products.map((product) => (
-                <div className="group relative -mx-3 flex rounded-lg p-3 text-sm/6 hover:bg-gray-50/20 transition-all sm:flex-col sm:p-6 justify-start items-start">
+                <div className="group relative -mx-3 flex rounded-lg p-3 text-sm/6 hover:bg-gray-50/20 transition-all sm:flex-col sm:p-6 justify-start items-start"
+                key={product.name} 
+                >
                   <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50/20 transition-all">
                     <product.icon className="size-6 text-gray-600" />
                   </div>
@@ -211,19 +211,7 @@ const Header = ({ headerProps }) => {
                     href="#"
                     className="flex items-center gap-x-2.5 p-3 px-6 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100/30 transition-all sm:justify-center sm:px-0"
                   >
-                    <svg
-                      className="size-5 flex-none text-gray-400"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      aria-hidden="true"
-                      data-slot="icon"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0Zm6.39-2.908a.75.75 0 0 1 .766.027l3.5 2.25a.75.75 0 0 1 0 1.262l-3.5 2.25A.75.75 0 0 1 8 12.25v-4.5a.75.75 0 0 1 .39-.658Z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
+                    <PlayCircleIcon className="size-5 flex-none text-gray-400"/>
                     Mirar demostración
                   </a>
                   <a
@@ -251,7 +239,7 @@ const Header = ({ headerProps }) => {
             <div>
               <div className="flex items-center justify-between">
                 <a href={navLinks[0]?.href} aria-label="Ir al inicio">
-                  <img src={logo.src} alt="Arxatec logo" className="w-32" />
+                  <img src={assets.logo} alt="Arxatec logo" className="w-32" />
                 </a>
                 <div className="">
                   <button

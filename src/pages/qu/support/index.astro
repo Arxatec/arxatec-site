@@ -6,9 +6,38 @@ import SupportSection from "../../../components/pages/support/support-section/in
 import HeroSection from "../../../components/pages/support/hero-section/index.astro";
 import QaSection from "../../../components/pages/shared/qa-section/index.astro";
 import Layout from "../../../layouts/Layout.astro";
+import { languageList, useTranslations } from "../../../i18n/";
+import { assets } from "../../../utils";
+const currentLang = Astro.currentLocale || "qu";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList
+);
+
+const structuredData = {
+  "@context": assets.seo.context,
+  "@type": assets.seo.type,
+  name: translateLabels("seo.support.title"),
+  url: translateLabels("seo.support.canonical"),
+  description: translateLabels("seo.support.description"),
+  publisher: {
+    "@type": assets.seo.type_publisher,
+    name: assets.seo.name,
+    logo: assets.seo.logo_url,
+  },
+};
 ---
 
-<Layout title="Soporte - Arxatec">
+<Layout
+  title={translateLabels("seo.support.title")}
+  description={translateLabels("seo.support.description")}
+  keywords={translateLabels("seo.support.keywords")}
+  canonical={translateLabels("seo.support.canonical")}
+  image={assets.seo.image_og}
+  type={assets.seo.type.toLowerCase()}
+  robots={assets.seo.robots}
+  structuredData={structuredData}
+>
   <Header />
   <HeroSection />
   <SupportSection />

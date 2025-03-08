@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { languageList, useTranslations } from "../i18n/";
+import { assets } from "../utils";
 const currentLang = Astro.currentLocale || "es";
 
 const translateLabels = useTranslations(
@@ -16,8 +17,8 @@ const translateLabels = useTranslations(
     >
       <div class="w-full">
         <img
-          src="https://images.pexels.com/photos/7876093/pexels-photo-7876093.jpeg"
-          alt=""
+          src={assets.error.banner}
+          alt="error"
           class="absolute top-0 left-0 -z-10 w-full h-full object-cover"
         />
         <div

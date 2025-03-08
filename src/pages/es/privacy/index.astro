@@ -5,14 +5,37 @@ import Layout from "../../../layouts/Layout.astro";
 import ArrowLeft from "astro-heroicons/outline/ArrowLeft.astro";
 
 import { languageList, useTranslations } from "../../../i18n/";
+import { assets } from "../../../utils";
 const currentLang = Astro.currentLocale || "es";
 
 const translateLabels = useTranslations(
-  currentLang as keyof typeof languageList,
+  currentLang as keyof typeof languageList
 );
+
+const structuredData = {
+  "@context": assets.seo.context,
+  "@type": assets.seo.type,
+  name: translateLabels("seo.privacy.title"),
+  url: translateLabels("seo.privacy.canonical"),
+  description: translateLabels("seo.privacy.description"),
+  publisher: {
+    "@type": assets.seo.type_publisher,
+    name: assets.seo.name,
+    logo: assets.seo.logo_url,
+  },
+};
 ---
 
-<Layout title="Politica de privacidad - Arxatec">
+<Layout
+  title={translateLabels("seo.privacy.title")}
+  description={translateLabels("seo.privacy.description")}
+  keywords={translateLabels("seo.privacy.keywords")}
+  canonical={translateLabels("seo.privacy.canonical")}
+  image={assets.seo.image_og}
+  type={assets.seo.type.toLowerCase()}
+  robots={assets.seo.robots}
+  structuredData={structuredData}
+>
   <Header />
   <div class="mx-auto max-w-7xl px-6 pb-24 sm:pb-32 lg:px-8 lg:pb-40 pt-6">
     <div class="w-full grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-2">

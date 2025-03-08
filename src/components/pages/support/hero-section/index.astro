@@ -1,6 +1,7 @@
 ---
 import { languageList, useTranslations } from "../../../../i18n/";
 import MagnifyingGlass from "astro-heroicons/outline/MagnifyingGlass.astro";
+import { assets } from "../../../../utils/assets.utilities.ts";
 const currentLang = Astro.currentLocale || "es";
 
 const translateLabels = useTranslations(
@@ -13,7 +14,7 @@ const translateLabels = useTranslations(
     class="relative w-full h-auto overflow-hidden rounded-lg flex items-end justify-center"
   >
     <img
-      src="https://images.pexels.com/photos/8112110/pexels-photo-8112110.jpeg"
+      src={assets.support.hero.banner}
       alt="Un abogado en su oficina"
       class="w-full h-full object-cover absolute z-[-1] top-0 left-0 overflow-hidden object-center"
       loading="lazy"
