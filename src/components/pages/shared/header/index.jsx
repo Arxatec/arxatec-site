@@ -172,7 +172,7 @@ const Header = ({ headerProps }) => {
                 {headerProps.actions.register}
               </button>
 
-              <button className="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+              <button className="modal-suscribe-button rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
                 {headerProps.actions.login}
               </button>
             </div>
@@ -265,11 +265,11 @@ const Header = ({ headerProps }) => {
               </div>
             </div>
             <div className="py-4 flex gap-4 flex-col">
-              <button className="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 w-full">
+              <button className="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 w-full modal-suscribe-button">
                 {headerProps.actions.login}
               </button>
 
-              <button className=" rounded-md px-4 py-2 text-sm font-semibold shadow-xs hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-60 border border-blue-600 bg-transparent text-blue-600 w-full">
+              <button className=" rounded-md px-4 py-2 text-sm font-semibold shadow-xs hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-60 border border-blue-600 bg-transparent text-blue-600 w-full modal-suscribe-button">
                 {headerProps.actions.register}
               </button>
             </div>

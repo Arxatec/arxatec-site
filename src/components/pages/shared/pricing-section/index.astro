@@ -4,7 +4,7 @@ import { languageList, useTranslations } from "../../../../i18n/";
 const currentLang = Astro.currentLocale || "es";
 
 const translateLabels = useTranslations(
-  currentLang as keyof typeof languageList,
+  currentLang as keyof typeof languageList
 );
 ---
 
@@ -54,13 +54,12 @@ const translateLabels = useTranslations(
               >/ {translateLabels("home.pricing.month")}</span
             >
           </p>
-          <a
-            href="#"
+          <button
             aria-describedby="tier-freelancer"
-            class="mt-6 block rounded-md px-3 py-2 text-center text-sm/6 font-semibold text-blue-600 ring-1 ring-inset ring-blue-200 hover:ring-blue-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+            class="modal-suscribe-button w-full mt-6 block rounded-md px-3 py-2 text-center text-sm/6 font-semibold text-blue-600 ring-1 ring-inset ring-blue-200 hover:ring-blue-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
           >
             {translateLabels("home.pricing.startFree")}
-          </a>
+          </button>
           <ul
             role="list"
             class="mt-8 space-y-3 text-sm/6 text-gray-600 xl:mt-10"
@@ -107,13 +106,12 @@ const translateLabels = useTranslations(
               >/ {translateLabels("home.pricing.month")}</span
             >
           </p>
-          <a
-            href="#"
+          <button
             aria-describedby="tier-startup"
-            class="mt-6 block rounded-md bg-blue-600 px-3 py-2 text-center text-sm/6 font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+            class=" modal-suscribe-button w-full mt-6 block rounded-md bg-blue-600 px-3 py-2 text-center text-sm/6 font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
           >
             {translateLabels("home.pricing.buy")}
-          </a>
+          </button>
           <ul
             role="list"
             class="mt-8 space-y-3 text-sm/6 text-gray-600 xl:mt-10"
@@ -160,13 +158,12 @@ const translateLabels = useTranslations(
               >/ {translateLabels("home.pricing.month")}</span
             >
           </p>
-          <a
-            href="#"
+          <button
             aria-describedby="tier-enterprise"
-            class="mt-6 block rounded-md px-3 py-2 text-center text-sm/6 font-semibold text-blue-600 ring-1 ring-inset ring-blue-200 hover:ring-blue-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+            class="mt-6 w-full modal-suscribe-button block rounded-md px-3 py-2 text-center text-sm/6 font-semibold text-blue-600 ring-1 ring-inset ring-blue-200 hover:ring-blue-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
           >
             {translateLabels("home.pricing.buy")}
-          </a>
+          </button>
           <ul
             role="list"
             class="mt-8 space-y-3 text-sm/6 text-gray-600 xl:mt-10"

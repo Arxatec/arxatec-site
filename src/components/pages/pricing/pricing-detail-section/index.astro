@@ -3,7 +3,7 @@ import { languageList, useTranslations } from "../../../../i18n/";
 const currentLang = Astro.currentLocale || "es";
 
 const translateLabels = useTranslations(
-  currentLang as keyof typeof languageList,
+  currentLang as keyof typeof languageList
 );
 
 const pricingData = {
@@ -318,19 +318,18 @@ const pricingData = {
                         / {translateLabels("home.pricing.month")}
                       </span>
                     </p>
-                    <a
-                      href="#"
+                    <button
                       aria-describedby="tier-freelancer"
                       class={
                         plan.key !== "free"
-                          ? "mt-6 block rounded-md bg-blue-600 px-3 py-2 text-center text-sm/6 font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                          : "mt-6 block rounded-md bg-white px-3 py-2 text-center text-sm/6 font-semibold text-blue-600 border border-blue-600 shadow-sm hover:bg-blue-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                          ? " modal-suscribe-button w-full mt-6 block rounded-md bg-blue-600 px-3 py-2 text-center text-sm/6 font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                          : "modal-suscribe-button w-full mt-6 block rounded-md bg-white px-3 py-2 text-center text-sm/6 font-semibold text-blue-600 border border-blue-600 shadow-sm hover:bg-blue-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                       }
                     >
                       {plan.key === "free"
                         ? translateLabels("home.pricing.startFree")
                         : translateLabels("home.pricing.buy")}
-                    </a>
+                    </button>
                   </th>
                 ))
               }
