@@ -9,6 +9,7 @@ export const assets = {
     image_og: "https://www.arxatec.com/og-image.jpg",
   },
   logo: "/assets/logo.png",
+  icon_logo: "/assets/icon_logo.png",
   shared: {
     modal_suscribe: "",
   },

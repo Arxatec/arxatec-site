@@ -7,7 +7,7 @@ import { assets } from "../../../../utils";
 const currentLang = Astro.currentLocale || "es";
 
 const translateLabels = useTranslations(
-  currentLang as keyof typeof languageList,
+  currentLang as keyof typeof languageList
 );
 ---
 
@@ -45,7 +45,7 @@ const translateLabels = useTranslations(
         <p class="text-white/80 text-left mt-8 text-sm lg:text-base">
           {translateLabels("home.hero.description")}
         </p>
-        <form
+        <div
           class="mt-10 flex max-w-md gap-x-4"
           aria-label="Suscripción por correo"
         >
@@ -67,7 +67,7 @@ const translateLabels = useTranslations(
           >
             {translateLabels("shared.join")}
           </button>
-        </form>
+        </div>
         <ul
           class="w-full flex gap-4 flex-wrap mt-8 flex-col"
           aria-labelledby="benefits-heading"
