@@ -31,12 +31,29 @@ const subscriptionService = {
       );
       return { success: true, data: response.data };
     } catch (error) {
+      if (error.response) {
+        const statusCode = error.response.status;
+        if (statusCode === 400) {
+          return {
+            success: false,
+            error:
+              "Este correo electrónico ya está suscrito. Por favor verifica que tu correo electrónico sea correcto e intenta nuevamente.",
+          };
+        } else if (statusCode === 404) {
+          return {
+            success: false,
+            error:
+              "El servicio de suscripción no está disponible en este momento. Por favor intenta más tarde o contacta con soporte.",
+          };
+        }
+      }
+
       return {
         success: false,
         error:
           error.response?.data?.error ||
           error.message ||
-          "Error durante la suscripción",
+          "Ha ocurrido un error al procesar tu solicitud. Por favor intenta nuevamente más tarde.",
       };
     }
   },
