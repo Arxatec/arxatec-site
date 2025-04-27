@@ -1,0 +1,249 @@
+---
+export const prerender = true;
+
+export function getStaticPaths() {
+  return [];
+}
+
+export function get() {
+  return {
+    status: 302,
+    headers: {
+      Location: '/arxatec/es',
+    },
+  };
+}
+---
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cargando...</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f9f9f9;
+        font-family: Arial, sans-serif;
+      }
+      .spinner {
+        width: 150px; /* Tamaño del spinner */
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .spinner svg {
+        animation: spin 1.5s linear infinite;
+      }
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <script>
+      setTimeout(() => {
+        window.location.href = '/es';
+      }, 3000); // 3 segundos
+    </script>
+  </head>
+  <body>
+    <div class="spinner">
+      <svg aria-hidden="true" class="text-gray-200 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+        <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+      </svg>
+    </div>
+  </body>
+</html>
+
+<!-- <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cargando...</title>
+    <style>
+      body {
+        background-color: #1a183f;
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        display: grid;
+        place-items: center center;
+      }
+      .container{
+        border: 2px solid #fff;
+        height: 350px;
+        width: 350px;
+        position: relative;
+        animation: spin 1.5s linear infinite;
+      }
+
+      @keyframes spin{
+        100%{
+          transform: rotate(360deg);
+        }
+      }
+
+      .container>div:nth-child(1) {
+        width: 75px;
+        height: 75px;
+        background-image: linear-gradient(45deg, #f7d000, #e6970e);
+        background-size: cover; /* Asegura que el fondo cubra el círculo */
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        box-shadow: 0 0 3px #f7d000;
+        border-radius: 50%;
+        animation: move1 1.5s infinite;
+      }
+
+      @keyframes move1 {
+        50% {
+          transform: translate(-30px, -30px) scale(0.3);
+        }
+      }
+
+      .container>div:nth-child(2){
+        height: 45px;
+        width: 45px;
+        background-image: linear-gradient(45deg, #00d7f7, #04c0f5);
+        background-size: cover;
+        position: absolute;
+        top: 105px;
+        right: 110px;
+        box-shadow: 0 0 2px #00d7f7;
+        border-radius: 50%;
+        animation: move2 1.5s infinite;
+      }
+
+      @keyframes move2 {
+        50% {
+          transform: translate(15px, 15px) scale(0.55);
+        }
+      }
+
+      .container>div:nth-child(3){
+        height: 75px;
+        width: 75px;
+        background-image: linear-gradient(45deg, #f60180, #f7014f);
+        background-size: cover;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        box-shadow: 0 0 3px #f60180;
+        border-radius: 50%;
+        animation: move3 1.5s infinite;
+      }
+
+      @keyframes move3 {
+        50% {
+          transform: translate(30px, 30px) scale(0.3);
+        }
+      }
+
+      .container>div:nth-child(4){
+        height: 45px;
+        width: 45px;
+        background-image: linear-gradient(45deg, #da00f7, #b501f6);
+        background-size: cover;
+        position: absolute;
+        bottom: 105px;
+        left: 110px;
+        border-radius: 50%;
+        animation: move4 1.5s infinite;
+      }
+
+      @keyframes move4 {
+        50% {
+          transform: translate(-15px, 20px) scale(0.55);
+        }
+      }
+    </style>
+    <script>
+      setTimeout(() => {
+        window.location.href = '/es';
+      }, 3000); // 3 segundos
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html> -->
+
+<!-- <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cargando...</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f9f9f9;
+        font-family: Arial, sans-serif;
+      }
+      .loading-bar {
+        width: 80%;
+        height: 10px;
+        background-color: #e0e0e0;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+      }
+      .loading-bar::after {
+        content: '';
+        width: 20%;
+        height: 100%;
+        background-color: #007aff;
+        animation: loading 1.5s infinite;
+        display: block;
+        position: absolute;
+        left: 0;
+      }
+      @keyframes loading {
+        0% {
+          left: 0;
+        }
+        50% {
+          left: 50%;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+    </style>
+    <script>
+      setTimeout(() => {
+        window.location.href = '/es';
+      }, 3000); // 3 segundos
+    </script>
+  </head>
+  <body>
+    <div class="loading-bar"></div>
+    <div class="text-center">
+      <div role="status">
+          <svg aria-hidden="true" class="inline w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+              <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+          </svg>
+          <span class="sr-only">Loading...</span>
+      </div>
+  </div>
+  </body>
+</html> -->
