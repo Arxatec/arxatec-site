@@ -26,7 +26,7 @@ export const labels = {
       "Arxatec: Plataforma líder en soluciones legales laborales online. Ofrecemos asesoría experta, generación automatizada de documentos y servicios legales accesibles para que puedas defender tus derechos laborales de forma rápida y efectiva. Descubre cómo nuestra tecnología LegalTech revoluciona el acceso a la justicia en Perú y a nivel global.",
     "seo.home.keywords":
       "LegalTech, derecho laboral, acceso a la justicia, plataforma legal en línea, asesoría legal, servicios legales, innovación legal, tecnología jurídica, defensa laboral, asesoría online, documentos legales, justicia laboral, derechos laborales",
-    "seo.home.canonical": "https://www.arxatec.com/es",
+    "seo.home.canonical": "https://www.arxatec.net",
 
     // SEO > Pricing
     "seo.pricing.title": "Planes - Arxatec",
@@ -34,7 +34,7 @@ export const labels = {
       "Descubre los planes y precios de Arxatec, la plataforma LegalTech que transforma la asesoría legal laboral. Elige entre opciones gratuitas, básicas y premium, diseñadas para ofrecerte asesoría experta, generación automatizada de documentos y soluciones legales accesibles que te permitan proteger y hacer valer tus derechos laborales.",
     "seo.pricing.keywords":
       "precios Arxatec, planes legales, asesoría laboral online, documentos legales automatizados, abogados en línea, servicios legales asequibles, LegalTech, derecho laboral, contratos laborales, despidos, conflictos laborales, mediación en línea, acceso a la justicia, soluciones legales, asesoría experta",
-    "seo.pricing.canonical": "https://www.arxatec.com/es/pricing",
+    "seo.pricing.canonical": "https://www.arxatec.net/pricing",
 
     // SEO > Blog
     "seo.blog.title": "Blog - Arxatec",
@@ -42,7 +42,7 @@ export const labels = {
       "Explora el blog de Arxatec y mantente informado sobre las últimas tendencias en derecho laboral, innovaciones en LegalTech, consejos prácticos para abogados y profesionales del derecho, y actualizaciones sobre cambios legislativos que impactan a trabajadores en Perú y en el mundo.",
     "seo.blog.keywords":
       "blog Arxatec, noticias legales, consejos para abogados, actualizaciones legales, recursos educativos, innovación legal, derecho laboral, contratos laborales, conflictos laborales, mediación en línea, tendencias legales, asesoría jurídica, LegalTech, noticias del derecho",
-    "seo.blog.canonical": "https://www.arxatec.com/es/blog",
+    "seo.blog.canonical": "https://www.arxatec.net/blog",
 
     // SEO > Support
     "seo.support.title": "Soporte - Arxatec",
@@ -50,7 +50,7 @@ export const labels = {
       "Accede al soporte de Arxatec y encuentra respuestas a todas tus preguntas. Nuestro equipo de asistencia técnica está listo para ayudarte a resolver problemas, guiarte en el uso de nuestra plataforma y ofrecerte atención personalizada para garantizar una experiencia óptima.",
     "seo.support.keywords":
       "soporte Arxatec, preguntas frecuentes, ayuda en línea, contacto, asistencia técnica, resolución de problemas, servicio al cliente, soporte legal, atención personalizada, asistencia online, soporte técnico, ayuda en plataforma",
-    "seo.support.canonical": "https://www.arxatec.com/es/support",
+    "seo.support.canonical": "https://www.arxatec.net/support",
 
     // SEO > Privacy
     "seo.privacy.title": "Política de Privacidad - Arxatec",
@@ -58,7 +58,7 @@ export const labels = {
       "Lee nuestra política de privacidad para conocer cómo Arxatec protege tus datos personales y garantiza la seguridad de tu información. Descubre cómo utilizamos cookies, gestionamos tus datos y te ofrecemos control total sobre tu información personal.",
     "seo.privacy.keywords":
       "política de privacidad, datos personales, protección de datos, derechos de autor, responsabilidad, privacidad, cookies, uso de la plataforma, seguridad de datos, protección legal, privacidad online, gestión de datos, transparencia",
-    "seo.privacy.canonical": "https://www.arxatec.com/es/privacy",
+    "seo.privacy.canonical": "https://www.arxatec.net/privacy",
 
     // SEO > Terms
     "seo.terms.title": "Términos y Condiciones - Arxatec",
@@ -66,7 +66,7 @@ export const labels = {
       "Consulta nuestros términos y condiciones para entender las normas que rigen el uso de la plataforma Arxatec. Infórmate sobre tus derechos, obligaciones y las políticas que garantizan una experiencia segura y legal en nuestros servicios.",
     "seo.terms.keywords":
       "términos y condiciones, uso de la plataforma, protección de datos, derechos de autor, responsabilidad, privacidad, cookies, normativa legal, condiciones de servicio, términos de uso, políticas legales, Arxatec, experiencia segura, asesoría legal, regulación online",
-    "seo.terms.canonical": "https://www.arxatec.com/es/terms",
+    "seo.terms.canonical": "https://www.arxatec.net/terms",
 
     // Chatbot
     "chatbot.you": "Tú",
@@ -481,7 +481,7 @@ export const labels = {
       "Arxatec: The leading platform for online labor legal solutions. We offer expert advice, automated document generation, and accessible legal services so you can defend your labor rights quickly and effectively. Discover how our LegalTech technology is revolutionizing access to justice in Peru and globally.",
     "seo.home.keywords":
       "LegalTech, labor law, access to justice, online legal platform, legal advice, legal services, legal innovation, legal technology, labor defense, online consulting, legal documents, labor justice, labor rights",
-    "seo.home.canonical": "https://www.arxatec.com/en",
+    "seo.home.canonical": "https://www.arxatec.net/en",
 
     // SEO > Pricing
     "seo.pricing.title": "Plans - Arxatec",
@@ -489,7 +489,7 @@ export const labels = {
       "Discover Arxatec's plans and pricing, the LegalTech platform transforming labor legal consulting. Choose from free, basic, and premium options designed to provide expert advice, automated document generation, and accessible legal solutions to protect and enforce your labor rights.",
     "seo.pricing.keywords":
       "Arxatec pricing, legal plans, online labor consulting, automated legal documents, online lawyers, affordable legal services, LegalTech, labor law, labor contracts, dismissals, labor disputes, online mediation, access to justice, legal solutions, expert legal advice",
-    "seo.pricing.canonical": "https://www.arxatec.com/en/pricing",
+    "seo.pricing.canonical": "https://www.arxatec.net/en/pricing",
 
     // SEO > Blog
     "seo.blog.title": "Blog - Arxatec",
@@ -497,7 +497,7 @@ export const labels = {
       "Explore the Arxatec blog and stay informed about the latest trends in labor law, innovations in LegalTech, practical advice for lawyers and legal professionals, and updates on legislative changes impacting workers in Peru and worldwide.",
     "seo.blog.keywords":
       "Arxatec blog, legal news, lawyer tips, legal updates, educational resources, legal innovation, labor law, labor contracts, labor disputes, online mediation, legal trends, legal consulting, LegalTech, law news",
-    "seo.blog.canonical": "https://www.arxatec.com/en/blog",
+    "seo.blog.canonical": "https://www.arxatec.net/en/blog",
 
     // SEO > Support
     "seo.support.title": "Support - Arxatec",
@@ -505,7 +505,7 @@ export const labels = {
       "Access Arxatec support and find answers to all your questions. Our technical support team is ready to help you solve issues, guide you in using our platform, and provide personalized assistance to ensure an optimal experience.",
     "seo.support.keywords":
       "Arxatec support, frequently asked questions, online help, contact, technical assistance, problem resolution, customer service, legal support, personalized assistance, online help, technical support, platform help",
-    "seo.support.canonical": "https://www.arxatec.com/en/support",
+    "seo.support.canonical": "https://www.arxatec.net/en/support",
 
     // SEO > Privacy
     "seo.privacy.title": "Privacy Policy - Arxatec",
@@ -513,7 +513,7 @@ export const labels = {
       "Read our privacy policy to learn how Arxatec protects your personal data and ensures the security of your information. Discover how we use cookies, manage your data, and provide you with full control over your personal information.",
     "seo.privacy.keywords":
       "privacy policy, personal data, data protection, copyright, liability, privacy, cookies, platform usage, data security, legal protection, online privacy, data management, transparency",
-    "seo.privacy.canonical": "https://www.arxatec.com/en/privacy",
+    "seo.privacy.canonical": "https://www.arxatec.net/en/privacy",
 
     // SEO > Terms
     "seo.terms.title": "Terms & Conditions - Arxatec",
@@ -521,7 +521,7 @@ export const labels = {
       "Review our terms and conditions to understand the rules governing the use of the Arxatec platform. Learn about your rights, obligations, and the policies that ensure a secure and legal experience with our services.",
     "seo.terms.keywords":
       "terms and conditions, platform usage, data protection, copyright, liability, privacy, cookies, legal regulations, service conditions, terms of use, legal policies, Arxatec, secure experience, legal consulting, online regulation",
-    "seo.terms.canonical": "https://www.arxatec.com/en/terms",
+    "seo.terms.canonical": "https://www.arxatec.net/en/terms",
 
     // Chatbot
     "chatbot.you": "You",
@@ -930,7 +930,7 @@ export const labels = {
       "Arxatec: Ñawpaq kausaypi huk willay wasi, amawt'a yachachiywan, willay p'anqakunata ruwaypaq, ima kaq kikin ruwayninkuta aswan alli kasukuyta yachay. Hukch'a runakunaqa imaynaqa kayñiqta ruwayta atipay, justicia mana usuyuqta Peruwanpi chayña pachapi tarikusun.",
     "seo.home.keywords":
       "LegalTech, lulunpa justicia, justiciaqa willakunawan, internetpi justicia, asesoría, asesoría ley, justicia tecnología, lulunpa asesoría, lulunpa yachay, lulunpa yachachiy, lulunpa amawt'a, lulunpa justicia",
-    "seo.home.canonical": "https://www.arxatec.com/qu",
+    "seo.home.canonical": "https://www.arxatec.net/qu",
 
     // SEO > Pricing
     "seo.pricing.title": "Rantiykunataq Imakunataq - Arxatec",
@@ -938,7 +938,7 @@ export const labels = {
       "Arxatec rantiykunata y imakunata qhaway, kayqa LegalTech kausaypi aswan allinta yanapaway, lulunpa justicia imach'ariy, allin willaymanta yachay, lulunpa documentos ruway, asesoría justicia. Kunan, mana qollqiyuq, hukch'a qollqiyuq, nisqakuna hinataq chaskiy.",
     "seo.pricing.keywords":
       "Arxatec rantiy, lulunpa kausay, internetpi lulunpa justicia, lulunpa willay p'anqakunata, lulunpa abogados, huk qollqiyuq kausay, LegalTech, lulunpa ley, lulunpa yachachiy, lulunpa justicia, lulunpa amawt'a, justicia kausay, justicia acceso",
-    "seo.pricing.canonical": "https://www.arxatec.com/qu/pricing",
+    "seo.pricing.canonical": "https://www.arxatec.net/qu/pricing",
 
     // SEO > Blog
     "seo.blog.title": "Willay Wasi - Arxatec",
@@ -946,7 +946,7 @@ export const labels = {
       "Arxatec willay wasipi, lulunpa leykunamanta, LegalTech yachachiykunamanta, lulunpa abogados yachachinakunamanta, justicia qichusqakuna, yachay, tukuy kausaypi rimanakuy.",
     "seo.blog.keywords":
       "Arxatec willay, lulunpa willay, lulunpa justicia, abogados yachachiy, justicia imach'ariy, yachachiykunata lulunpa, lulunpa ley, lulunpa justicia, justicia amawt'a, justicia yachay, LegalTech, justicia yachay wasi",
-    "seo.blog.canonical": "https://www.arxatec.com/qu/blog",
+    "seo.blog.canonical": "https://www.arxatec.net/qu/blog",
 
     // SEO > Support
     "seo.support.title": "Yanapakuq - Arxatec",
@@ -954,7 +954,7 @@ export const labels = {
       "Arxatec yanapakuqpi taripay willaykunata. Asesoría, yanapakuq, internetpi justicia ima kasuyku. Tukuy kausaypi yanapakuq chaskiy.",
     "seo.support.keywords":
       "Arxatec yanapakuq, yanapakuq willay, yanapakuq internetpi, yanapakuq p'anqakuna, imach'ariy yanapakuq, imach'ariy willay, justicia yanapakuq, lulunpa yanapakuq, yanapakuq tukuy kausaypi, lulunpa justicia yanapakuq",
-    "seo.support.canonical": "https://www.arxatec.com/qu/support",
+    "seo.support.canonical": "https://www.arxatec.net/qu/support",
 
     // SEO > Privacy
     "seo.privacy.title": "Runaq Willayninkuna - Arxatec",
@@ -962,7 +962,7 @@ export const labels = {
       "Arxatec runaq willayninkunata imayna waqaychanchikta, seguridad imayna chaskinchikta. Cookies, datos chaskikuy imayna, tukuy runaq willayninpi apakuyta yachay.",
     "seo.privacy.keywords":
       "runaq willayninkuna, datos runaq, datos seguridad, derechos runaq, privacidad, cookies, plataforma justicia, seguridad datos, lulunpa justicia, datos yachay, imayna waqaychay, imayna chaskikuy",
-    "seo.privacy.canonical": "https://www.arxatec.com/qu/privacy",
+    "seo.privacy.canonical": "https://www.arxatec.net/qu/privacy",
 
     // SEO > Terms
     "seo.terms.title": "Imayna Taripaykunataq - Arxatec",
@@ -970,7 +970,7 @@ export const labels = {
       "Arxatec plataforma rimanakuy, imayna taripaykunataq tukuy kausaypi kasuykunata. Runakunapa derechos, obligaciones, lulunpa justicia taripay, justicia seguridad.",
     "seo.terms.keywords":
       "taripaykunataq, plataforma kasuykunata, derechos runaq, privacidad, cookies, seguridad datos, ley imayna, condiciones justicia, términos uso, seguridad lulunpa, lulunpa justicia, asesoría justicia, lulunpa regulación",
-    "seo.terms.canonical": "https://www.arxatec.com/qu/terms",
+    "seo.terms.canonical": "https://www.arxatec.net/qu/terms",
 
     // Chatbot
     "chatbot.you": "Qam",

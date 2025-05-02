@@ -1,12 +1,12 @@
 ---
-import Footer from "../../../components/pages/shared/footer/index.astro";
-import Header from "../../../components/pages/shared/header/index.astro";
-import CtaSection from "../../../components/pages/shared/cta-section/index.astro";
-import RelatedBlogSection from "../../../components/pages/blog/related-blog-section/index.astro";
-import Layout from "../../../layouts/Layout.astro";
-import BlogInfoSection from "../../../components/pages/blog/blog-info-section/index.astro";
-import { languageList, useTranslations } from "../../../i18n/";
-import { assets } from "../../../utils";
+import Footer from "../../components/pages/shared/footer/index.astro";
+import Header from "../../components/pages/shared/header/index.astro";
+import CtaSection from "../../components/pages/shared/cta-section/index.astro";
+import RelatedBlogSection from "../../components/pages/blog/related-blog-section/index.astro";
+import Layout from "../../layouts/Layout.astro";
+import BlogInfoSection from "../../components/pages/blog/blog-info-section/index.astro";
+import { languageList, useTranslations } from "../../i18n/";
+import { assets } from "../../utils";
 const currentLang = Astro.currentLocale || "es";
 
 const translateLabels = useTranslations(

@@ -2,11 +2,11 @@ export const assets = {
   seo: {
     type_publisher: "Organization",
     name: "Arxatec",
-    logo_url: "https://www.arxatec.com/assets/logo.png",
+    logo_url: "https://www.arxatec.net/favicon.svg",
     type: "WebSite",
     context: "https://schema.org",
     robots: "index, follow",
-    image_og: "https://www.arxatec.com/og-image.jpg",
+    image_og: "https://www.arxatec.net/og-image.png",
   },
   logo: "/assets/logo.png",
   icon_logo: "/assets/icon_logo.png",

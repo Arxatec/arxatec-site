@@ -9,6 +9,7 @@ import sitemap from "@astrojs/sitemap";
 
 const locales = ['en', 'es', 'qu'];
 export default defineConfig({
+
   integrations: [tailwind(), react(), 
     sitemap({
       serialize: (entry) => {
@@ -24,6 +25,7 @@ export default defineConfig({
       },
     }),  
   ],
+
   site: "https://arxatec.net",
 
   i18n: {

@@ -1,13 +1,13 @@
 ---
-import Footer from "../../../components/pages/shared/footer/index.astro";
-import Header from "../../../components/pages/shared/header/index.astro";
-import QaSection from "../../../components/pages/shared/qa-section/index.astro";
-import PricingSection from "../../../components/pages/shared/pricing-section/index.astro";
-import PricingDetailSection from "../../../components/pages/pricing/pricing-detail-section/index.astro";
-import HeroSection from "../../../components/pages/pricing/hero-section/index.astro";
-import Layout from "../../../layouts/Layout.astro";
-import { languageList, useTranslations } from "../../../i18n/";
-import { assets } from "../../../utils";
+import Footer from "../../components/pages/shared/footer/index.astro";
+import Header from "../../components/pages/shared/header/index.astro";
+import QaSection from "../../components/pages/shared/qa-section/index.astro";
+import PricingSection from "../../components/pages/shared/pricing-section/index.astro";
+import PricingDetailSection from "../../components/pages/pricing/pricing-detail-section/index.astro";
+import HeroSection from "../../components/pages/pricing/hero-section/index.astro";
+import Layout from "../../layouts/Layout.astro";
+import { languageList, useTranslations } from "../../i18n/";
+import { assets } from "../../utils";
 const currentLang = Astro.currentLocale || "es";
 
 const translateLabels = useTranslations(

@@ -1,5 +1,5 @@
 ---
-import { getRelativeLocaleUrl } from "astro:i18n";
+import { getRelativeLocaleUrl, getLocaleByPath, getAbsoluteLocaleUrl, getPathByLocale, getRelativeLocaleUrlList } from "astro:i18n";
 import Header from ".";
 import { languageList, useTranslations } from "../../../../i18n/";
 const currentLang = Astro.currentLocale || "es";
@@ -25,6 +25,9 @@ const headerProps = {
     register: translateLabels("shared.header.register"),
   },
 };
+console.log(getPathByLocale(Astro.currentLocale || "es"))
+console.log(getRelativeLocaleUrlList("/"))
+console.log(getRelativeLocaleUrl(currentLang , "/pricing"))
 ---
 
 <Header headerProps={headerProps} client:load />
