@@ -6,6 +6,41 @@ const currentLang = Astro.currentLocale || "es";
 const translateLabels = useTranslations(
   currentLang as keyof typeof languageList
 );
+
+const props = {
+  form: {
+    name: {
+      label: translateLabels("support.contact.form.name.label"),
+      placeholder: translateLabels("support.contact.form.name.placeholder")
+    },
+    lastname: {
+      label: translateLabels("support.contact.form.lastname.label"),
+      placeholder: translateLabels("support.contact.form.lastname.placeholder")
+    },
+    email: {
+      label: translateLabels("support.contact.form.email.label"),
+      placeholder: translateLabels("support.contact.form.email.placeholder")
+    },
+    phone: {
+      label: translateLabels("support.contact.form.phone.label"),
+      placeholder: translateLabels("support.contact.form.phone.placeholder")
+    },
+    country: {
+      label: translateLabels("support.contact.form.country.label"),
+      placeholder: translateLabels("support.contact.form.country.placeholder")
+    },
+    subject: {
+      label: translateLabels("support.contact.form.subject.label"),
+      placeholder: translateLabels("support.contact.form.subject.placeholder")
+    },
+    message: {
+      label: translateLabels("support.contact.form.message.label"),
+      placeholder: translateLabels("support.contact.form.message.placeholder")
+    },
+    button: translateLabels("support.contact.form.button"),
+    warn: translateLabels("support.contact.form.message.legal")
+  }
+}
 ---
 
 <div class="pb-24 md:pb-32 pt-6">
@@ -90,7 +125,7 @@ const translateLabels = useTranslations(
         </div>
       </div>
       <div class="bg-white rounded-xl shadow-sm p-6 flex flex-col">
-        <ContactForm client:load />
+        <ContactForm props={props} client:load />
       </div>
     </div>
   </div>

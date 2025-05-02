@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { assets } from "../../../../../../utils/assets.utilities.ts";
 
-export default function ContactForm() {
+export default function ContactForm({props}) {
   const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
@@ -22,10 +22,13 @@ export default function ContactForm() {
   });
 
   const validateField = (name, value) => {
+    // First check if the field is empty
+    if (!value || value.trim() === "") {
+      return "Este campo es obligatorio";
+    }
+
+    // Then perform specific validations
     switch (name) {
-      case "first_name":
-      case "last_name":
-        return value.trim() ? "" : "Este campo es obligatorio";
       case "email":
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
           ? ""
@@ -34,9 +37,6 @@ export default function ContactForm() {
         return /^[+\d\s()-]{7,}$/.test(value)
           ? ""
           : "Número de teléfono inválido";
-      case "country":
-      case "subject":
-        return value.trim() ? "" : "Este campo es obligatorio";
       case "message":
         return value.trim().length >= 10
           ? ""
@@ -81,17 +81,6 @@ export default function ContactForm() {
     setSubmitStatus(null);
     setErrorMessage("");
 
-    console.log(
-      JSON.stringify({
-        first_name: formData.first_name,
-        last_name: formData.last_name,
-        email: formData.email,
-        phone: formData.phone,
-        country: formData.country,
-        subject: formData.subject,
-        message: formData.message,
-      })
-    );
 
     try {
       const response = await fetch(
@@ -219,14 +208,14 @@ export default function ContactForm() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="flex flex-col">
+      <form onSubmit={handleSubmit} className="flex flex-col min-h-full">
         <div className="flex items-center gap-2">
           <div className="w-full">
             <label
               htmlFor="first_name"
               className="block text-sm/6 font-medium text-gray-900"
             >
-              Nombre
+              {props.form.name.label}
             </label>
             <div className="mt-2">
               <input
@@ -238,7 +227,7 @@ export default function ContactForm() {
                 className={`block w-full rounded-md bg-white px-3 py-1.5 text-gray-900 outline outline-1 -outline-offset-1 ${
                   errors.first_name ? "outline-red-500" : "outline-gray-300"
                 } placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 text-sm`}
-                placeholder="Ingrese su nombre"
+                placeholder={props.form.name.placeholder}
               />
               {errors.first_name && (
                 <p className="mt-1 text-xs text-red-500">{errors.first_name}</p>
@@ -250,7 +239,7 @@ export default function ContactForm() {
               htmlFor="last_name"
               className="block text-sm/6 font-medium text-gray-900"
             >
-              Apellido
+              {props.form.lastname.label}
             </label>
             <div className="mt-2">
               <input
@@ -262,7 +251,7 @@ export default function ContactForm() {
                 className={`block w-full rounded-md bg-white px-3 py-1.5 text-gray-900 outline outline-1 -outline-offset-1 ${
                   errors.last_name ? "outline-red-500" : "outline-gray-300"
                 } placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm`}
-                placeholder="Ingrese su apellido"
+                placeholder={props.form.lastname.placeholder}
               />
               {errors.last_name && (
                 <p className="mt-1 text-xs text-red-500">{errors.last_name}</p>
@@ -275,7 +264,7 @@ export default function ContactForm() {
             htmlFor="email"
             className="block text-sm/6 font-medium text-gray-900"
           >
-            Correo electrónico
+            {props.form.email.label}
           </label>
           <div className="mt-2">
             <input
@@ -287,7 +276,7 @@ export default function ContactForm() {
               className={`block w-full rounded-md bg-white px-3 py-1.5 text-gray-900 outline outline-1 -outline-offset-1 ${
                 errors.email ? "outline-red-500" : "outline-gray-300"
               } placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 text-sm`}
-              placeholder="Ingrese su correo electrónico"
+              placeholder={props.form.email.placeholder}
             />
             {errors.email && (
               <p className="mt-1 text-xs text-red-500">{errors.email}</p>
@@ -299,7 +288,7 @@ export default function ContactForm() {
             htmlFor="phone"
             className="block text-sm/6 font-medium text-gray-900"
           >
-            Teléfono
+            {props.form.phone.label}
           </label>
           <div className="mt-2">
             <input
@@ -311,7 +300,7 @@ export default function ContactForm() {
               className={`block w-full rounded-md bg-white px-3 py-1.5 text-gray-900 outline outline-1 -outline-offset-1 ${
                 errors.phone ? "outline-red-500" : "outline-gray-300"
               } placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 text-sm`}
-              placeholder="Ingrese su número de teléfono"
+              placeholder={props.form.phone.placeholder}
             />
             {errors.phone && (
               <p className="mt-1 text-xs text-red-500">{errors.phone}</p>
@@ -323,7 +312,7 @@ export default function ContactForm() {
             htmlFor="country"
             className="block text-sm/6 font-medium text-gray-900"
           >
-            País
+            {props.form.country.label}
           </label>
           <div className="mt-2">
             <input
@@ -335,7 +324,7 @@ export default function ContactForm() {
               className={`block w-full rounded-md bg-white px-3 py-1.5 text-gray-900 outline outline-1 -outline-offset-1 ${
                 errors.country ? "outline-red-500" : "outline-gray-300"
               } placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 text-sm`}
-              placeholder="Ingrese su país"
+              placeholder={props.form.country.placeholder}
             />
             {errors.country && (
               <p className="mt-1 text-xs text-red-500">{errors.country}</p>
@@ -348,7 +337,7 @@ export default function ContactForm() {
             htmlFor="subject"
             className="block text-sm/6 font-medium text-gray-900"
           >
-            Asunto
+            {props.form.subject.label}
           </label>
           <div className="mt-2">
             <input
@@ -360,7 +349,7 @@ export default function ContactForm() {
               className={`block w-full rounded-md bg-white px-3 py-1.5 text-gray-900 outline outline-1 -outline-offset-1 ${
                 errors.subject ? "outline-red-500" : "outline-gray-300"
               } placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 text-sm`}
-              placeholder="Ingrese el asunto del mensaje"
+              placeholder={props.form.subject.placeholder}
             />
             {errors.subject && (
               <p className="mt-1 text-xs text-red-500">{errors.subject}</p>
@@ -373,7 +362,7 @@ export default function ContactForm() {
             htmlFor="message"
             className="block text-sm/6 font-medium text-gray-900"
           >
-            Mensaje
+            {props.form.message.label}
           </label>
           <div className="mt-2">
             <textarea
@@ -385,7 +374,7 @@ export default function ContactForm() {
               className={`block w-full rounded-md bg-white px-3 py-1.5 text-gray-900 outline outline-1 -outline-offset-1 ${
                 errors.message ? "outline-red-500" : "outline-gray-300"
               } placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 text-sm`}
-              placeholder="Escriba su mensaje aquí"
+              placeholder={props.form.message.placeholder}
             ></textarea>
             {errors.message && (
               <p className="mt-1 text-xs text-red-500">{errors.message}</p>
@@ -393,8 +382,7 @@ export default function ContactForm() {
           </div>
         </div>
         <p className="text-sm mt-4 text-gray-700">
-          Al enviar este formulario, acepta nuestra política de privacidad y
-          términos de servicio.
+          {props.form.warn}
         </p>
 
         {submitStatus === "success" && (
@@ -415,9 +403,9 @@ export default function ContactForm() {
           disabled={isSubmitting}
           className={`rounded-md ${
             isSubmitting ? "bg-blue-400" : "bg-blue-600 hover:bg-blue-500"
-          } px-4 py-2 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 w-full mt-12`}
+          } px-4 py-2 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 w-full mt-auto`}
         >
-          {isSubmitting ? "Enviando..." : "Enviar mensaje"}
+          {isSubmitting ? "Enviando..." : props.form.button}
         </button>
       </form>
 

@@ -25,9 +25,7 @@ const headerProps = {
     register: translateLabels("shared.header.register"),
   },
 };
-console.log(getPathByLocale(Astro.currentLocale || "es"))
-console.log(getRelativeLocaleUrlList("/"))
-console.log(getRelativeLocaleUrl(currentLang , "/pricing"))
+
 ---
 
 <Header headerProps={headerProps} client:load />

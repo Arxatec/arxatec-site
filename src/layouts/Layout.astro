@@ -5,13 +5,13 @@ import ModalSuscribe from "../components/shared/modal-suscribe/index.astro";
 
 const currentLang = Astro.currentLocale || "es";
 const {
-  title = "Mi Sitio Web",
-  description = "Bienvenido a nuestro sitio web, descubre lo mejor en tecnología.",
-  keywords = "tecnología, innovación, software, desarrollo web",
+  title = "",
+  description = "",
+  keywords = "",
   canonical = Astro.url.pathname,
-  image = "/default-og-image.jpg",
-  type = "website",
-  robots = "index, follow",
+  image = "",
+  type = "",
+  robots = "",
   structuredData
 } = Astro.props;
 ---
@@ -24,12 +24,10 @@ const {
     <meta name="theme-color" content="#ffffff" />
     <meta name="robots" content={robots} />
 
-    <!-- SEO Meta -->
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
 
-    <!-- Open Graph (Facebook, LinkedIn) -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
@@ -37,27 +35,21 @@ const {
     <meta property="og:type" content={type} />
     <meta property="og:locale" content={currentLang} />
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
 
-    <!-- Canonical URL -->
     <link rel="canonical" href={canonical} />
 
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!-- JSON-LD Structured Data -->
     {structuredData && <script type="application/ld+json">{JSON.stringify(structuredData)}</script>}
 
-    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
 
-    <!-- Scripts -->
     <meta name="generator" content={Astro.generator} />
   </head>
 
@@ -87,7 +79,6 @@ const {
         }else{
           localStorage.setItem("IS_MODAL_ACTIVE", "true");
         }
-        console.log(localStorage.getItem("IS_MODAL_ACTIVE"))
       }else{
         localStorage.setItem("IS_MODAL_ACTIVE", "true");
       }

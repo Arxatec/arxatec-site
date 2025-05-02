@@ -8,7 +8,8 @@ export const labels = {
   es: {
     // Modal Suscribe
     "modal.suscribe.title": "Suscríbete a nuestro newsletter",
-    "modal.suscribe.description": "¡Recibe las últimas noticias y actualizaciones de nuestros servicios! Sé el primero en descubrir las innovaciones de Arxatec y mantente siempre un paso adelante.",
+    "modal.suscribe.description":
+      "¡Recibe las últimas noticias y actualizaciones de nuestros servicios! Sé el primero en descubrir las innovaciones de Arxatec y mantente siempre un paso adelante.",
     "modal.suscribe.form.email.label": "Correo electrónico",
     "modal.suscribe.form.email.placeholder": "Ej. juanperez@gmail.com",
     "modal.suscribe.form.name.label": "Nombre",
@@ -18,7 +19,21 @@ export const labels = {
     "modal.suscribe.terms.p2": "términos y condiciones",
     "modal.suscribe.terms.p3": "y nuestra",
     "modal.suscribe.terms.p4": "política de privacidad",
-
+    "modal.suscribe.thanks.title": "¡Gracias por suscribirte!",
+    "modal.suscribe.thanks.description":
+      "Estamos muy contentos de que te hayas unido a nuestra lista. Pronto recibirás noticias nuestras.",
+    "modal.suscribe.thanks.button": "Volver a la página",
+    "modal.suscribe.form.error.name.required": "El nombre es requerido.",
+    "modal.suscribe.form.error.email.invalid":
+      "El correo electrónico es invalido.",
+    "modal.suscribe.form.error.email.required":
+      "El correo electrónico es requerido.",
+    "modal.suscribe.form.error.400":
+      "Este correo electrónico ya está suscrito. Por favor verifica que tu correo electrónico sea correcto e intenta nuevamente.",
+    "modal.suscribe.form.error.404":
+      "El servicio de suscripción no está disponible en este momento. Por favor intenta más tarde o contacta con soporte.",
+    "modal.suscribe.form.error.500":
+      "Ha ocurrido un error al procesar tu solicitud. Por favor intenta nuevamente más tarde.",
 
     // SEO > Home
     "seo.home.title": "Inicio - Arxatec",
@@ -464,7 +479,8 @@ export const labels = {
   en: {
     // Modal Suscribe
     "modal.suscribe.title": "Subscribe to our newsletter",
-    "modal.suscribe.description": "Receive the latest news and updates about our services! Be the first to discover Arxatec's innovations and always stay one step ahead.",
+    "modal.suscribe.description":
+      "Receive the latest news and updates about our services! Be the first to discover Arxatec's innovations and always stay one step ahead.",
     "modal.suscribe.form.email.label": "Email",
     "modal.suscribe.form.email.placeholder": "E.g. juanperez@gmail.com",
     "modal.suscribe.form.name.label": "Name",
@@ -474,6 +490,20 @@ export const labels = {
     "modal.suscribe.terms.p2": "terms and conditions",
     "modal.suscribe.terms.p3": "and our",
     "modal.suscribe.terms.p4": "privacy policy",
+    "modal.suscribe.thanks.title": "Thanks for subscribing!",
+    "modal.suscribe.thanks.description":
+      "We're so glad you've joined our list. You'll hear from us soon.",
+    "modal.suscribe.thanks.button": "Back to page",
+    "modal.suscribe.form.error.name.required": "Name is required.",
+    "modal.suscribe.form.error.email.required": "Email is required.",
+    "modal.suscribe.form.error.email.invalid": "Email is invalid.",
+    "modal.suscribe.form.error.400":
+      "This email is already subscribed. Please verify your email address is correct and try again.",
+    "modal.suscribe.form.error.404":
+      "The subscription service is currently unavailable. Please try again later or contact support.",
+    "modal.suscribe.form.error.500":
+      "An error occurred while processing your request. Please try again later.",
+
 
     // SEO > Home
     "seo.home.title": "Home - Arxatec",
@@ -912,7 +942,8 @@ export const labels = {
   qu: {
     // Modal Suscribe
     "modal.suscribe.title": "Qillqasqa wasikunaman qillqay",
-    "modal.suscribe.description": "Ñawpaq kachkayta munaspa, Arxatec nisqapi willakuykunata chaskiy! Ñawpaqmi Arxatec nisqapi musuq ruranakuykunata yachanki, hukmanta sut'iyta chaskinki.",
+    "modal.suscribe.description":
+      "Ñawpaq kachkayta munaspa, Arxatec nisqapi willakuykunata chaskiy! Ñawpaqmi Arxatec nisqapi musuq ruranakuykunata yachanki, hukmanta sut'iyta chaskinki.",
     "modal.suscribe.form.email.label": "Correo electrónico",
     "modal.suscribe.form.email.placeholder": "Kaymanta: juanperez@gmail.com",
     "modal.suscribe.form.name.label": "Suti",
@@ -922,7 +953,20 @@ export const labels = {
     "modal.suscribe.terms.p2": "rimaywan rimanakuykuna",
     "modal.suscribe.terms.p3": "hinallataq ñoqaykuq",
     "modal.suscribe.terms.p4": "waqaychanapaq rimanakuykuna",
-
+    "modal.suscribe.thanks.title": "¡Gracias suscribisqaykimanta!",
+    "modal.suscribe.thanks.description":
+      "Ancha kusisqa kayku listaykuman hukllawakusqaykimanta. Pisi tiempollamantan uyariwankiku.",
+    "modal.suscribe.thanks.button": "P'anqaman kutiy",
+    "modal.suscribe.form.error.name.required": "Sutiqa munasqañam.",
+    "modal.suscribe.form.error.email.required":
+      "Correo electrónicoqa munasqañam.",
+    "modal.suscribe.form.error.email.invalid":
+      "Correo electrónicoqa mana allinchu.",
+    "modal.suscribe.form.error.400":
+      "Kay correo electrónicoqa ñawpaqmi suscripsusqa. Ama hina, checkay correo electrónicoyki, hukmantaña yachaykamuy.",
+    "modal.suscribe.form.error.404":
+      "Suscripción servicioqa kay pacha hinallam mana disponiblechu. Ama hina, huk ratupiña yachaykamuy utaq soportewan rimay.",
+    "modal.suscribe.form.error.500": "Achka pantasaqmi ruwasqa mañaykita. Ama hina, huk ratupiña yachaykamuy.",
 
     // SEO > Home
     "seo.home.title": "Qallariy - Arxatec",
