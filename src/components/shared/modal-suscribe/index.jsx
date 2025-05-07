@@ -23,6 +23,7 @@ const injectAnimationStyles = () => {
 };
 
 export default function ModalSuscribe({ props }) {
+  
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -30,6 +31,7 @@ export default function ModalSuscribe({ props }) {
     isSubmitting: false,
     submitError: "",
   });
+  
 
   const [modalState, setModalState] = useState({
     isModalActive: localStorage.getItem("IS_MODAL_ACTIVE") || "false",

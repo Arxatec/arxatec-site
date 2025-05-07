@@ -1,4 +1,5 @@
 ---
+import React from 'react';
 import ModalSuscribe from "./index.jsx";
 import { languageList, useTranslations } from "../../../i18n/";
 const currentLang = Astro.currentLocale || "es";
@@ -7,14 +8,15 @@ const translateLabels = useTranslations(
   currentLang as keyof typeof languageList,
 );
 
+const savedEmail = typeof window !== "undefined" ? localStorage.getItem("userEmail") || "Tu huevada no esta pasando" : "Tu porqueria no esta pasando";
+
 const props = {
   title: translateLabels("modal.suscribe.title"),
   description: translateLabels("modal.suscribe.description"),
   form:{
     email:{
       label: translateLabels("modal.suscribe.form.email.label"),
-      placeholder: translateLabels("modal.suscribe.form.email.placeholder"),
-
+      placeholder: translateLabels("modal.suscribe.form.email.placeholder")
     },
     name:{
       label: translateLabels("modal.suscribe.form.name.label"),
@@ -44,7 +46,8 @@ const props = {
     "500": translateLabels("modal.suscribe.form.error.500"),
     "400": translateLabels("modal.suscribe.form.error.400"),
     "404": translateLabels("modal.suscribe.form.error.404")
-  }
+  },
+  userEmail: savedEmail,
 };
 ---
 
