@@ -504,7 +504,6 @@ export const labels = {
     "modal.suscribe.form.error.500":
       "An error occurred while processing your request. Please try again later.",
 
-
     // SEO > Home
     "seo.home.title": "Home - Arxatec",
     "seo.home.description":
@@ -966,7 +965,8 @@ export const labels = {
       "Kay correo electrónicoqa ñawpaqmi suscripsusqa. Ama hina, checkay correo electrónicoyki, hukmantaña yachaykamuy.",
     "modal.suscribe.form.error.404":
       "Suscripción servicioqa kay pacha hinallam mana disponiblechu. Ama hina, huk ratupiña yachaykamuy utaq soportewan rimay.",
-    "modal.suscribe.form.error.500": "Achka pantasaqmi ruwasqa mañaykita. Ama hina, huk ratupiña yachaykamuy.",
+    "modal.suscribe.form.error.500":
+      "Achka pantasaqmi ruwasqa mañaykita. Ama hina, huk ratupiña yachaykamuy.",
 
     // SEO > Home
     "seo.home.title": "Qallariy - Arxatec",

@@ -1,10 +1,69 @@
+---
+interface User {
+  first_name: string;
+  last_name: string;
+}
+
+interface UserDetails {
+  user: User;
+}
+
+interface ArticleCategory {
+  name: string;
+}
+
+interface Article {
+  id: string;
+  title: string;
+  resume: string;
+  reading_time: number;
+  banner: string;
+  publication_timestamp: string;
+  userDetails: UserDetails;
+  articleCategory: ArticleCategory;
+}
+
+interface ApiResponse {
+  status: number;
+  message: string;
+  description: string;
+  timestamp: string;
+  path: string;
+  data: {
+    data: Article[];
+    total: number;
+    totalPages: number;
+    currentPage: number;
+    limit: number;
+  };
+}
+
+const response = await fetch(
+  "http://localhost:3000/api/v1/articles?page=1&limit=1"
+);
+const apiResponse: ApiResponse = await response.json();
+const article = apiResponse.data.data[0];
+
+if (!article) {
+  return Astro.redirect("/");
+}
+
+const publicationDate = new Date(
+  article.publication_timestamp
+).toLocaleDateString("es-ES", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+});
+---
+
 <section class="p-4 relative z-10">
   <div
     class="relative w-full h-auto overflow-hidden rounded-lg flex items-end justify-center"
   >
     <img
-      src="/assets/images/blog/banner_slug.webp"
-      alt="Un abogado en su oficina"
+      src={article.banner}
+      alt={article.title}
       class="w-full h-full object-cover absolute z-[-1] top-0 left-0 overflow-hidden object-top"
       loading="lazy"
     />
@@ -18,36 +77,33 @@
           <span
             class="block w-fit bg-white/15 backdrop-blur-lg px-4 py-1.5 text-white lg:text-base text-sm rounded-full"
           >
-            Asesoria legal
+            {article.articleCategory.name}
           </span>
         </div>
         <h2 class="lg:text-4xl text-2xl text-white font-bold mt-8">
-          Cómo vestirse adecuadamente para aumentar tus posibilidades de éxito
-          en un juicio
+          {article.title}
         </h2>
         <p class="lg:text-lg text-sm text-white/60 mt-4">
-          La forma en que te vistes en un juicio puede influir en la percepción
-          del juez y el jurado. Proyectar una imagen profesional, confiable y
-          respetuosa es clave para generar una buena impresión. En este
-          artículo...
+          {article.resume}
         </p>
       </div>
       <div>
         <span class="flex items-center gap-2 lg:justify-end lg:mt-0 mt-4">
           <img
             class="rounded-full size-9 object-cover"
-            alt="username"
+            alt={`${article.userDetails.user.first_name} ${article.userDetails.user.last_name}`}
             src="/assets/images/blog/avatar.avif"
           />
           <p class="lg:text-lg text-sm text-white font-semibold">
-            Rafael Aguirre
+            {article.userDetails.user.first_name}
+            {article.userDetails.user.last_name}
           </p>
         </span>
         <span class="flex items-center mt-4 gap-2 lg:justify-end flex-wrap">
-          <p class="lg:text-base text-sm text-white/70">24 de enero del 2024</p>
+          <p class="lg:text-base text-sm text-white/70">{publicationDate}</p>
           <span class="size-1.5 rounded-full bg-white/70"></span>
           <p class="lg:text-base text-sm text-white/70">
-            10 minutos de lectura
+            {article.reading_time} minutos de lectura
           </p>
         </span>
       </div>

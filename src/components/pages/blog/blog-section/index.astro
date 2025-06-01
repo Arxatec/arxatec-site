@@ -5,203 +5,185 @@ import CardBlog from "../../../shared/card-blog/index.astro";
 import ChevronDown from "astro-heroicons/outline/ChevronDown.astro";
 
 const translateLabels = useTranslations(
-  currentLang as keyof typeof languageList,
+  currentLang as keyof typeof languageList
 );
 
-const posts = [
-  {
-    title: "Boost your conversion rate",
-    date: "2020-03-16",
-    category: "Marketing",
-    image:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
-      avatar:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
-    link: "#",
-  },
-  {
-    title: "Boost your conversion rate",
-    date: "2020-03-16",
-    category: "Marketing",
-    image:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
-      avatar:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
-    link: "#",
-  },
-  {
-    title: "Boost your conversion rate",
-    date: "2020-03-16",
-    category: "Marketing",
-    image:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
-      avatar:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
-    link: "#",
-  },
-  {
-    title: "Boost your conversion rate",
-    date: "2020-03-16",
-    category: "Marketing",
-    image:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
-      avatar:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
-    link: "#",
-  },
-  {
-    title: "Boost your conversion rate",
-    date: "2020-03-16",
-    category: "Marketing",
-    image:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
-      avatar:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
-    link: "#",
-  },
-  {
-    title: "Boost your conversion rate",
-    date: "2020-03-16",
-    category: "Marketing",
-    image:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
-      avatar:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
-    link: "#",
-  },
-  {
-    title: "Boost your conversion rate",
-    date: "2020-03-16",
-    category: "Marketing",
-    image:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
-      avatar:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
-    link: "#",
-  },
-  {
-    title: "Boost your conversion rate",
-    date: "2020-03-16",
-    category: "Marketing",
-    image:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
-      avatar:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
-    link: "#",
-  },
-  {
-    title: "Boost your conversion rate",
-    date: "2020-03-16",
-    category: "Marketing",
-    image:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
-      avatar:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
-    link: "#",
-  },
-  {
-    title: "Boost your conversion rate",
-    date: "2020-03-16",
-    category: "Marketing",
-    image:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
-      avatar:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
-    link: "#",
-  },
-  {
-    title: "Boost your conversion rate",
-    date: "2020-03-16",
-    category: "Marketing",
-    image:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
-      avatar:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
-    link: "#",
-  },
-  {
-    title: "Boost your conversion rate",
-    date: "2020-03-16",
-    category: "Marketing",
-    image:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
-      avatar:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
-    link: "#",
-  },
-];
+// Definir las interfaces para los tipos de datos de la API
+interface ApiArticle {
+  id: string;
+  user_id: number;
+  title: string;
+  content: string;
+  resume: string;
+  reading_time: number;
+  banner: string;
+  category_id: number;
+  publication_timestamp: string;
+  status: string;
+  userDetails: {
+    user: {
+      first_name: string;
+      last_name: string;
+    };
+  };
+  articleCategory: {
+    name: string;
+  };
+}
+
+interface ApiCategory {
+  id: number;
+  name: string;
+  description: string;
+}
+
+interface ApiResponse<T> {
+  status: number;
+  message: string;
+  description: string;
+  timestamp: string;
+  path: string;
+  data: {
+    data: T[];
+    total: number;
+    totalPages: number;
+    currentPage: number;
+    limit: number;
+  };
+}
+
+interface ApiCategoryResponse {
+  status: number;
+  message: string;
+  description: string;
+  timestamp: string;
+  path: string;
+  data: ApiCategory[];
+}
+
+// Obtener el número de página de los parámetros de la URL
+const url = new URL(Astro.request.url);
+const currentPage = Number(url.searchParams.get("page")) || 1;
+
+// Realizar las peticiones a los endpoints
+let articles: ApiArticle[] = [];
+let categories: ApiCategory[] = [];
+let pagination = {
+  total: 0,
+  totalPages: 0,
+  currentPage: currentPage,
+  limit: 10,
+};
+
+try {
+  // Petición para obtener artículos con paginación
+  const articlesResponse = await fetch(
+    `http://localhost:3000/api/v1/articles?page=${currentPage}`
+  );
+
+  if (!articlesResponse.ok) {
+    throw new Error(
+      `Error en artículos: ${articlesResponse.status} ${articlesResponse.statusText}`
+    );
+  }
+
+  const articlesData: ApiResponse<ApiArticle> = await articlesResponse.json();
+
+  // Validar que la estructura de datos sea correcta
+  if (
+    articlesData &&
+    articlesData.data &&
+    Array.isArray(articlesData.data.data)
+  ) {
+    articles = articlesData.data.data;
+    pagination = {
+      total: articlesData.data.total,
+      totalPages: articlesData.data.totalPages,
+      currentPage: articlesData.data.currentPage,
+      limit: articlesData.data.limit,
+    };
+  } else {
+    console.warn("Estructura de datos de artículos inesperada:", articlesData);
+    articles = [];
+  }
+
+  // Petición para obtener categorías
+  const categoriesResponse = await fetch(
+    "http://localhost:3000/api/v1/articles/categories"
+  );
+
+  if (!categoriesResponse.ok) {
+    throw new Error(
+      `Error en categorías: ${categoriesResponse.status} ${categoriesResponse.statusText}`
+    );
+  }
+
+  const categoriesData: ApiCategoryResponse = await categoriesResponse.json();
+
+  // Validar que la estructura de datos sea correcta
+  if (
+    categoriesData &&
+    categoriesData.data &&
+    Array.isArray(categoriesData.data)
+  ) {
+    categories = categoriesData.data;
+  } else {
+    console.warn(
+      "Estructura de datos de categorías inesperada:",
+      categoriesData
+    );
+    categories = [];
+  }
+} catch (error) {
+  console.error("Error fetching data:", error);
+  articles = [];
+  categories = [];
+}
+
+// Mapear los artículos de la API al formato esperado por CardBlog
+const posts = Array.isArray(articles)
+  ? articles
+      .map((article) => {
+        if (!article) return null;
+
+        const authorFirstName =
+          article.userDetails?.user?.first_name || "Usuario";
+        const authorLastName =
+          article.userDetails?.user?.last_name || "Anónimo";
+        const categoryName = article.articleCategory?.name || "Sin categoría";
+        const publicationDate = article.publication_timestamp
+          ? new Date(article.publication_timestamp).toLocaleDateString()
+          : new Date().toLocaleDateString();
+
+        return {
+          title: article.title || "Título no disponible",
+          date: publicationDate,
+          category: categoryName,
+          categoryId: article.category_id,
+          image:
+            article.banner ||
+            "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+          author: {
+            name: `${authorFirstName} ${authorLastName}`,
+            role: "Autor",
+            avatar:
+              "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+          },
+          description: article.resume || "Descripción no disponible",
+          link: `/blog/${article.id}`,
+          readingTime: article.reading_time || 0,
+        };
+      })
+      .filter((post): post is NonNullable<typeof post> => post !== null)
+  : [];
+
+// Calcular el rango de resultados mostrados
+const startIndex = (pagination.currentPage - 1) * pagination.limit + 1;
+const endIndex = Math.min(startIndex + pagination.limit - 1, pagination.total);
+
+// Calcular si los botones de navegación deben estar deshabilitados
+const isPrevDisabled = pagination.currentPage <= 1;
+const isNextDisabled = pagination.currentPage >= pagination.totalPages;
 ---
 
 <div class="py-24 sm:py-32">
@@ -220,88 +202,54 @@ const posts = [
       <div class="mt-8 flex items-center justify-between flex-wrap gap-6">
         <div class="flex items-center gap-2 flex-wrap">
           <button
-            class="px-4 py-1.5 bg-gray-100 rounded-md font-medium text-gray-900 text-sm"
+            class="px-4 py-1.5 bg-gray-100 rounded-md font-medium text-gray-900 text-sm category-filter active"
+            data-category-id="all"
           >
-            {translateLabels("blog.blog.category.1")}
+            Todas
           </button>
-          <button
-            class="px-4 py-1.5 rounded-md font-medium text-gray-900 text-sm hover:bg-gray-100 transition-all"
-          >
-            {translateLabels("blog.blog.category.2")}
-          </button>
-          <button
-            class="px-4 py-1.5 rounded-md font-medium text-gray-900 text-sm hover:bg-gray-100 transition-all"
-          >
-            {translateLabels("blog.blog.category.3")}
-          </button>
-          <button
-            class="px-4 py-1.5 rounded-md font-medium text-gray-900 text-sm hover:bg-gray-100 transition-all"
-          >
-            {translateLabels("blog.blog.category.4")}
-          </button>
-          <button
-            class="px-4 py-1.5 rounded-md font-medium text-gray-900 text-sm hover:bg-gray-100 transition-all"
-          >
-            {translateLabels("blog.blog.category.5")}
-          </button>
-          <button
-            class="px-4 py-1.5 rounded-md font-medium text-gray-900 text-sm hover:bg-gray-100 transition-all"
-          >
-            {translateLabels("blog.blog.category.6")}
-          </button>
-        </div>
-        <div class="flex items-center gap-1 flex-wrap">
-          <p class="text-sm text-gray-900">
-            {translateLabels("blog.blog.order.title")}
-          </p>
-          <div class="mt-2 grid grid-cols-1">
-            <select
-              id="location"
-              name="location"
-              class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pl-3 pr-8 lg:text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 text-sm"
-            >
-              <option>
-                {translateLabels("blog.blog.order.recent")}
-              </option>
-              <option>
-                {translateLabels("blog.blog.order.popular")}
-              </option>
-              <option>
-                {translateLabels("blog.blog.order.recommended")}
-              </option>
-              <option>
-                {translateLabels("blog.blog.order.relevance")}
-              </option>
-              <option>
-                {translateLabels("blog.blog.order.alphabetic")}
-              </option>
-            </select>
-
-            <ChevronDown
-              class="pointer-events-none col-start-1 row-start-1 mr-2 size-3 self-center justify-self-end text-gray-500 sm:size-3"
-              stroke-width={3}
-            />
-          </div>
+          {
+            Array.isArray(categories) &&
+              categories.length > 0 &&
+              categories.map((category) => (
+                <button
+                  class="px-4 py-1.5 rounded-md font-medium text-gray-900 text-sm hover:bg-gray-100 transition-all category-filter"
+                  data-category-id={category.id}
+                >
+                  {category.name}
+                </button>
+              ))
+          }
         </div>
       </div>
     </div>
     <div
+      id="posts-container"
       class="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-2 gap-y-2 lg:gap-y-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
     >
       {
-        posts.map((post) => (
-          <CardBlog
-            imageUrl={post.image}
-            date={post.date}
-            category={post.category}
-            title={post.title}
-            titleUrl={post.link}
-            description={post.description}
-            authorName={post.author.name}
-            authorImage={post.author.avatar}
-            authorRole={post.author.role}
-          />
-        ))
+        Array.isArray(posts) && posts.length > 0 ? (
+          posts.map((post) => (
+            <div class="post-card" data-category={post.categoryId}>
+              <CardBlog
+                imageUrl={post.image}
+                date={post.date}
+                category={post.category}
+                title={post.title}
+                titleUrl={post.link}
+                description={post.description}
+                authorName={post.author.name}
+                authorImage={post.author.avatar}
+                authorRole={post.author.role}
+              />
+            </div>
+          ))
+        ) : (
+          <div class="col-span-full text-center py-12">
+            <p class="text-gray-500 text-lg">
+              No hay artículos disponibles en este momento.
+            </p>
+          </div>
+        )
       }
     </div>
 
@@ -312,24 +260,34 @@ const posts = [
       <div class="hidden sm:block">
         <p class="text-sm text-gray-700">
           {translateLabels("blog.blog.pagination.show")}
-          <span class="font-medium">1</span>
+          <span class="font-medium">{startIndex}</span>
           {translateLabels("blog.blog.pagination.show.to")}
-          <span class="font-medium">10</span>
+          <span class="font-medium">{endIndex}</span>
           {translateLabels("blog.blog.pagination.show.of")}
-          <span class="font-medium">20</span>
+          <span class="font-medium">{pagination.total}</span>
           {translateLabels("blog.blog.pagination.results")}
         </p>
       </div>
       <div class="flex flex-1 justify-between sm:justify-end">
         <a
-          href="#"
-          class="relative inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus-visible:outline-offset-0"
+          href={isPrevDisabled ? "#" : `?page=${pagination.currentPage - 1}`}
+          class={`relative inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold ring-1 ring-gray-300 ring-inset focus-visible:outline-offset-0 ${
+            isPrevDisabled
+              ? "text-gray-400 cursor-not-allowed"
+              : "text-gray-900 hover:bg-gray-50"
+          }`}
+          aria-disabled={isPrevDisabled}
         >
           {translateLabels("blog.blog.pagination.back")}
         </a>
         <a
-          href="#"
-          class="relative ml-3 inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus-visible:outline-offset-0"
+          href={isNextDisabled ? "#" : `?page=${pagination.currentPage + 1}`}
+          class={`relative ml-3 inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold ring-1 ring-gray-300 ring-inset focus-visible:outline-offset-0 ${
+            isNextDisabled
+              ? "text-gray-400 cursor-not-allowed"
+              : "text-gray-900 hover:bg-gray-50"
+          }`}
+          aria-disabled={isNextDisabled}
         >
           {translateLabels("blog.blog.pagination.next")}
         </a>
@@ -337,3 +295,84 @@ const posts = [
     </nav>
   </div>
 </div>
+
+<script>
+  // Función para filtrar los posts por categoría
+  function filterPosts(categoryId: string) {
+    const posts = document.querySelectorAll(".post-card");
+    const buttons = document.querySelectorAll(".category-filter");
+
+    // Actualizar estado activo de los botones
+    buttons.forEach((button) => {
+      if (button instanceof HTMLElement) {
+        if (button.dataset.categoryId === categoryId) {
+          button.classList.add("bg-gray-100");
+          button.classList.add("active");
+        } else {
+          button.classList.remove("bg-gray-100");
+          button.classList.remove("active");
+        }
+      }
+    });
+
+    // Filtrar los posts
+    posts.forEach((post) => {
+      if (post instanceof HTMLElement) {
+        if (categoryId === "all") {
+          post.style.display = "block";
+        } else {
+          const postCategory = post.dataset.category;
+          post.style.display = postCategory === categoryId ? "block" : "none";
+        }
+      }
+    });
+
+    // Mostrar mensaje si no hay posts en la categoría seleccionada
+    let visibleCount = 0;
+    posts.forEach((post) => {
+      if (
+        post instanceof HTMLElement &&
+        getComputedStyle(post).display !== "none"
+      ) {
+        visibleCount++;
+      }
+    });
+
+    const noPostsMessage = document.querySelector("#no-posts-message");
+    const postsContainer = document.querySelector("#posts-container");
+
+    // Remover mensaje existente si hay posts visibles
+    if (visibleCount > 0 && noPostsMessage) {
+      noPostsMessage.remove();
+    }
+    // Agregar mensaje solo si no hay posts visibles y no existe el mensaje
+    else if (visibleCount === 0 && postsContainer && !noPostsMessage) {
+      const message = document.createElement("div");
+      message.id = "no-posts-message";
+      message.className = "col-span-full text-center";
+      message.innerHTML =
+        '<div class="text-gray-500 text-base font-semibold bg-white w-full px-4 py-8 rounded-md">No hay artículos disponibles en esta categoría.</div>';
+      postsContainer.appendChild(message);
+    }
+  }
+
+  // Agregar event listeners a los botones de categoría
+  document.addEventListener("DOMContentLoaded", () => {
+    const categoryButtons = document.querySelectorAll(".category-filter");
+
+    categoryButtons.forEach((button) => {
+      if (button instanceof HTMLElement) {
+        button.addEventListener("click", () => {
+          const categoryId = button.dataset.categoryId || "all";
+          filterPosts(categoryId);
+        });
+      }
+    });
+  });
+</script>
+
+<style>
+  .category-filter.active {
+    background-color: rgb(243 244 246);
+  }
+</style>
