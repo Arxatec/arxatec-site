@@ -4,59 +4,42 @@ const currentLang = Astro.currentLocale || "es";
 import CardBlog from "../../../shared/card-blog/index.astro";
 
 const translateLabels = useTranslations(
-  currentLang as keyof typeof languageList,
+  currentLang as keyof typeof languageList
 );
 
-const posts = [
-  {
-    title: "Boost your conversion rate",
-    date: "2020-03-16",
-    category: "Marketing",
-    image:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+// Hacer la petición al API
+const response = await fetch("http://localhost:3000/api/v1/articles?page=1");
+const data = await response.json();
+
+// Obtener 3 artículos aleatorios
+const allArticles = data.data.data;
+const shuffledArticles = [...allArticles].sort(() => Math.random() - 0.5);
+const selectedArticles = shuffledArticles.slice(0, 3);
+
+// Formatear los artículos para el componente CardBlog
+const posts = selectedArticles.map((article) => {
+  const publicationDate = new Date(
+    article.publication_timestamp
+  ).toLocaleDateString(currentLang, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
+  return {
+    title: article.title,
+    date: publicationDate,
+    category: article.articleCategory.name,
+    image: article.banner,
     author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
-      avatar:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      name: `${article.userDetails.user.first_name} ${article.userDetails.user.last_name}`,
+      role: "Autor",
+      avatar: "/assets/images/blog/avatar.avif",
     },
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
-    link: "#",
-  },
-  {
-    title: "Boost your conversion rate",
-    date: "2020-03-16",
-    category: "Marketing",
-    image:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
-      avatar:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
-    link: "#",
-  },
-  {
-    title: "Boost your conversion rate",
-    date: "2020-03-16",
-    category: "Marketing",
-    image:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
-      avatar:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
-    link: "#",
-  },
-];
+    description: article.resume,
+    link: `/blog/${article.id}`,
+  };
+});
 ---
 
 <div class="mt-2">
@@ -69,7 +52,7 @@ const posts = [
       {translateLabels("blog.read.related")}
     </p>
     <a
-      href=""
+      href="/blog"
       class="text-blue-600 text-sm font-semibold px-6 py-2 block hover:bg-blue-100 rounded-md transition-all"
     >
       {translateLabels("blog.read.related.button")}

@@ -9,7 +9,7 @@ import sitemap from "@astrojs/sitemap";
 
 const locales = ['en', 'es', 'qu'];
 export default defineConfig({
-
+  output: 'server',
   integrations: [tailwind(), react(), 
     sitemap({
       serialize: (entry) => {
