@@ -1,0 +1,178 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  faqs?: {
+    question: string;
+    answer: string;
+  }[];
+}
+
+const { 
+  title = "Preguntas frecuentes", 
+  description,
+  faqs = [
+    {
+      question: "¿Cuál es lo mejor de Suiza?",
+      answer: "No lo sé, pero la bandera es una gran ventaja. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
+    },
+    {
+      question: "¿Cómo haces agua bendita?",
+      answer: "Le hierves el infierno. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut tempora vitae odio inventore fuga aliquam nostrum quod porro. Delectus quia facere id sequi expedita natus."
+    },
+    {
+      question: "¿Cómo llamas a alguien sin cuerpo y sin nariz?",
+      answer: "Nadie lo sabe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem."
+    },
+    {
+      question: "¿Por qué nunca ves elefantes escondidos en los árboles?",
+      answer: "Porque son muy buenos en eso. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
+    },
+    {
+      question: "¿Por qué no puedes escuchar a un pterodáctilo ir al baño?",
+      answer: "Porque la 'p' es silenciosa. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, quas voluptatibus ex culpa ipsum, aspernatur blanditiis fugiat ullam magnam suscipit deserunt illum natus facilis atque vero consequatur! Quisquam, debitis error."
+    },
+    {
+      question: "¿Por qué el hombre invisible rechazó la oferta de trabajo?",
+      answer: "No podía verse a sí mismo haciéndolo. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius."
+    }
+  ]
+} = Astro.props as Props;
+---
+
+<div class="bg-white">
+  <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+    <div class="mx-auto max-w-7xl">
+      <h2 class="text-5xl font-bold font-serif tracking-tight text-neutral-900 sm:text-5xl">
+        {title}
+      </h2>
+      {description && (
+        <p class="mt-6 max-w-2xl text-lg text-neutral-600">
+          {description}
+        </p>
+      )}
+      <dl class="mt-16 divide-y divide-neutral-900/10">
+        {faqs.map((faq, index) => (
+          <div class="py-6 first:pt-0 last:pb-0 faq-item">
+            <dt >
+              <button 
+                class="faq-button group flex w-full items-start justify-between text-left text-neutral-900 focus:outline-none rounded-lg p-2 -m-2 hover:bg-transparent"
+                aria-expanded="false"
+                data-faq-index={index}
+              >
+                <span class="text-xl font-semibold font-serif">
+                  {faq.question}
+                </span>
+                <span class="ml-6 flex h-7 items-center">
+                  <!-- Plus Icon -->
+                  <svg 
+                    class="faq-plus-icon size-6 transition-transform duration-200 ease-in-out" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke-width="1.5" 
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                  </svg>
+                  <!-- Minus Icon -->
+                  <svg 
+                    class="faq-minus-icon size-6 transition-transform duration-200 ease-in-out hidden" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke-width="1.5" 
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+                  </svg>
+                </span>
+              </button>
+            </dt>
+            <dd class="faq-panel mt-2 pr-12 overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+              <p class="text-base/7 text-neutral-600 pb-2">
+                {faq.answer}
+              </p>
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqButtons = document.querySelectorAll('.faq-button');
+    
+    faqButtons.forEach((button: Element) => {
+      button.addEventListener('click', function(this: HTMLButtonElement) {
+        const faqItem = this.closest('.faq-item');
+        if (!faqItem) return;
+        
+        const panel = faqItem.querySelector('.faq-panel') as HTMLElement;
+        const plusIcon = faqItem.querySelector('.faq-plus-icon') as HTMLElement;
+        const minusIcon = faqItem.querySelector('.faq-minus-icon') as HTMLElement;
+        
+        if (!panel || !plusIcon || !minusIcon) return;
+        
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        
+        // Close all other FAQ items
+        faqButtons.forEach((otherButton: Element) => {
+          if (otherButton !== this) {
+            const otherFaqItem = otherButton.closest('.faq-item');
+            if (!otherFaqItem) return;
+            
+            const otherPanel = otherFaqItem.querySelector('.faq-panel') as HTMLElement;
+            const otherPlusIcon = otherFaqItem.querySelector('.faq-plus-icon') as HTMLElement;
+            const otherMinusIcon = otherFaqItem.querySelector('.faq-minus-icon') as HTMLElement;
+            
+            if (!otherPanel || !otherPlusIcon || !otherMinusIcon) return;
+            
+            otherButton.setAttribute('aria-expanded', 'false');
+            otherPanel.style.maxHeight = '0px';
+            otherPanel.classList.remove('opacity-100');
+            otherPanel.classList.add('opacity-0');
+            otherPlusIcon.classList.remove('hidden');
+            otherMinusIcon.classList.add('hidden');
+          }
+        });
+        
+        if (isExpanded) {
+          // Close this FAQ
+          this.setAttribute('aria-expanded', 'false');
+          panel.style.maxHeight = '0px';
+          panel.classList.remove('opacity-100');
+          panel.classList.add('opacity-0');
+          plusIcon.classList.remove('hidden');
+          minusIcon.classList.add('hidden');
+        } else {
+          // Open this FAQ
+          this.setAttribute('aria-expanded', 'true');
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+          panel.classList.remove('opacity-0');
+          panel.classList.add('opacity-100');
+          plusIcon.classList.add('hidden');
+          minusIcon.classList.remove('hidden');
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .faq-panel {
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  .faq-plus-icon,
+  .faq-minus-icon {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .faq-button:hover .faq-plus-icon,
+  .faq-button:hover .faq-minus-icon {
+    transform: scale(1.1);
+  }
+</style>
