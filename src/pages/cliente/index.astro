@@ -1,21 +1,67 @@
 ---
+// src/pages/cliente/index.astro
 import { CoreLayout } from "../../layouts";
-import { HeroSection, FAQSection, CTASection } from "../../components/shared";
-import { FeaturesSection } from "../../components/pages/cliente";
+import { HeroSection } from "../../components/shared";
+import { StatsSection, FAQSection, CTASection } from "../../components/shared";
+import { FeaturesSection, BentoSection } from "../../components/pages/cliente";
+
+const clientStats = [
+  {
+    value: "50+",
+    label: "Abogados verificados",
+  },
+  {
+    value: "200+",
+    label: "Casos resueltos",
+  },
+  {
+    value: "4.8★",
+    label: "Calificación promedio",
+  },
+  {
+    value: "24h",
+    label: "Respuesta promedio",
+  },
+];
+const clientFAQs = [
+  {
+    question: "¿Es realmente gratis para los clientes?",
+    answer:
+      "Sí, completamente gratis. No cobramos ninguna comisión ni tarifa a los clientes. Solo pagas directamente al abogado que elijas por sus servicios profesionales.",
+  },
+  {
+    question: "¿Cuánto tiempo tarda en recibir propuestas de abogados?",
+    answer:
+      "En promedio, recibirás las primeras propuestas en menos de 24 horas. La mayoría de nuestros clientes reciben entre 3 a 5 propuestas de abogados especializados en su tipo de caso.",
+  },
+  {
+    question: "¿Los abogados están verificados?",
+    answer:
+      "Sí, todos los abogados en nuestra plataforma pasan por un proceso de verificación que incluye validación de colegiatura, antecedentes profesionales y experiencia comprobada en su área de especialización.",
+  },
+  {
+    question: "¿Qué tipo de casos pueden resolver?",
+    answer:
+      "Tenemos abogados especializados en todas las áreas: laboral, familiar, civil, penal, corporativo, tributario, administrativo y más. Si tienes un caso legal, contamos con el especialista adecuado.",
+  },
+];
 ---
 
 <CoreLayout>
   <HeroSection
     title="Encuentra abogados especializados en tu caso"
-    description="Conoce a los mejores abogados especializados en tu caso en minutos, sin intermediarios ni comisiones, en un solo click, sin complicaciones, solo registro y listo."
+    description="Conoce a los mejores abogados para tu tipo de caso en minutos. Sin intermediarios ni comisiones, todo en un solo clic. Regístrate gratis y conecta con profesionales verificados, fácil y sin complicaciones."
     image="/screenshots/client_desktop.png"
-    buttonText="Registrate ahora"
-    buttonLink="/cliente"
+    buttonText="Regístrate ahora"
+    buttonLink="/cliente/registro"
   />
+  <StatsSection stats={clientStats} />
   <FeaturesSection />
+  <BentoSection />
   <FAQSection
     title="Preguntas frecuentes"
-    description="Have a different question and can’t find the answer you’re looking for? Reach out to our support team by sending us an email and we’ll get back to you as soon as we can."
+    description="Resolvemos las dudas más comunes de nuestros clientes. Si no encuentras tu respuesta, contáctanos."
+    faqs={clientFAQs}
   />
   <CTASection />
 </CoreLayout>

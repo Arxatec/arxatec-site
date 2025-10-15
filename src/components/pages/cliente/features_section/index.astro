@@ -1,223 +1,326 @@
-<div class="bg-neutral-50 py-24 sm:py-32">
+---
+import { FileText, Scale, MessageSquare, Bell } from "lucide-react";
+---
+
+<section class="py-24 sm:py-32 overflow-hidden">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto max-w-2xl lg:mx-0">
-      <h2
-        class="text-4xl font-bold font-serif tracking-tight text-pretty text-neutral-900 sm:text-5xl"
-      >
-        Stay on top of customer support
-      </h2>
-      <p class="mt-6 text-lg text-neutral-600">
-        Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
-        voluptatum cupiditate veritatis in accusamus quisquam.
-      </p>
-    </div>
-    <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-      <dl class="grid max-w-xl grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-3">
+    <div class="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-20 items-center">
+      <div class="relative order-2 lg:order-1">
         <div
-          class="flex flex-col ring-1 ring-neutral-200 rounded p-6 bg-neutral-100"
+          class="absolute inset-0 bg-gradient-to-br from-neutral-200 via-neutral-100 to-neutral-200 rounded-3xl -z-10"
         >
-          <dt>
-            <div
-              class="mb-6 flex size-10 items-center justify-center rounded-lg bg-neutral-900"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                data-slot="icon"
-                aria-hidden="true"
-                class="size-6 text-white"
-              >
-                <path
-                  d="M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H6.911a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661Z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-              </svg>
-            </div>
-            <span class="text-xl font-bold font-serif text-neutral-900"
-              >Unlimited inboxes</span
-            >
-          </dt>
-          <dd class="mt-1 flex flex-auto flex-col text-base/7 text-neutral-600">
-            <p class="flex-auto">
-              Non quo aperiam repellendus quas est est. Eos aut dolore aut ut
-              sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores
-              incidunt.
-            </p>
-          </dd>
         </div>
-        <div
-          class="flex flex-col ring-1 ring-neutral-200 rounded p-6 bg-neutral-100"
+
+        <div class="relative p-8 lg:p-12">
+          <div
+            class="absolute top-8 left-8 w-[85%] bg-white rounded-2xl shadow-2xl ring-1 ring-neutral-900/5 overflow-hidden"
+          >
+            <div
+              class="flex items-center gap-2 px-4 py-3 bg-neutral-50 border-b border-neutral-200"
+            >
+              <div class="flex gap-1.5">
+                <div class="w-3 h-3 rounded-full bg-neutral-300"></div>
+                <div class="w-3 h-3 rounded-full bg-neutral-300"></div>
+                <div class="w-3 h-3 rounded-full bg-neutral-300"></div>
+              </div>
+              <div class="flex items-center gap-2 ml-4 flex-1">
+                <svg
+                  class="w-4 h-4 text-neutral-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                  ></path>
+                </svg>
+                <span class="text-xs text-neutral-500">Mis casos activos</span>
+              </div>
+            </div>
+
+            <div class="p-6 space-y-3">
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-8 h-8 rounded-lg bg-neutral-100 flex items-center justify-center flex-shrink-0"
+                >
+                  <svg
+                    class="w-4 h-4 text-neutral-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm font-semibold text-neutral-900">
+                    Caso laboral - Despido injustificado
+                  </p>
+                  <p class="text-xs text-neutral-500">
+                    Dr. Carlos Mendoza • En proceso
+                  </p>
+                </div>
+                <span class="text-xs font-medium text-neutral-500">Hoy</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-8 h-8 rounded-lg bg-neutral-100 flex items-center justify-center flex-shrink-0"
+                >
+                  <svg
+                    class="w-4 h-4 text-neutral-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm font-semibold text-neutral-900">
+                    Derecho familiar - Pensión alimenticia
+                  </p>
+                  <p class="text-xs text-neutral-500">
+                    Dra. Ana Torres • Revisión de documentos
+                  </p>
+                </div>
+                <span class="text-xs font-medium text-neutral-500">Ayer</span>
+              </div>
+              <div class="flex items-center gap-3 opacity-60">
+                <div
+                  class="w-8 h-8 rounded-lg bg-neutral-100 flex items-center justify-center flex-shrink-0"
+                >
+                  <svg
+                    class="w-4 h-4 text-neutral-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <p
+                    class="text-sm font-semibold text-neutral-500 line-through"
+                  >
+                    Contrato de arrendamiento
+                  </p>
+                  <p class="text-xs text-neutral-400">
+                    Dr. Roberto Silva • Finalizado
+                  </p>
+                </div>
+                <span class="text-xs font-medium text-neutral-400">15 días</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="relative z-10 ml-auto w-[90%] bg-gradient-to-br from-neutral-700 via-neutral-800 to-neutral-900 rounded-2xl shadow-2xl ring-1 ring-neutral-900/5 mt-34 overflow-hidden"
+          >
+            <div
+              class="flex items-center gap-2 px-4 py-3 bg-neutral-800/80 border-b border-neutral-700/50"
+            >
+              <div class="flex gap-1.5">
+                <div class="w-3 h-3 rounded-full bg-neutral-600"></div>
+                <div class="w-3 h-3 rounded-full bg-neutral-600"></div>
+                <div class="w-3 h-3 rounded-full bg-neutral-600"></div>
+              </div>
+              <div class="flex items-center gap-2 ml-4 flex-1">
+                <svg
+                  class="w-4 h-4 text-neutral-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  ></path>
+                </svg>
+                <span class="text-xs text-neutral-300 font-medium"
+                  >Caso laboral - Despido injustificado</span
+                >
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="flex items-start gap-3 mb-4">
+                <div
+                  class="w-10 h-10 rounded-full bg-neutral-600 flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-sm font-bold text-white">CM</span>
+                </div>
+                <div>
+                  <h3 class="text-base font-bold text-white mb-1">
+                    Dr. Carlos Mendoza
+                  </h3>
+                  <p class="text-xs text-neutral-400">
+                    Especialista en derecho laboral • 12 años exp.
+                  </p>
+                </div>
+              </div>
+
+              <div class="space-y-2 mb-4">
+                <p class="text-sm font-semibold text-white mb-3">
+                  Documentos requeridos:
+                </p>
+                <div class="flex items-center gap-2 text-sm">
+                  <div
+                    class="w-4 h-4 rounded bg-neutral-600 flex items-center justify-center flex-shrink-0"
+                  >
+                    <svg
+                      class="w-3 h-3 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <span class="text-neutral-300 line-through"
+                    >Contrato laboral vigente</span
+                  >
+                </div>
+                <div class="flex items-center gap-2 text-sm">
+                  <div
+                    class="w-4 h-4 rounded bg-neutral-600 flex items-center justify-center flex-shrink-0"
+                  >
+                    <svg
+                      class="w-3 h-3 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <span class="text-neutral-300 line-through"
+                    >Boletas de pago últimos 6 meses</span
+                  >
+                </div>
+                <div class="flex items-center gap-2 text-sm">
+                  <div
+                    class="w-4 h-4 rounded border-2 border-neutral-500 flex-shrink-0"
+                  >
+                  </div>
+                  <span class="text-neutral-200">Carta de despido</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm">
+                  <div
+                    class="w-4 h-4 rounded border-2 border-neutral-500 flex-shrink-0"
+                  >
+                  </div>
+                  <span class="text-neutral-200">Comunicaciones internas</span>
+                </div>
+              </div>
+
+              <div class="mt-4 pt-4 border-t border-neutral-700">
+                <p class="text-xs text-neutral-400">
+                  Última actualización: <span
+                    class="text-neutral-300 font-medium">Hace 2 horas</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-1 lg:order-2">
+        <p class="text-sm font-semibold text-neutral-500 tracking-wider mb-4">
+          GESTIONA TU CASO
+        </p>
+
+        <h2
+          class="text-4xl font-bold font-serif tracking-tight text-neutral-900 sm:text-5xl mb-6"
         >
-          <dt>
+          Desde la primera consulta hasta el resultado final
+        </h2>
+
+        <p class="text-lg text-neutral-600 leading-relaxed mb-10">
+          En Arxatec, tu caso va contigo: sigue cada etapa en tiempo real desde
+          todos tus dispositivos. Recibe actualizaciones al instante y mantén
+          toda la documentación organizada en un solo lugar.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+          <div class="flex items-start gap-3">
             <div
-              class="mb-6 flex size-10 items-center justify-center rounded-lg bg-neutral-900"
+              class="flex-shrink-0 w-10 h-10 rounded-lg bg-neutral-100 flex items-center justify-center"
             >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                data-slot="icon"
-                aria-hidden="true"
-                class="size-6 text-white"
-              >
-                <path
-                  d="M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H6.911a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661Z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-              </svg>
+              <FileText className="w-5 h-5 text-neutral-900" />
             </div>
-            <span class="text-xl font-bold font-serif text-neutral-900"
-              >Unlimited inboxes</span
-            >
-          </dt>
-          <dd class="mt-1 flex flex-auto flex-col text-base/7 text-neutral-600">
-            <p class="flex-auto">
-              Non quo aperiam repellendus quas est est. Eos aut dolore aut ut
-              sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores
-              incidunt.
-            </p>
-          </dd>
-        </div>
-        <div
-          class="flex flex-col ring-1 ring-neutral-200 rounded p-6 bg-neutral-100"
-        >
-          <dt>
+            <div>
+              <h3 class="text-sm font-semibold text-neutral-900">
+                Documentos organizados
+              </h3>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
             <div
-              class="mb-6 flex size-10 items-center justify-center rounded-lg bg-neutral-900"
+              class="flex-shrink-0 w-10 h-10 rounded-lg bg-neutral-100 flex items-center justify-center"
             >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                data-slot="icon"
-                aria-hidden="true"
-                class="size-6 text-white"
-              >
-                <path
-                  d="M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H6.911a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661Z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-              </svg>
+              <Scale className="w-5 h-5 text-neutral-900" />
             </div>
-            <span class="text-xl font-bold font-serif text-neutral-900"
-              >Unlimited inboxes</span
-            >
-          </dt>
-          <dd class="mt-1 flex flex-auto flex-col text-base/7 text-neutral-600">
-            <p class="flex-auto">
-              Non quo aperiam repellendus quas est est. Eos aut dolore aut ut
-              sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores
-              incidunt.
-            </p>
-          </dd>
-        </div>
-        <div
-          class="flex flex-col ring-1 ring-neutral-200 rounded p-6 bg-neutral-100"
-        >
-          <dt>
+            <div>
+              <h3 class="text-sm font-semibold text-neutral-900">
+                Seguimiento legal
+              </h3>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
             <div
-              class="mb-6 flex size-10 items-center justify-center rounded-lg bg-neutral-900"
+              class="flex-shrink-0 w-10 h-10 rounded-lg bg-neutral-100 flex items-center justify-center"
             >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                data-slot="icon"
-                aria-hidden="true"
-                class="size-6 text-white"
-              >
-                <path
-                  d="M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H6.911a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661Z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-              </svg>
+              <MessageSquare className="w-5 h-5 text-neutral-900" />
             </div>
-            <span class="text-xl font-bold font-serif text-neutral-900"
-              >Unlimited inboxes</span
-            >
-          </dt>
-          <dd class="mt-1 flex flex-auto flex-col text-base/7 text-neutral-600">
-            <p class="flex-auto">
-              Non quo aperiam repellendus quas est est. Eos aut dolore aut ut
-              sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores
-              incidunt.
-            </p>
-          </dd>
-        </div>
-        <div
-          class="flex flex-col ring-1 ring-neutral-200 rounded p-6 bg-neutral-100"
-        >
-          <dt>
+            <div>
+              <h3 class="text-sm font-semibold text-neutral-900">
+                Chat directo
+              </h3>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
             <div
-              class="mb-6 flex size-10 items-center justify-center rounded-lg bg-neutral-900"
+              class="flex-shrink-0 w-10 h-10 rounded-lg bg-neutral-100 flex items-center justify-center"
             >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                data-slot="icon"
-                aria-hidden="true"
-                class="size-6 text-white"
-              >
-                <path
-                  d="M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H6.911a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661Z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-              </svg>
+              <Bell className="w-5 h-5 text-neutral-900" />
             </div>
-            <span class="text-xl font-bold font-serif text-neutral-900"
-              >Unlimited inboxes</span
-            >
-          </dt>
-          <dd class="mt-1 flex flex-auto flex-col text-base/7 text-neutral-600">
-            <p class="flex-auto">
-              Non quo aperiam repellendus quas est est. Eos aut dolore aut ut
-              sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores
-              incidunt.
-            </p>
-          </dd>
-        </div>
-        <div
-          class="flex flex-col ring-1 ring-neutral-200 rounded p-6 bg-neutral-100"
-        >
-          <dt>
-            <div
-              class="mb-6 flex size-10 items-center justify-center rounded-lg bg-neutral-900"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                data-slot="icon"
-                aria-hidden="true"
-                class="size-6 text-white"
-              >
-                <path
-                  d="M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H6.911a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661Z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-              </svg>
+            <div>
+              <h3 class="text-sm font-semibold text-neutral-900">
+                Notificaciones en tiempo real
+              </h3>
             </div>
-            <span class="text-xl font-bold font-serif text-neutral-900"
-              >Unlimited inboxes</span
-            >
-          </dt>
-          <dd class="mt-1 flex flex-auto flex-col text-base/7 text-neutral-600">
-            <p class="flex-auto">
-              Non quo aperiam repellendus quas est est. Eos aut dolore aut ut
-              sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores
-              incidunt.
-            </p>
-          </dd>
+          </div>
         </div>
-      </dl>
+      </div>
     </div>
   </div>
-</div>
+</section>

@@ -1,0 +1,110 @@
+---
+import { UserPlus, FileEdit, Mail, CheckCircle } from "lucide-react";
+
+const steps = [
+  {
+    number: "01",
+    title: "Crea tu cuenta",
+    description:
+      "Regístrate en minutos sin costo alguno. Solo necesitas tu correo electrónico.",
+    icon: UserPlus,
+    gradient: "from-neutral-800 to-neutral-900",
+  },
+  {
+    number: "02",
+    title: "Describe tu caso",
+    description:
+      "Completa un formulario simple con los detalles de tu situación legal.",
+    icon: FileEdit,
+    gradient: "from-neutral-700 to-neutral-800",
+  },
+  {
+    number: "03",
+    title: "Recibe propuestas",
+    description:
+      "Los abogados especializados te contactarán con sus propuestas en menos de 24 horas.",
+    icon: Mail,
+    gradient: "from-neutral-600 to-neutral-700",
+  },
+  {
+    number: "04",
+    title: "Elige y contrata",
+    description:
+      "Compara perfiles, revisa calificaciones y contrata al abogado ideal para tu caso.",
+    icon: CheckCircle,
+    gradient: "from-neutral-500 to-neutral-600",
+  },
+];
+---
+
+<section class="py-24 sm:py-32 bg-gradient-to-b from-white to-neutral-50">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center mb-16">
+      <h2
+        class="text-4xl font-bold font-serif tracking-tight text-neutral-900 sm:text-5xl mb-6"
+      >
+        ¿Cómo funciona?
+      </h2>
+      <p class="text-lg text-neutral-600 leading-relaxed">
+        Encuentra al abogado perfecto para tu caso en 4 simples pasos
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 mb-12">
+      {
+        steps.map((step, index) => (
+          <div
+            class={`
+            group relative overflow-hidden rounded-3xl 
+            bg-gradient-to-br ${step.gradient}
+            p-8 lg:p-10
+            shadow-xl hover:shadow-2xl
+            transition-all duration-500 hover:scale-[1.02]
+            ring-1 ring-white/10
+            ${index === 0 ? "md:col-span-2 lg:col-span-1" : ""}
+            ${index === 3 ? "md:col-span-2 lg:col-span-1" : ""}
+          `}
+          >
+            <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div class="relative z-10">
+              <div class="flex items-start justify-between mb-6">
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center ring-1 ring-white/20 group-hover:scale-110 transition-transform duration-300">
+                    <step.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div class="text-7xl font-bold font-serif text-white/20 leading-none">
+                    {step.number}
+                  </div>
+                </div>
+              </div>
+              <h3 class="text-2xl lg:text-3xl font-bold font-serif text-white mb-4 group-hover:translate-x-1 transition-transform duration-300">
+                {step.title}
+              </h3>
+              <p class="text-neutral-200 leading-relaxed text-base lg:text-lg">
+                {step.description}
+              </p>
+              <div class="mt-6 h-1 w-16 bg-gradient-to-r from-white/40 to-transparent rounded-full group-hover:w-24 transition-all duration-500" />
+            </div>
+            <div
+              class="absolute inset-0 opacity-[0.03]"
+              style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;"
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
