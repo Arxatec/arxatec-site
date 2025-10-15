@@ -1,4 +1,7 @@
 ---
+import HeroBackground from "./background/index.astro";
+import HeroContent from "./content/index.astro";
+
 interface Props {
   title: string;
   description: string;
@@ -6,53 +9,20 @@ interface Props {
   buttonText: string;
   buttonLink: string;
 }
+
 const { title, description, image, buttonText, buttonLink } =
   Astro.props as Props;
 ---
 
-<div class="relative isolate pt-14">
-  <div
-    aria-hidden="true"
-    class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-  >
-    <div
-      style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
-      class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#e5e5e5] to-[#999] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
-    >
-    </div>
-  </div>
-  <div class="py-24 sm:py-32 lg:pb-40">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl text-center">
-        <h1
-          class="text-5xl font-bold font-serif tracking-tight text-balance text-neutral-900 sm:text-7xl"
-        >
-          {title}
-        </h1>
-        <p class="mt-8 text-lg text-pretty text-neutral-500">
-          {description}
-        </p>
-        <div class="mt-10 flex items-center justify-center gap-x-6">
-          <a
-            href={buttonLink}
-            class="rounded bg-neutral-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900"
-            >{buttonText}</a
-          >
-        </div>
-      </div>
-      <div class="mt-16 flow-root sm:mt-24">
-        <div
-          class="rounded-xl ring-1 ring-neutral-900/10 ring-inset lg:rounded-2xl"
-        >
-          <img
-            width="2432"
-            height="1442"
-            src={image}
-            alt="App screenshot"
-            class="w-304 rounded-md bg-neutral-50 shadow-xl ring-1 ring-neutral-900/10"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<section
+  class="relative flex flex-col items-center text-center mx-auto rounded-2xl overflow-hidden my-6 w-full h-[400px] md:w-full md:max-w-[1220px] md:h-[600px] lg:h-[810px] px-4 md:px-0"
+>
+  <HeroBackground />
+  <HeroContent
+    title={title}
+    description={description}
+    image={image}
+    buttonText={buttonText}
+    buttonLink={buttonLink}
+  />
+</section>

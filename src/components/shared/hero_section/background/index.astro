@@ -1,0 +1,90 @@
+<div class="absolute inset-0 z-0">
+  <svg
+    width="100%"
+    height="100%"
+    viewBox="0 0 1220 810"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    preserveAspectRatio="xMidYMid slice"
+  >
+    <defs>
+      <filter
+        id="blur-gradient-1"
+        x="-50%"
+        y="-50%"
+        width="200%"
+        height="200%"
+        filterUnits="objectBoundingBox"
+      >
+        <feGaussianBlur stdDeviation="120"></feGaussianBlur>
+      </filter>
+
+      <filter
+        id="blur-gradient-2"
+        x="-50%"
+        y="-50%"
+        width="200%"
+        height="200%"
+        filterUnits="objectBoundingBox"
+      >
+        <feGaussianBlur stdDeviation="100"></feGaussianBlur>
+      </filter>
+
+      <linearGradient id="gradient-1" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color: #262626; stop-opacity: 1"></stop>
+        <stop offset="50%" style="stop-color: #404040; stop-opacity: 0.8"
+        ></stop>
+        <stop offset="100%" style="stop-color: #525252; stop-opacity: 0.6"
+        ></stop>
+      </linearGradient>
+
+      <linearGradient id="gradient-2" x1="100%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" style="stop-color: #171717; stop-opacity: 0.9"></stop>
+        <stop offset="50%" style="stop-color: #404040; stop-opacity: 0.7"
+        ></stop>
+        <stop offset="100%" style="stop-color: #525252; stop-opacity: 0.5"
+        ></stop>
+      </linearGradient>
+
+      <radialGradient id="gradient-radial" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" style="stop-color: #525252; stop-opacity: 0.4"></stop>
+        <stop offset="50%" style="stop-color: #404040; stop-opacity: 0.3"
+        ></stop>
+        <stop offset="100%" style="stop-color: #262626; stop-opacity: 0.2"
+        ></stop>
+      </radialGradient>
+    </defs>
+
+    <rect width="1220" height="810" fill="#fafafa"></rect>
+
+    <path
+      d="M1220 0 C1220 200, 1100 300, 900 400 L1220 400 Z"
+      fill="url(#gradient-1)"
+      filter="url(#blur-gradient-1)"
+      opacity="0.3"></path>
+
+    <circle
+      cx="610"
+      cy="405"
+      r="300"
+      fill="url(#gradient-radial)"
+      filter="url(#blur-gradient-2)"
+      opacity="0.25"></circle>
+
+    <path
+      d="M0 810 C200 810, 300 700, 400 500 L0 500 Z"
+      fill="url(#gradient-2)"
+      filter="url(#blur-gradient-1)"
+      opacity="0.28"></path>
+
+    <rect
+      x="0.5"
+      y="0.5"
+      width="1219"
+      height="809"
+      rx="16"
+      fill="none"
+      stroke="#262626"
+      stroke-opacity="0.06"></rect>
+  </svg>
+</div>

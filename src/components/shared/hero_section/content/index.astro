@@ -1,0 +1,53 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  buttonText: string;
+  buttonLink: string;
+}
+
+const { title, description, image, buttonText, buttonLink } =
+  Astro.props as Props;
+---
+
+<div class="relative z-10 w-full flex flex-col items-center">
+  <div
+    class="space-y-4 md:space-y-5 lg:space-y-6 mb-6 md:mb-8 lg:mb-10 max-w-md md:max-w-[500px] lg:max-w-[588px] mt-16 md:mt-[120px] lg:mt-[160px] px-4"
+  >
+    <h1
+      class="text-neutral-900 text-3xl md:text-4xl lg:text-6xl font-bold font-serif tracking-tight text-balance leading-tight"
+    >
+      {title}
+    </h1>
+    <p
+      class="text-neutral-500 text-base md:text-base lg:text-lg font-medium leading-relaxed max-w-lg mx-auto text-pretty"
+    >
+      {description}
+    </p>
+  </div>
+
+  <a
+    href={buttonLink}
+    class="relative z-10 bg-neutral-900 text-white hover:bg-neutral-700 px-8 py-3 rounded-full font-semibold text-sm md:text-base shadow-lg ring-1 ring-neutral-900/10 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900"
+  >
+    {buttonText}
+  </a>
+
+  <div class="mt-12 md:mt-16 lg:mt-20 w-full max-w-7xl px-6 lg:px-8">
+    <div class="flow-root">
+      <div
+        class="rounded-xl lg:rounded-2xl overflow-hidden ring-1 ring-neutral-900/10 shadow-2xl"
+      >
+        <img
+          width="2432"
+          height="1442"
+          src={image}
+          alt="App screenshot"
+          class="w-full rounded-md bg-neutral-50"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</div>
